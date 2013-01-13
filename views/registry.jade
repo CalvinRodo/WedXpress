@@ -9,7 +9,18 @@ block content
   #RegistryContents
 
   - each item in items
-    .item
-      h3= item.name
-      p #{item.text}
-      em $#{item.price}
+    form(action="/charge", method="post")
+      .item
+        h3= item.name
+        p #{item.text}
+        em $#{item.price}
+        script(
+                src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key="pk_test_3F84VzJprLQJ56zZsr6NyIAO",
+                data-amount='#{item.price}',
+                data-name="Wedding Registry",
+                data-description='#{item.name}'
+              )
+
+
