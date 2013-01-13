@@ -1,0 +1,15 @@
+//
+   Created with IntelliJ IDEA.
+   User: calvin
+   Date: 1/13/13
+   Time: 11:55 AM
+   To change this template use File | Settings | File Templates.
+extends layout
+block content
+  #RegistryContents
+
+  - each item in items
+    .item
+      h3= item.name
+      p #{item.text}
+      em $#{item.price}
