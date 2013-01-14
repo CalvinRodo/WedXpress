@@ -6,8 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-exports.view = function(req,res){
+exports.index = function(req,res){
+    var settings = require('../express_settings');
     res.render("registry", {
+        publicKey : settings.Config.StripePublicKey,
         title : "Wedding Registry",
         items: [
             {

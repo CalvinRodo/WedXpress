@@ -7,7 +7,7 @@
 extends layout
 block content
   #RegistryContents
-
+  p #{publicKey}
   - each item in items
     form(action="/charge", method="post")
       .item
@@ -17,7 +17,7 @@ block content
         script(
                 src="https://checkout.stripe.com/v2/checkout.js",
                 class="stripe-button",
-                data-key="pk_test_3F84VzJprLQJ56zZsr6NyIAO",
+                data-key='#{publicKey}',
                 data-amount='#{item.price}',
                 data-name="Wedding Registry",
                 data-description='#{item.name}'
