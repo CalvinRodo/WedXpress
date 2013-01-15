@@ -1,3 +1,3 @@
-exports.pay = function(req, res){
-    req.body.stripeToken
+exports.pay = function (req, res) {
+  req.body.stripeToken
 };
