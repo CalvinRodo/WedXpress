@@ -1,4 +1,4 @@
-module.exports = function(app){
+exports.constructor = function(app){
     var index = require('./routes/index.js'),
         registry = require('./routes/registry.js'),
         charge = require('./routes/charge.js');

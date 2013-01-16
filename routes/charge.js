@@ -1,3 +1,5 @@
 exports.pay = function(req, res){
-    req.body.stripeToken
+  var mongo = require('../DataLayer/persist.js');
+  var dl = mongo.constructor();
+  dl.InsertToken(req.body.stripeToken);
 };
