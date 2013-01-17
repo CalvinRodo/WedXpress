@@ -1,25 +1,48 @@
 exports.constructor = function (spec, my) {
-  var that = {},
-    mongoDb = require('mongoskin'),
-    settings = require('../express_settings.js'),
-    db = mongoDb.db(settings.Config.MongoDbConnection);
-
+  var that = {};
   my = my || {};
 
-  /*  var InsertRegItem = function(name, description, price){
-   db.collection('RegistryItems')
-   .Insert({
-   name: name,
-   description: description,
-   price: price
-   });
-   };
-   that.InsertRegItem = InsertRegItem;*/
+  my.ConnectToDb = function () {
+    var mongoDb = require('mongoskin'),
+      settings = require('../express_settings.js');
+    return mongoDb.db(settings.Config.MongoDbConnection);
+  };
 
-  that.SaveTransaction = function (token) {
+  that.GetRegistryItems = function () {
+    var db = my.ConnectToDb();
+    db.collection('RegistryItems');
+    //TODO: Finish getting registry items
+    db.close();
+  };
+  that.SaveRegistryItem = function (name, description, price) {
+    var db = my.ConnectToDb();
+    db.collection('RegistryItems')
+      .insert({
+        name: name,
+        description: description,
+        price: price
+      }, function (err, result) {
+        db.close();
+        if (err) {
+          throw err;
+        } else {
+          console.log('Added');
+        }
+      });
+    db.close();
+  }
+  s;
+
+  that.SaveCustomer = function (customer) {
+
+    var db = my.ConnectToDb();
     db.collection('Transactions')
-      .Insert({
-        token: token
+      .insert({
+        customer: customer
+      }, function (err, result) {
+        db.close();
+        if (err) throw err;
+        if (result) console.log('Added!');
       });
   };
 
