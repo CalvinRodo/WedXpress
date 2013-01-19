@@ -7,16 +7,16 @@
  */
 
 exports.index = function (req, res) {
-  res.render('login', {title:'login'});
+  res.render('login', {title: 'login'});
 }
 
 exports.login = function (req, res) {
-  var uname = req.body.username,
-      pword = req.body.password,
-      settings = require('../express_settings.js');
+  var uname = req.param('username'),
+    pword = req.param('password'),
+    settings = require('../express_settings.js');
 
-  if(uname === settings.Config.AdminUsername &&
-      pword === settings.Config.AdminPassword){
+  if (uname === settings.Config.AdminUsername &&
+    pword === settings.Config.AdminPassword) {
     req.session.loggedIn = true;
     res.redirect('./index')
   }

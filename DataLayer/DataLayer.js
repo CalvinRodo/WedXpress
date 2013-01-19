@@ -8,12 +8,13 @@ exports.constructor = function (spec, my) {
     return mongoDb.db(settings.Config.MongoDbConnection);
   };
 
-  that.GetRegistryItems = function () {
-    var db = my.ConnectToDb();
-    db.collection('RegistryItems');
-    //TODO: Finish getting registry items
-    db.close();
-  };
+//  that.GetRegistryItems = function () {
+//    var db = my.ConnectToDb();
+//    db.collection('RegistryItems');
+//    //TODO: Finish getting registry items
+//    db.close();
+//  };
+
   that.SaveRegistryItem = function (name, description, price) {
     var db = my.ConnectToDb();
     db.collection('RegistryItems')

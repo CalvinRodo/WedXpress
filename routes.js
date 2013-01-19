@@ -1,8 +1,9 @@
 module.exports = function (app) {
   var index = require('./routes/index.js'),
-      registry = require('./routes/registry.js'),
-      charge = require('./routes/charge.js'),
-      login = require('./routes/login.js');
+    registry = require('./routes/registry.js'),
+    charge = require('./routes/charge.js'),
+    login = require('./routes/login.js'),
+    registryAdmin = require('./routes/registryAdmin.js');
 
 
   app.get('/', index.index);
@@ -12,4 +13,7 @@ module.exports = function (app) {
 
   app.get('/login', login.index);
   app.post('/login', login.login);
+
+  app.get('/registryAdmin', registryAdmin.index);
+  app.post('/registryAdmin', registryAdmin.addItem);
 }
