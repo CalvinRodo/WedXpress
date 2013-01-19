@@ -3,18 +3,31 @@ block content
   form(action='/registryAdmin', method='post')
     formset
       legend Add Registry Item
-      label(for ='name') Title:
-      input(type='text', name='name', placeholder='Name').name
-      label(for = 'description') Description:
-      input(type='textarea', rows='3',  name='description', placeholder='Description').description
-      lable(for='price') Price:
+      label(for='name') Title:
+      input(type='text', name='name', placeholder='Title').name
+      label(for='description') Description:
+      textarea(rows='3',  name='description', placeholder='Description').description
+      label(for='price') Price:
       div(class='input-prepend input-append')
         span(class='add-on') $
         input(type='text', name='price', placeholder='Price').price
         span(class='add-on') .00
       button(type='submit') Add New Item
 
-  formset
-    legend Registry Items
-    - each item in items
-      p Name: #{item.name} Description: #{item.dsecription} Price: #{item.price}
+  table(class='table table-hover table-condensed')
+    thead
+      tr
+        th Name
+        th Description
+        th Price
+        th Actions
+    tbody
+      - each item in items
+        tr
+          th #{item.name}
+          th #{item.description}
+          th #{item.price}
+          th
+            .btn-group
+              a(href='/registryAdmin/edit/:#{item._id}', class='btn') Edit
+              a(href='/registryAdmin/delete/:#{item._id}', class='btn') Delete
