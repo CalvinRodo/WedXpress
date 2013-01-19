@@ -2,51 +2,53 @@ exports.constructor = function (spec, my) {
   var that = {};
   my = my || {};
 
+  my.registryDB = 'RegistryItems';
+  my.transactionDB = 'Transactions';
+
   my.ConnectToDb = function () {
     var mongoDb = require('mongoskin'),
       settings = require('../express_settings.js');
     return mongoDb.db(settings.Config.MongoDbConnection);
   };
 
-  that.GetRegistryItems = function (skipValue) {
+  that.GetRegistryItems = function (skipValue, callback) {
     var db = my.ConnectToDb();
     var items = {};
-    db.collection('RegistryItems')
+    db.collection(my.registryDB)
       .find({}, { limit: 30, skip: skipValue || 0 })
       .toArray(function (err, result) {
         db.close();
-        if (err) throw err;
-        items = result;
+        callback(err, result);
       });
-    return items;
   };
 
-  that.SaveRegistryItem = function (name, description, price) {
+  that.SaveRegistryItem = function (name, description, price, callback) {
     var db = my.ConnectToDb();
-    db.collection('RegistryItems')
+    db.collection(my.registryDB)
       .insert({
         name: name,
         description: description,
         price: price
       }, function (err, result) {
         db.close();
-        if (err) {
-          throw err;
-        } else {
-          console.log('Added');
-        }
+        callback(err, result);
       });
   };
 
-  that.SaveCustomer = function (customer) {
+  that.DeleteRegistryItem = function (id, callback) {
     var db = my.ConnectToDb();
-    db.collection('Transactions')
+    db.collection(my.registryDB)
+      .insert()
+  }
+
+  that.SaveCustomer = function (customer, callback) {
+    var db = my.ConnectToDb();
+    db.collection()
       .insert({
         customer: customer
       }, function (err, result) {
         db.close();
-        if (err) throw err;
-        if (result) console.log('Added!');
+        callback(err, result);
       });
   };
 

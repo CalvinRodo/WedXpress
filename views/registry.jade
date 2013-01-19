@@ -11,15 +11,15 @@ block content
       .item
         form(action="/charge", method="post")
           h3= item.name
-          p #{item.text}
+          p #{item.description}
           em $#{item.price}
           script(
-                  src="https://checkout.stripe.com/v2/checkout.js",
-                  class="stripe-button",
-                  data-key='#{publicKey}',
-                  data-amount='#{item.price}',
-                  data-name="Wedding Registry",
-                  data-description='#{item.name}'
-                )
+          src="https://checkout.stripe.com/v2/checkout.js",
+          class="stripe-button",
+          data-key='#{publicKey}',
+          data-amount='#{item.price}',
+          data-name="Wedding Registry",
+          data-description='#{item.name}'
+          )
 
 
