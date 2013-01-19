@@ -8,12 +8,18 @@ exports.constructor = function (spec, my) {
     return mongoDb.db(settings.Config.MongoDbConnection);
   };
 
-//  that.GetRegistryItems = function () {
-//    var db = my.ConnectToDb();
-//    db.collection('RegistryItems');
-//    //TODO: Finish getting registry items
-//    db.close();
-//  };
+  that.GetRegistryItems = function (skipValue) {
+    var db = my.ConnectToDb();
+    var items = {};
+    db.collection('RegistryItems')
+      .find({}, { limit: 30, skip: skipValue || 0 })
+      .toArray(function (err, result) {
+        db.close();
+        if (err) throw err;
+        items = result;
+      });
+    return items;
+  };
 
   that.SaveRegistryItem = function (name, description, price) {
     var db = my.ConnectToDb();
@@ -30,12 +36,9 @@ exports.constructor = function (spec, my) {
           console.log('Added');
         }
       });
-    db.close();
-  }
-  s;
+  };
 
   that.SaveCustomer = function (customer) {
-
     var db = my.ConnectToDb();
     db.collection('Transactions')
       .insert({
