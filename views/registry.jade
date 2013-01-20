@@ -1,25 +1,22 @@
-//
-   Created with IntelliJ IDEA.
-   User: calvin
-   Date: 1/13/13
-   Time: 11:55 AM
-   To change this template use File | Settings | File Templates.
 extends layout
 block content
-  #RegistryContents
+  ul#RegistryContents.thumbnails
     - each item in items
-      .item
-        form(action="/charge", method="post")
-          h3= item.name
-          p #{item.description}
-          em $#{item.price}
-          script(
-          src="https://checkout.stripe.com/v2/checkout.js",
-          class="stripe-button",
-          data-key='#{publicKey}',
-          data-amount='#{item.price}',
-          data-name="Wedding Registry",
-          data-description='#{item.name}'
-          )
+      li.span3
+        .thumbnail
+          form(action="/charge", method="post").form-horizontal
+            fieldset
+              legend #{item.name}
+              p #{item.description}
+              em $#{item.price}
+              .control
+                script(
+                src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key='#{publicKey}',
+                data-amount='#{item.price}',
+                data-name="Wedding Registry",
+                data-description='#{item.name}'
+                )
 
 

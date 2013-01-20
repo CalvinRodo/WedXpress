@@ -8,13 +8,14 @@
 
 exports.index = function (req, res) {
   var settings = require('../express_settings'),
-    db = require('../DataLayer/DataLayer.js').constructor(),
-    items = db.GetRegistryItems(0, function (err, results) {
-      if (err) throw(err); //TODO: Handle errors
-      res.render("registry", {
-        publicKey: settings.Config.StripePublicKey,
-        title: "Wedding Registry",
-        items: results
-      });
+    db = require('../DataLayer/DataLayer.js').constructor();
+  db.GetRegistryItems(0, function (err, results) {
+    if (err) throw(err); //TODO: Handle errors
+    res.render("registry", {
+      publicKey: settings.Config.StripePublicKey,
+      title: "Wedding Registry",
+      items: results,
+      scrollspy: false
     });
+  });
 };

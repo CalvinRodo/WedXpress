@@ -7,8 +7,8 @@
  */
 
 exports.index = function (req, res) {
-  res.render('login', {title: 'login'});
-}
+  res.render('login', {title: 'login', scrollspy: false});
+};
 
 exports.login = function (req, res) {
   var uname = req.body.username,
@@ -22,4 +22,4 @@ exports.login = function (req, res) {
     return;
   }
   res.redirect('../');
-}
+};
