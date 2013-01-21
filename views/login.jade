@@ -1,7 +1,9 @@
 extends layout
 
 block content
-  form(action='/login', method='post', class='form-inline')
-    input(type='text', name='username', placeholder='Username').username
-    input(type='text', name='password', placeholder='Password').password
-    button(type='submit', class='btn') Login
+  .container
+    form(action='/login', method='post').form-signin
+      h2.form-signin-heading Administrative Login
+      input(type='text', name='username', placeholder='Username')
+      input(type='text', name='password', placeholder='Password')
+      button(type='submit').btn.btn-large.btn-primary Login

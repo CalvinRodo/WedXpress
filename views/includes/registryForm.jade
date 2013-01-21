@@ -1,0 +1,21 @@
+form(action='/registryAdmin', method='post').form-horizontal
+  formset
+    legend Add Registry Item
+    .control-group
+      label(for='name').control-label Title:
+      .controls
+        input(type='text', name='name', placeholder='Title').name
+    .control-group
+      label(for='description').control-label Description:
+      .controls
+        textarea(rows='3',  name='description', placeholder='Description').description
+    .control-group
+      label(for='price').control-label Price:
+      .controls
+        div.input-prepend.input-append
+          span(class='add-on') $
+          input(type='text', name='price', placeholder='Price').price
+          span(class='add-on') .00
+    .control-group
+      .controls
+        button(type='submit').btn.addnew Add New Item

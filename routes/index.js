@@ -3,5 +3,20 @@
  */
 
 exports.index = function (req, res) {
-  res.render('index', { title: "Calvin and Amy's Wedding", scrollspy: true });
+  res.render('index', {
+    title: "Calvin and Amy's Wedding",
+    scrollspy: true,
+    songs: [
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'},
+      { name: 'Thunderstruck', band: 'AC/DC'}
+    ]
+  });
 };
