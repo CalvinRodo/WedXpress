@@ -21,9 +21,9 @@ block content
             a(href='#Registry') Wedding Registry
           li
             a(href='#Songs') Songs
-      .span9#mainContent
+      .span9.mainContent
         .container-fluid
-          #AboutUs
+          section#AboutUs
             h2 About Us
             .row-fluid
               img(src='http://placekitten.com/800/200')
@@ -57,7 +57,7 @@ block content
                 | feugiat mi et ante bibendum nec adipiscing elit commodo. Sed eget ipsum mauris,
                 | vitae rhoncus lectus. Mauris laoreet justo in lectus cursus in euismod nisl semper.
                 | Phasellus ultricies pretium turpis a pretium. Pellentesque at neque odio.
-          #WeddingParty
+          section#WeddingParty
             h2 Wedding Party
             .row-fluid
               .span6#bridesmaids
@@ -115,7 +115,7 @@ block content
                     | vitae rhoncus lectus. Mauris laoreet justo in lectus cursus in euismod nisl semper.
                     | Phasellus ultricies pretium turpis a pretium. Pellentesque at neque odio.
                 #Daniel
-                  h3 Daniel Vankeulen</h3>
+                  h3 Daniel Vankeulen
                   img(src='http://placekitten.com/400/100')
                   p
                     | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -140,7 +140,7 @@ block content
                     | feugiat mi et ante bibendum nec adipiscing elit commodo. Sed eget ipsum mauris,
                     | vitae rhoncus lectus. Mauris laoreet justo in lectus cursus in euismod nisl semper.
                     | Phasellus ultricies pretium turpis a pretium. Pellentesque at neque odio.
-          #Venue
+          section#Venue
             h2 The Venue
             .row-fluid
               #Directions.span6
@@ -153,10 +153,10 @@ block content
                 | <iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=36+Treasure+Drive,+Western+Shore,+NS,+Canada&amp;aq=0&amp;oq=36+Treasure&amp;sll=44.529556,-64.307957&amp;sspn=0.057884,0.122223&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=36+Treasure+Dr,+Western+Shore,+Lunenburg+County,+Nova+Scotia+B0J+1K0,+Canada&amp;ll=44.521121,-64.308289&amp;spn=0.015758,0.03695&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=36+Treasure+Drive,+Western+Shore,+NS,+Canada&amp;aq=0&amp;oq=36+Treasure&amp;sll=44.529556,-64.307957&amp;sspn=0.057884,0.122223&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=36+Treasure+Dr,+Western+Shore,+Lunenburg+County,+Nova+Scotia+B0J+1K0,+Canada&amp;ll=44.521121,-64.308289&amp;spn=0.015758,0.03695&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
             p You can find directions to the Atlantica Oak Island on their
               a(href='http://www.atlanticaoakisland.com/en/utility/locationanddirections.aspx')  website
-          #RSVP
+          section#RSVP
             h2 RSVP
-            include includes/rsvpForm
-          #Registry
+              include includes/rsvpForm
+          section#Registry
             h2 Wedding Registry
             .row-fluid
               p
@@ -169,7 +169,7 @@ block content
                 | feugiat mi et ante bibendum nec adipiscing elit commodo. Sed eget ipsum mauris,
                 | vitae rhoncus lectus. Mauris laoreet justo in lectus cursus in euismod nisl semper.
                 | Phasellus ultricies pretium turpis a pretium. Pellentesque at neque odio.
-          #Songs
+          section#Songs
             h2 Wedding Songs
             ul
               - for song in songs

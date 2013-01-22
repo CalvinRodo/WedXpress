@@ -1,0 +1,14 @@
+form(action='/guest', method='post').form-horizontal
+  formset
+    legend Add Guest
+      .contol-group
+        label(for='name').control-label Name:
+        .controls
+          input(type='text').name
+      .control-group
+        label(for='guests').control-label Number of Guests:
+        .controls
+          input(type='number', min=0, max=10).guests
+      .control-group
+        .controls
+          button(type='submit').btn Add Guest

@@ -2,15 +2,19 @@ form(action='/rsvp', method='post').form-horizontal
   .control-group
     label(for='name').control-label Name:
     .controls
+      input(type='text').name
+      select.meal
+        option Meal 1
+        option Meal 2
   .control-group
-    label(for='name').control-label Guests Name
+    label(for='meal').control-label Guests Name
     .controls
-      input(type='text')
-      select
+      input(type='text').name
+      select.meal
         option Meal 1
         option Meal 2
         option Meal 3
   .control-group
     label(for='song').control-label Song
     .controls
-      input(type='text')
+      input(type='text').song
