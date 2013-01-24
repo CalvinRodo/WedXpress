@@ -4,6 +4,7 @@ exports.constructor = function (spec, my) {
 
   my.registryDB = 'RegistryItems';
   my.transactionDB = 'Transactions';
+  my.guestDB = 'Guests';
 
   my.ConnectToDb = function () {
     var mongoDb = require('mongoskin'),
@@ -11,6 +12,23 @@ exports.constructor = function (spec, my) {
     return mongoDb.db(settings.Config.MongoDbConnection);
   };
 
+  that.GetGuestList = function (callback) {
+    callback(undefined, { name: 'Test Guest', invites: 3 });
+  }
+
+
+  that.SaveGuestToList = function (name, numberOfInvites, callback) {
+    var db = my.ConnectToDb();
+    db.collection(my.guestDB)
+      .insert({
+        name: name,
+        invites: numberOfInvites
+      }, function (err, result) {
+        db.close();
+        callback(err, result);
+      })
+
+  }
   that.GetRegistryItems = function (skipValue, callback) {
     var db = my.ConnectToDb();
     var items = {};

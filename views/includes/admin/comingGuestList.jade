@@ -1,0 +1,16 @@
+table.table.table-hover.table-condensed.well
+  thead
+    tr
+      th Name
+      th Number of Invites
+      th Actions
+  tbody
+    - each guest in guests
+      tr
+        th #{guest.name}
+        th #{guest.description}
+        th
+          .btn-group
+            a(href='/registryAdmin/editGuest/:#{item._id}').btn Edit
+            a(href='/registryAdmin/deleteGuest/:#{item._id}').btn Delete
+  k

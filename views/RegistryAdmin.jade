@@ -3,9 +3,20 @@ block content
   .container-fluid.mainContent
     section
       h1 Registry Admin
-      include includes/admin/registryForm
-      include includes/admin/registryAdminList
+      h2 Add Registry Item
+      .row-fluid
+        include includes/admin/registryForm
+      h2 Registry Items
+      .row-fluid
+        include includes/admin/registryAdminList
     section
       h1 Guest Admin
-      include includes/admin/guestForm
-//include guestAdminList
+      h2 Add Guest
+      .row-fluid
+        include includes/admin/guestForm
+      h2 Guest List
+      .row-fluid
+        include includes/admin/guestList
+      h2 RSVP Response
+      .row-fluid
+//include includes/admin/rsvpList
