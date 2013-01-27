@@ -8,6 +8,12 @@ module.exports = function (app) {
 
   app.get('/', index.index);
 
+
+  app.get('/partials/:name', function (req, res) {
+    var name = req.param.name;
+    res.render('/partials/' + name);
+  });
+
   app.get('/registry', registry.index);
   app.post('/charge', charge.pay);
 

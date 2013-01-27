@@ -3,15 +3,23 @@ block content
   .container-fluid.mainContent
     section
       h1 Registry Admin
-      include includes/admin/registryForm
-      #regAdminList
+      h2 Add Registry Item
+      .row-fluid
+        include includes/admin/registryForm
+      h2 Registry Items
+      .row-fluid
+       #regAdminList
     section
-      h1 Invite Admin
-      include includes/admin/guestForm
-      #inviteList
-    section
-      h1 Guests
-      #guestList
+      h1 Guest Admin
+      h2 Add Guest
+      .row-fluid
+        include includes/admin/guestForm
+      h2 Guest List
+      .row-fluid
+        #guestList
+      h2 RSVP Response
+      .row-fluid
+        #inviteList
 
 block scripts
   script(src='/javascripts/admin.js')
