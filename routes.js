@@ -15,5 +15,17 @@ module.exports = function (app) {
   app.post('/login', login.login);
 
   app.get('/registryAdmin', registryAdmin.index);
-  app.post('/registryAdmin', registryAdmin.addItem);
+
+  app.get('/regList', registryAdmin.GetRegistryList);
+  app.post('/registry', registryAdmin.AddRegistryItem);
+  app.get('/registry/delete/:id', registryAdmin.DeleteRegistryItem);
+  app.get('/registry/edit/:id', registryAdmin.EditRegistryItem);
+
+  app.get('/guestList', registryAdmin.GetGuestList);
+
+
+  app.post('/invite', registryAdmin.AddInvite);
+  app.get('/inviteList', registryAdmin.GetInviteList);
+  app.get('/invite/delete/:id', registryAdmin.DeleteInvite);
+  app.get('/invite/edit/:id', registryAdmin.EditInvite);
 }

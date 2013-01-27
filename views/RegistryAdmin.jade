@@ -4,8 +4,14 @@ block content
     section
       h1 Registry Admin
       include includes/admin/registryForm
-      include includes/admin/registryAdminList
+      #regAdminList
     section
-      h1 Guest Admin
+      h1 Invite Admin
       include includes/admin/guestForm
-//include guestAdminList
+      #inviteList
+    section
+      h1 Guests
+      #guestList
+
+block scripts
+  script(src='/javascripts/admin.js')
