@@ -1,3 +1,66 @@
+function inviteDB() {
+  var DB = require('./db.js');
+  var that = Object.create(DB);
+
+  return that;
+}
+
+inviteDB.prototype.GetInviteList = function (skipValue, callback) {
+  var db = my.ConnectToDb();
+  db.collection(my.guestDB)
+    .find({}, {limit: 30, skip: skipValue || 0 })
+    .toArray(function (err, result) {
+      db.close();
+      callback(err, result);
+    });
+}
+
+inviteDB.DeleteInvite = function (id, callback) {
+  var db = my.ConnectToDb();
+  db.collection(my.guestDB)
+    .removeById(id, function (err) {
+      db.close();
+      callback(err);
+    });
+}
+
+exports.inviteDB = inviteDB;
+
+
+function RegistryDB() {
+
+}
+
+
+RegistryDB.prototype.GetRegistryItems = function (skipValue, callback) {
+  var db = my.ConnectToDb();
+  db.collection(my.registryDB)
+    .find({}, { limit: 30, skip: skipValue || 0 })
+    .toArray(function (err, result) {
+      db.close();
+      callback(err, result);
+    });
+};
+
+RegistryDB.prototype.SaveRegistryItem = function (item, callback) {
+  var db = my.ConnectToDb();
+  db.collection(my.registryDB)
+    .insert(item, function (err, result) {
+      db.close();
+      callback(err, result);
+    });
+};
+
+RegistryDB.prototype.DeleteRegistryItem = function (id, callback) {
+  var db = my.ConnectToDb();
+  db.collection(my.registryDB)
+    .removeById(id, function (err) {
+      db.close();
+      callback(err);
+    });
+};
+exports.RegistryDB = RegistryDB;
+
 exports.constructor = function (spec, my) {
   var that = {};
   my = my || {};
@@ -12,69 +75,14 @@ exports.constructor = function (spec, my) {
     return mongoDb.db(settings.Config.MongoDbConnection);
   };
 
-  that.AddGuest = function (name, invites, callback) {
+  that.AddGuest = function (invite, callback) {
     var db = my.ConnectToDb();
     db.collection(my.guestDB)
-      .insert({
-        name: name,
-        invites: invites
-      }, function (err, results) {
+      .insert(invite, function (err, results) {
         db.close();
         callback(err, results);
       });
   }
-
-  that.GetInviteList = function (skipValue, callback) {
-    var db = my.ConnectToDb();
-    db.collection(my.guestDB)
-      .find({}, {limit: 30, skip: skipValue || 0 })
-      .toArray(function (err, result) {
-        db.close();
-        callback(err, result);
-      })
-
-  }
-
-  that.DeleteInvite = function (id, callback) {
-    var db = my.ConnectToDb();
-    db.collection(my.guestDB)
-      .removeById(id, function (err) {
-        db.close();
-        callback(err);
-      });
-  };
-
-  that.GetRegistryItems = function (skipValue, callback) {
-    var db = my.ConnectToDb();
-    db.collection(my.registryDB)
-      .find({}, { limit: 30, skip: skipValue || 0 })
-      .toArray(function (err, result) {
-        db.close();
-        callback(err, result);
-      });
-  };
-
-  that.SaveRegistryItem = function (name, description, price, callback) {
-    var db = my.ConnectToDb();
-    db.collection(my.registryDB)
-      .insert({
-        name: name,
-        description: description,
-        price: price
-      }, function (err, result) {
-        db.close();
-        callback(err, result);
-      });
-  };
-
-  that.DeleteRegistryItem = function (id, callback) {
-    var db = my.ConnectToDb();
-    db.collection(my.registryDB)
-      .removeById(id, function (err) {
-        db.close();
-        callback(err);
-      });
-  };
 
   that.SaveCustomer = function (customer, callback) {
     var db = my.ConnectToDb();

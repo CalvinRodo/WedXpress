@@ -13,16 +13,16 @@ exports.index = function (req, res) {
 exports.SongList = function (req, res) {
   res.render('includes/index/songs',
     { songs: [
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'},
-      { name: 'Thunderstruck', band: 'AC/DC'}
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'},
+      { name: 'Thunderstruck'}
     ]
     });
 };

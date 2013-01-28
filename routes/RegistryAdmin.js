@@ -17,18 +17,6 @@ exports.index = function (req, res) {
   });
 };
 
-exports.GetInviteList = function (req, res) {
-  CheckIfLoggedIn(req, res);
-
-  var db = LoadDB();
-  db.GetInviteList(0, function (err, results) {
-    if (err) throw(err);
-    res.render('includes/admin/inviteList.jade', {
-      inviteList: results
-    })
-  });
-};
-
 exports.GetGuestList = function (req, res) {
   CheckIfLoggedIn(req, res);
 
@@ -40,21 +28,39 @@ exports.GetGuestList = function (req, res) {
 
 };
 
-exports.GetRegistryList = function (req, res) {
-  CheckIfLoggedIn(req, req);
+//Invite Functions
+exports.GetInviteList = function (req, res) {
+  CheckIfLoggedIn(req, res);
+
   var db = LoadDB();
-  db.GetRegistryItems(0, function (err, results) {
+
+  db.GetInviteList(0, function (err, results) {
     if (err) throw(err);
-    res.render('includes/admin/registryAdminList', {
-      items: results
+
+    var settings = require('../express_settings.js'),
+      HashID = require('hashids'),
+      hashID = new HashID(settings.Config.HashIDSalt);
+
+    results.map(function (obj) {
+      obj.hashId = hashID.encrypt(obj._id);
     });
+
+    res.render('includes/admin/inviteList', {
+      inviteList: results
+    });
+
   });
+
 };
 
 exports.AddInvite = function (req, res) {
   CheckIfLoggedIn(req, res);
+
   var db = LoadDB();
-  db.AddGuest(req.body.name, req.body.guests, function (err, results) {
+  db.AddGuest({
+    name: req,
+    invites: req.body.guests
+  }, function (err, results) {
     if (err) throw(err);
     res.redirect('/registryAdmin');
   });
@@ -74,14 +80,32 @@ exports.EditInvite = function (req, res) {
 
 }
 
+//Registry Functions
+exports.GetRegistryList = function (req, res) {
+  CheckIfLoggedIn(req, req);
+  var db = LoadDB();
+  db.GetRegistryItems(0, function (err, results) {
+    if (err) throw(err);
+    res.render('includes/admin/registryAdminList', {
+      items: results
+    });
+  });
+};
+
 exports.AddRegistryItem = function (req, res) {
   CheckIfLoggedIn(req, res);
 
   var db = LoadDB();
-  db.SaveRegistryItem(req.body.name, req.body.description, req.body.price, function (err, result) {
+  db.SaveRegistryItem({
+    name: req.body.name,
+    description: req.body.description,
+    price: req.body.price
+  }, function (err, result) {
+
     if (err) throw err;
-    console.log(result);
+
     res.redirect('/registryAdmin');
+
   });
 };
 
