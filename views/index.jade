@@ -1,5 +1,8 @@
 extends layout
 
+block scripts
+  script(src='/javascripts/index.js')
+
 block content
   header.jumbotron.subhead
     .container
@@ -171,6 +174,6 @@ block content
                 | Phasellus ultricies pretium turpis a pretium. Pellentesque at neque odio.
           section#Songs
             h2 Wedding Songs
-            ul
-              - for song in songs
-                include includes/songs
+            #songList
+
+

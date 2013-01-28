@@ -1,4 +1,8 @@
 extends layout
+block scripts
+  script(src='/javascripts/admin.js')
+
+
 block content
   .container-fluid.mainContent
     section
@@ -8,7 +12,7 @@ block content
         include includes/admin/registryForm
       h2 Registry Items
       .row-fluid
-       #regAdminList
+        #regAdminList
     section
       h1 Guest Admin
       h2 Add Guest
@@ -21,5 +25,3 @@ block content
       .row-fluid
         #inviteList
 
-block scripts
-  script(src='/javascripts/admin.js')
