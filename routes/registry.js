@@ -8,7 +8,8 @@
 
 exports.index = function (req, res) {
   var settings = require('../express_settings'),
-    db = require('../DataLayer/DataLayer.js').constructor();
+    CustomerDB = require('../DataLayer/CustomerDB.js').CustomerDB,
+    db = new CustomerDB();
   db.GetRegistryItems(0, function (err, results) {
     if (err) throw(err); //TODO: Handle errors
     res.render("registry", {
