@@ -12,6 +12,7 @@
     "mongodb": "*",
     "mongoskin": "*",
     "stripe": "*",
-    "hashids": "*"
+    "hashids": "*",
+    "async": "*"
   }
 }

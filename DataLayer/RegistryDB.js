@@ -6,7 +6,6 @@ var db = require('./db.js').DB,
 
 util.inherits(RegistryDB, db);
 
-
 RegistryDB.prototype.GetRegistryItems = function (skipValue, callback) {
   var db = my.ConnectToDb();
   db.collection(my.registryDB)
@@ -34,3 +33,5 @@ RegistryDB.prototype.DeleteRegistryItem = function (id, callback) {
       callback(err);
     });
 };
+
+module.exports.RegistryDB = RegistryDB;

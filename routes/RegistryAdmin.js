@@ -6,10 +6,28 @@ function CheckIfLoggedIn(req, res) {
 
 exports.index = function (req, res) {
   CheckIfLoggedIn(req, res);
+  var async = require('async'),
+    RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
+    InviteDB = require('../DataLayer/InviteDB.js').InviteDB,
+    regDB = new RegistryDB(),
+    invDB = new InviteDB();
 
-  res.render('registryAdmin', {
-    title: 'Registry Administration',
-    scrollspy: false
+  console.log('foo');
+  async.parallel([
+    function (callback) {
+      regDB.getRegistryItems(0, callback);
+    },
+    function (callback) {
+      invDB.getInviteList(0, callback)
+    }
+  ], function (err, results) {
+    if (err) throw(err);
+    res.render('registryAdmin', {
+      title: 'Registry Administration',
+      scrollspy: false,
+      inviteList: results[0],
+      items: results[1]
+    });
   });
 };
 

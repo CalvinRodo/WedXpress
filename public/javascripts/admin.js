@@ -15,8 +15,8 @@ function loadInviteList() {
       console.log(data);
     });
 }
-$(function () {
-  loadRegistryList();
-  loadInviteList();
-});
+//$(function () {
+//  loadRegistryList();
+//  loadInviteList();
+//});
 
