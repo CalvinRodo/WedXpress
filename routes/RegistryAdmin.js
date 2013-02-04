@@ -7,12 +7,12 @@ function CheckIfLoggedIn(req, res) {
 exports.index = function (req, res) {
   CheckIfLoggedIn(req, res);
   var async = require('async'),
-    RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
-    InviteDB = require('../DataLayer/InviteDB.js').InviteDB,
+    RegistryDB = require('../DataLayer/RegistryDB.js'),
+    InviteDB = require('../DataLayer/InviteDB.js'),
     regDB = new RegistryDB(),
     invDB = new InviteDB();
 
-  console.log('foo');
+  console.log(Object.getPrototypeOf(regDB));
   async.parallel([
     function (callback) {
       regDB.getRegistryItems(0, callback);

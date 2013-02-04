@@ -1,4 +1,4 @@
-var db = require('./db.js').DB,
+var db = require('./db.js'),
   util = require('util'),
   RegistryDB = function () {
     this.registryDB = 'RegistryItems';
@@ -34,4 +34,4 @@ RegistryDB.prototype.DeleteRegistryItem = function (id, callback) {
     });
 };
 
-module.exports.RegistryDB = RegistryDB;
+module.exports = RegistryDB;

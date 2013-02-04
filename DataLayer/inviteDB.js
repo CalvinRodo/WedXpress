@@ -1,4 +1,4 @@
-var db = require('./db.js').DB,
+var db = require('./db.js'),
   util = require('util'),
   InviteDB = function () {
     this.guestDB = 'Guests';
@@ -34,5 +34,5 @@ InviteDB.prototype.DeleteInvite = function (id, callback) {
     });
 };
 
-module.exports.InviteDB = InviteDB;
+module.exports = InviteDB;
 

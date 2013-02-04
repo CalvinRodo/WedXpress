@@ -9,4 +9,4 @@ DB.prototype = {
   }
 }
 
-exports.DB = DB;
+module.exports = DB;
