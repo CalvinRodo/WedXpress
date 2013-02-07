@@ -1,11 +1,11 @@
 var db = require('./db.js'),
   util = require('util'),
   InviteDB = function () {
-    this.guestDB = 'Guests';
   };
 
 util.inherits(InviteDB, db);
 
+InviteDB.prototype.guestDB = 'Guests';
 InviteDB.prototype.AddInvite = function (invite, callback) {
   var db = this.ConnectToDb();
   db.collection(this.guestDB)

@@ -15,10 +15,10 @@ exports.index = function (req, res) {
   console.log(Object.getPrototypeOf(regDB));
   async.parallel([
     function (callback) {
-      regDB.getRegistryItems(0, callback);
+      regDB.GetRegistryItems(0, callback);
     },
     function (callback) {
-      invDB.getInviteList(0, callback)
+      invDB.GetInviteList(0, callback)
     }
   ], function (err, results) {
     if (err) throw(err);
