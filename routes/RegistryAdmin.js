@@ -12,13 +12,12 @@ exports.index = function (req, res) {
     regDB = new RegistryDB(),
     invDB = new InviteDB();
 
-  console.log(Object.getPrototypeOf(regDB));
   async.parallel([
     function (callback) {
-      regDB.GetRegistryItems(0, callback);
+      regDB.GetItems(0, callback);
     },
     function (callback) {
-      invDB.GetInviteList(0, callback)
+      invDB.GetItems(0, callback)
     }
   ], function (err, results) {
     if (err) throw(err);
@@ -38,7 +37,7 @@ exports.GetGuestList = function (req, res) {
   var InviteDB = require('../DataLayer/InviteDB.js').InviteDB,
     db = new InviteDB();
 
-  db.GetGuestList(function (err, results) {
+  db.GetItems(function (err, results) {
     if (err) throw(err);
     res.render('includes/admin/guestList.jade');
   });
@@ -48,10 +47,10 @@ exports.GetGuestList = function (req, res) {
 exports.GetInviteList = function (req, res) {
   CheckIfLoggedIn(req, res);
 
-  var Invite = require('../DataLayer/InviteDB.js').InviteDB,
+  var Invite = require('../DataLayer/InviteDB.js'),
     db = new Invite();
 
-  db.GetInviteList(0, function (err, results) {
+  db.GetItems(0, function (err, results) {
     if (err) throw(err);
 
     var settings = require('../express_settings.js'),
@@ -72,10 +71,10 @@ exports.GetInviteList = function (req, res) {
 
 exports.AddInvite = function (req, res) {
   CheckIfLoggedIn(req, res);
-  var InviteDB = require('../DataLayer/InviteDB.js').InviteDB,
+  var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 
-  db.AddInvite({
+  db.SaveItem({
     name: req,
     invites: req.body.guests
   }, function (err, results) {
@@ -87,10 +86,10 @@ exports.AddInvite = function (req, res) {
 exports.DeleteInvite = function (req, res) {
   CheckIfLoggedIn(req, res);
 
-  var InviteDB = require('../DataLayer/InviteDB.js').InviteDB,
+  var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 
-  db.DeleteInvite(req.params.id, function (err, results) {
+  db.DeleteItem(req.params.id, function (err, results) {
     if (err) throw err;
     res.redirect('/registryAdmin');
   });
@@ -98,7 +97,7 @@ exports.DeleteInvite = function (req, res) {
 
 exports.EditInvite = function (req, res) {
 
-  var InviteDB = require('../DataLayer/InviteDB.js').InviteDB,
+  var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 }
 
@@ -106,10 +105,10 @@ exports.EditInvite = function (req, res) {
 exports.GetRegistryList = function (req, res) {
   CheckIfLoggedIn(req, req);
 
-  var RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
+  var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
-  db.GetRegistryItems(0, function (err, results) {
+  db.GetItems(0, function (err, results) {
     if (err) throw(err);
     res.render('includes/admin/registryAdminList', {
       items: results
@@ -120,17 +119,15 @@ exports.GetRegistryList = function (req, res) {
 exports.AddRegistryItem = function (req, res) {
   CheckIfLoggedIn(req, res);
 
-  var RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
+  var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
-  db.SaveRegistryItem({
+  db.SaveItem({
     name: req.body.name,
     description: req.body.description,
     price: req.body.price
   }, function (err, result) {
-
     if (err) throw err;
-
     res.redirect('/registryAdmin');
 
   });
@@ -141,7 +138,8 @@ exports.DeleteRegistryItem = function (req, res) {
 
   var RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
     db = new RegistryDB();
-  db.DeleteRegistryItem(req.params.id, function (err, result) {
+
+  db.DeleteItem(req.params.id, function (err, result) {
     if (err) throw err;
     res.redirect('/registryAdmin');
   });
@@ -152,4 +150,6 @@ exports.EditRegistryItem = function (req, res) {
 
   var RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
     db = new RegistryDB();
+
+
 }

@@ -1,38 +1,13 @@
-var db = require('./db.js'),
+var DB = require('./DB.js'),
   util = require('util'),
   InviteDB = function () {
   };
 
-util.inherits(InviteDB, db);
+util.inherits(InviteDB, DB);
 
-InviteDB.prototype.guestDB = 'Guests';
-InviteDB.prototype.AddInvite = function (invite, callback) {
-  var db = this.ConnectToDb();
-  db.collection(this.guestDB)
-    .insert(invite, function (err, results) {
-      db.close();
-      callback(err, results);
-    });
-};
+InviteDB.prototype.DBName = 'Guests';
 
-InviteDB.prototype.GetInviteList = function (skipValue, callback) {
-  var db = this.ConnectToDb();
-  db.collection(this.guestDB)
-    .find({}, {limit: 30, skip: skipValue || 0 })
-    .toArray(function (err, result) {
-      db.close();
-      callback(err, result);
-    });
-};
-
-InviteDB.prototype.DeleteInvite = function (id, callback) {
-  var db = this.ConnectToDb();
-  db.collection(this.guestDB)
-    .removeById(id, function (err) {
-      db.close();
-      callback(err);
-    });
-};
+InviteDB.super_(InviteDB.prototype.DBName);
 
 module.exports = InviteDB;
 
