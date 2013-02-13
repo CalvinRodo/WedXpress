@@ -24,8 +24,8 @@ exports.index = function (req, res) {
     res.render('registryAdmin', {
       title: 'Registry Administration',
       scrollspy: false,
-      inviteList: results[0],
-      items: results[1]
+      inviteList: results[1],
+      items: results[0]
     });
   });
 };
@@ -101,6 +101,19 @@ exports.EditInvite = function (req, res) {
     db = new InviteDB();
 }
 
+exports.GetInvite = function (req, res) {
+  CheckIfLoggedIn(req, res);
+
+  var InviteDB = require('../DataLayer/InviteDB.js'),
+    db = new InviteDB();
+
+  db.GetItem(req.params.id, function (err, result) {
+    if (err) throw err;
+
+    res.send(200, result);
+  });
+}
+
 //Registry Functions
 exports.GetRegistryList = function (req, res) {
   CheckIfLoggedIn(req, req);
@@ -148,8 +161,23 @@ exports.DeleteRegistryItem = function (req, res) {
 exports.EditRegistryItem = function (req, res) {
   CheckIfLoggedIn(req, res);
 
-  var RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
+  var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
 
 }
+
+exports.GetRegistryItem = function (req, res) {
+  CheckIfLoggedIn(req, res);
+
+  var RegistryDB = require('../DataLayer/RegistryDB.js'),
+    db = new RegistryDB();
+
+  db.GetItem(req.params.id, function (err, result) {
+    if (err) throw err;
+
+    res.send(200, result);
+
+  });
+
+};

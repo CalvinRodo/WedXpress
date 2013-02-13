@@ -39,7 +39,16 @@ DB.prototype = {
         db.close();
         callback(err, result);
       });
+  },
+  GetItem: function (id, callback) {
+    var db = this.ConnectToDB();
+    db.collection(this.DBName)
+      .findById(id, function (err, result) {
+        db.close();
+        callback(err, result);
+      });
   }
 }
+
 
 module.exports = DB;

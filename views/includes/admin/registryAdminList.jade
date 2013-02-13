@@ -13,5 +13,5 @@ table.table.table-hover.table-condensed
         th #{item.price}
         th
           .btn-group
-            a(href='/registry/edit/#{item._id}').btn Edit
+            a(href='about:blank', data-id='#{item._id}').btn#editRegItem Edit
             a(href='/registry/delete/#{item._id}').btn Delete

@@ -19,14 +19,17 @@ module.exports = function (app) {
 
   app.get('/regList', registryAdmin.GetRegistryList);
   app.post('/registry', registryAdmin.AddRegistryItem);
+
   app.get('/registry/delete/:id', registryAdmin.DeleteRegistryItem);
-  app.get('/registry/edit/:id', registryAdmin.EditRegistryItem);
+  app.get('/registry/edit/:id', registryAdmin.GetRegistryItem);
+  app.post('/registry/edit/:id', registryAdmin.EditRegistryItem);
 
   app.get('/guestList', registryAdmin.GetGuestList);
-
 
   app.post('/invite', registryAdmin.AddInvite);
   app.get('/inviteList', registryAdmin.GetInviteList);
   app.get('/invite/delete/:id', registryAdmin.DeleteInvite);
-  app.get('/invite/edit/:id', registryAdmin.EditInvite);
+  app.post('/invite/edit/:id', registryAdmin.EditInvite);
+  app.get('/invite/edit/:id', registryAdmin.GetInvite);
+
 }
