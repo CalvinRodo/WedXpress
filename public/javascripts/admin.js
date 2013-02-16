@@ -22,9 +22,8 @@ function loadRegistryItemForm(data, id) {
   $('#registryItemForm input[name=price]').val(data.price);
   $('#registryItemForm button[name=edit]')
     .attr('disabled', false)
-    .attr('formaction', '/registryAdmin/edit/' + id);
-  $('#registryItemForm button[name=submit]')
-    .attr('disabled', true);
+    .attr('formaction', '/registry/edit/' + id);
+  $('#addNew').attr('disabled', true);
 }
 
 function editRegItem() {
@@ -32,6 +31,7 @@ function editRegItem() {
   $.get('./registry/edit/' + id)
     .done(function (data) {
       loadRegistryItemForm(data, id);
+
     }).fail(function (data) {
       console.log(data);
     });
@@ -39,6 +39,9 @@ function editRegItem() {
 }
 
 $(function () {
-  $('#editRegItem').on("click", editRegItem)
+  $('#editRegItem').on("click", editRegItem);
+  $('#editRegistryItem').on('click', function () {
+    $('#addNew').attr('disabled', false);
+  });
 });
 
