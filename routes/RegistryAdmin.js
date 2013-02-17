@@ -12,12 +12,12 @@ function CreateRegistryItemFromRequest(req) {
   };
 }
 
-function DefaultRedirect(err, result) {
+function DefaultRedirect(err, res) {
   if (err) throw err;
   res.redirect('/registryAdmin');
 }
 
-function SendResultAsJson(err, result) {
+function SendResultAsJson(err, result, res) {
   if (err) throw err;
   res.send(200, result);
 
@@ -97,8 +97,7 @@ exports.AddInvite = function (req, res) {
     name: req,
     invites: req.body.guests
   }, function (err, results) {
-    if (err) throw(err);
-    res.redirect('/registryAdmin');
+    DefaultRedirect(err, res)
   });
 };
 
@@ -108,7 +107,9 @@ exports.DeleteInvite = function (req, res) {
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 
-  db.DeleteItem(req.params.id, DefaultRedirect);
+  db.DeleteItem(req.params.id, function (err, result) {
+    DefaultRedirect(err, res);
+  });
 }
 
 exports.EditInvite = function (req, res) {
@@ -123,7 +124,9 @@ exports.GetInvite = function (req, res) {
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 
-  db.GetItem(req.params.id, SendResultAsJson);
+  db.GetItem(req.params.id, function (err, result) {
+    SendResultAsJson(err, result, res);
+  });
 }
 
 //Registry Functions
@@ -147,7 +150,9 @@ exports.AddRegistryItem = function (req, res) {
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
-  db.SaveItem(CreateRegistryItemFromRequest(req), DefaultRedirect);
+  db.SaveItem(CreateRegistryItemFromRequest(req), function (err, result) {
+    DefaultRedirect(err, res);
+  });
 };
 
 exports.DeleteRegistryItem = function (req, res) {
@@ -156,7 +161,9 @@ exports.DeleteRegistryItem = function (req, res) {
   var RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
     db = new RegistryDB();
 
-  db.DeleteItem(req.params.id, DefaultRedirect);
+  db.DeleteItem(req.params.id, function (err, result) {
+    DefaultRedirect(err, res);
+  });
 }
 
 exports.EditRegistryItem = function (req, res) {
@@ -164,7 +171,9 @@ exports.EditRegistryItem = function (req, res) {
 
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
-  db.UpdateItem(req.params.id, CreateRegistryItemFromRequest(req), DefaultRedirect)
+  db.UpdateItem(req.params.id, CreateRegistryItemFromRequest(req), function (err, result) {
+    DefaultRedirect(err, res);
+  });
 
 }
 
@@ -174,6 +183,8 @@ exports.GetRegistryItem = function (req, res) {
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
-  db.GetItem(req.params.id, SendResultAsJson);
+  db.GetItem(req.params.id, function (err, result) {
+    SendResultAsJson(err, result, res);
+  });
 
 };
