@@ -12,6 +12,13 @@ function CreateRegistryItemFromRequest(req) {
   };
 }
 
+function CreateInviteFromRequest(req) {
+  return {
+    name: req.body.name,
+    invites: req.body.guests
+  };
+}
+
 function DefaultRedirect(err, res) {
   if (err) throw err;
   res.redirect('/registryAdmin');
@@ -93,10 +100,7 @@ exports.AddInvite = function (req, res) {
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 
-  db.SaveItem({
-    name: req,
-    invites: req.body.guests
-  }, function (err, results) {
+  db.SaveItem(CreateInviteFromRequest(req), function (err, results) {
     DefaultRedirect(err, res)
   });
 };
@@ -116,6 +120,9 @@ exports.EditInvite = function (req, res) {
 
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
+  db.UpdateItem(req.params.id, CreateInviteFromRequest(req), function (err, result) {
+    DefaultRedirect(err, res);
+  });
 }
 
 exports.GetInvite = function (req, res) {

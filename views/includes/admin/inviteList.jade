@@ -1,3 +1,18 @@
-- each invite in inviteList
-  p #{invite.name} Number of Invites: #{invite.invites} Hash: #{invite.hashId}
-    a(href='/invite/delete/#{invite._id}').btn Delete
+table.table.table-hover.table-condensed
+  thead
+    tr
+      th Name
+      th Invites
+      th Hash
+      th Actions
+  tbody
+    - each invite in inviteList
+      tr
+      th #{invite.name}
+      th #{invite.invites}
+      th  #{invite.hashId}
+      th
+        .btn-group
+          a(href='/invite/edit/', data-id='#{invite._id}').btn Edit
+          a(href='/invite/delete/#{invite._id}').btn
+            i.icon-remove

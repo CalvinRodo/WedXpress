@@ -1,4 +1,4 @@
-form(action='/invite', method='post').form-horizontal.well.offset3.span6
+form(action='/invite', method='post').form-horizontal.well.offset3.span6#guestInviteForm
   formset
     legend Add Guest
       .contol-group
@@ -10,5 +10,6 @@ form(action='/invite', method='post').form-horizontal.well.offset3.span6
         .controls
           input(type='number', min=0, max=10, name='guests').guests
       .control-group
-        .controls
+        .controls.btn-group
           button(type='submit').btn Add Guest
+          button(name='edit').btn Edit
