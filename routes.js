@@ -32,4 +32,7 @@ module.exports = function (app) {
   app.post('/invite/edit/:id', registryAdmin.EditInvite);
   app.get('/invite/edit/:id', registryAdmin.GetInvite);
 
+  app.post('/menuItem', registryAdmin.AddMenuItem);
+  app.get('/menuItem/delete/:id', registryAdmin.DeleteMenuItem);
+
 }

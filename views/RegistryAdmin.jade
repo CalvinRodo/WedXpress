@@ -6,6 +6,10 @@ block scripts
 block content
   .container-fluid.mainContent
     section
+      h1 RSVP Response
+      .row-fluid
+        #inviteList
+    section
       h1 Registry Admin
       h2 Add Registry Item
       .row-fluid
@@ -16,6 +20,12 @@ block content
           include includes/admin/registryAdminList
     section
       h1 Guest Admin
+      h2 Add Menu Items
+      .row-fluid
+        include includes/admin/menuItems
+      h2 Menu List
+      .row-fluid
+        include includes/admin/menuList
       h2 Add Guest
       .row-fluid
         include includes/admin/guestForm
@@ -23,8 +33,3 @@ block content
       .row-fluid
         #guestList
           include includes/admin/inviteList
-      h2 RSVP Response
-      .row-fluid
-        #inviteList
-
-

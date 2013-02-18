@@ -35,8 +35,10 @@ exports.index = function (req, res) {
   var async = require('async'),
     RegistryDB = require('../DataLayer/RegistryDB.js'),
     InviteDB = require('../DataLayer/InviteDB.js'),
+    MenuDB = require('../DataLayer/MenuDB.js'),
     regDB = new RegistryDB(),
-    invDB = new InviteDB();
+    invDB = new InviteDB(),
+    menuDB = new MenuDB();
 
   async.parallel([
     function (callback) {
@@ -44,6 +46,9 @@ exports.index = function (req, res) {
     },
     function (callback) {
       invDB.GetItems(0, callback)
+    },
+    function (callback) {
+      menuDB.GetItems(0, callback);
     }
   ], function (err, results) {
     if (err) throw(err);
@@ -51,7 +56,8 @@ exports.index = function (req, res) {
       title: 'Registry Administration',
       scrollspy: false,
       inviteList: results[1],
-      items: results[0]
+      items: results[0],
+      menuItems: results[2]
     });
   });
 };
@@ -194,4 +200,31 @@ exports.GetRegistryItem = function (req, res) {
     SendResultAsJson(err, result, res);
   });
 
+};
+
+//Menu Functions
+
+exports.AddMenuItem = function (req, res) {
+  CheckIfLoggedIn(req, res);
+
+  var MenuDB = require('../DataLayer/MenuDB.js'),
+    db = new MenuDB();
+
+  db.SaveItem({
+    name: req.body.name,
+    course: req.body.course
+  }, function (err, result) {
+    DefaultRedirect(err, res);
+  })
+};
+
+exports.DeleteMenuItem = function (req, res) {
+  CheckIfLoggedIn(req, res);
+
+  var MenuDB = require('../DataLayer/MenuDB.js'),
+    db = new MenuDB();
+
+  db.DeleteItem(req.params.id, function (err, result) {
+    DefaultRedirect(err, res);
+  });
 };
