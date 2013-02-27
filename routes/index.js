@@ -2,11 +2,25 @@
  * GET home page.
  */
 
-
 exports.index = function (req, res) {
   res.render('index', {
     title: "Calvin and Amy's Wedding",
-    scrollspy: true
+    scrollspy: true,
+    invites: 3,
+    menu: {
+      appetizer: [
+        { name: "name1"},
+        { name: "name2"}
+      ],
+      entree: [
+        { name: "name3" },
+        { name: "name4" }
+      ],
+      dessert: [
+        { name: "name5" },
+        { name: "name6" }
+      ]
+    }
   });
 };
 
