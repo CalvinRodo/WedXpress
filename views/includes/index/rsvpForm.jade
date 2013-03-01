@@ -1,10 +1,33 @@
-form(action='/rsvp', method='post').form-horizontal
+.invite
   .control-group
     label(for='name').control-label Name:
     .controls
-      input(type='text').name
-  .control-group
-  .control-group
-    label(for='song').control-label Song
-    .controls
-      input(type='text').song
+      input(type='text', name='invite-name').invite-name
+  .meal-choice
+    .control-group
+      label.control-label Appetizer
+      .controls
+        each item in menu.appetizer
+          label.radio.inline #{item.name}
+            input(type='radio', name='appetizer', value='#{item.name}')
+    .control-group
+      label.control-label Entree
+      .controls
+        each item in menu.entree
+          label.radio.inline #{item.name}
+            input(type='radio', name='entree', value='#{item.name}')
+    .control-group
+      label.control-label Dessert
+      .controls
+        each item in menu.dessert
+          label.radio.inline #{item.name}
+            input(type='radio', name='dessert', value='#{item.name}')
+    .control-group
+      label.control-label Special Requirements
+        .controls
+          input(type='checkbox', name='special')
+            label I have special requirements
+    .control-group
+      label.control-label I am:
+        .controls
+          input(type='input', name='requirement')
