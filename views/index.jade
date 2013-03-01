@@ -163,6 +163,13 @@ block content
                 legend RSVP
                 include includes/index/rsvpForm
                 .control-group
+                  label().control-label RSVP
+                  .controls
+                    label.radio.inline Accept
+                      input(type='radio', name='rsvp', value='decline')
+                    label.radio.inline Decline
+                      input(type='radio', name='rsvp', value='decline')
+                .control-group
                   label(for='song').control-label Suggest a Song:
                   .controls
                     input(type='text', name='song').song
@@ -171,7 +178,7 @@ block content
                 include includes/index/rsvpForm
                 hr
                 -}
-
+                button(type='submit')
           section#Registry
             h2 Wedding Registry
             .row-fluid
