@@ -8,9 +8,10 @@
 
 exports.index = function (req, res) {
   var settings = require('../express_settings'),
-    CustomerDB = require('../DataLayer/CustomerDB.js').CustomerDB,
-    db = new CustomerDB();
-  db.GetRegistryItems(0, function (err, results) {
+    RegistryDB = require('../DataLayer/RegistryDB.js'),
+    db = new RegistryDB();
+
+  db.GetItems(0, function (err, results) {
     if (err) throw(err); //TODO: Handle errors
     res.render("registry", {
       publicKey: settings.Config.StripePublicKey,

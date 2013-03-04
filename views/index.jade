@@ -9,21 +9,21 @@ block content
       h1= title
   .container-fluid
     .row-fluid
-      .span3#menu.nav-sidebar
-        ul.nav.nav-list.affix.affix-top
-          li.nav-header Our Site
-          li.active
-            a(href='#AboutUs') About Us
-          li
-            a(href='#WeddingParty') Wedding Party
-          li
-            a(href='#Venue') Venue
-          li
-            a(href='#RSVP') RSVP
-          li
-            a(href='#Registry') Wedding Registry
-          li
-            a(href='#Songs') Songs
+      .span3
+        #menu.nav-sidebar
+          ul(data-spy='affix')#nav.nav.nav-list.affix-top
+            li.active
+              a(href='#AboutUs') About Us
+            li
+              a(href='#WeddingParty') Wedding Party
+            li
+              a(href='#Venue') Venue
+            li
+              a(href='#RSVP') RSVP
+            li
+              a(href='#Registry') Wedding Registry
+            li
+              a(href='#Songs') Songs
       .span9.mainContent
         .container-fluid
           section#AboutUs
@@ -178,7 +178,7 @@ block content
                 include includes/index/rsvpForm
                 hr
                 -}
-                button(type='submit')
+                button(type='submit') Submit
           section#Registry
             h2 Wedding Registry
             .row-fluid

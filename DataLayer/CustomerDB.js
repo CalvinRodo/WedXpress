@@ -1,11 +1,12 @@
-var db = require('./DB.js').DB,
+var DB = require('./DB.js'),
   util = require('util'),
   CustomerDB = function () {
   };
 
-util.inherits(CustomerDB, db);
+util.inherits(CustomerDB, DB);
 
 CustomerDB.prototype.DBName = 'Transaction';
 
-module.exports.CustomerDB = CustomerDB;
+CustomerDB.super_(CustomerDB.prototype.DBName);
 
+module.exports = CustomerDB;

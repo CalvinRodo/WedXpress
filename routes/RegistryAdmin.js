@@ -66,7 +66,7 @@ exports.index = function (req, res) {
 exports.GetGuestList = function (req, res) {
   CheckIfLoggedIn(req, res);
 
-  var InviteDB = require('../DataLayer/InviteDB.js').InviteDB,
+  var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 
   db.GetItems(function (err, results) {
@@ -171,7 +171,7 @@ exports.AddRegistryItem = function (req, res) {
 exports.DeleteRegistryItem = function (req, res) {
   CheckIfLoggedIn(req, res);
 
-  var RegistryDB = require('../DataLayer/RegistryDB.js').RegistryDB,
+  var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
   db.DeleteItem(req.params.id, function (err, result) {
