@@ -1,0 +1,21 @@
+div(id='modal#{item._id}').modal.hide.fade
+  .modal-header
+    h3 Upload an Image for this registry Item
+  .modal-body
+    p Until I get image resizing working make sure the image is small enough to fit as a registry item
+    form(action='http://wedxpress.s3.amazonaws.com/', method='post', enctype='multipart/form-data', id='upload#{item._id}')
+      input(type='hidden', name='key', value='${filename}')
+      input(type="hidden", name='AWSAccessKeyId', value='#{AWSAccessKeyId}')
+      input(type="hidden", name="success_action_redirect", value="http://localhost/")
+      input(type="hidden", name="acl", value="private")
+      input(type="hidden", name="policy", value="#{policy}")
+      input(type="hidden", name="signature", value="#{signature}")
+      input(type="hidden", name="Content-Type", value="image/jpeg")
+      input(type="file", name="file", id='file')
+      input(type="hidden", name="policy")
+      input(type="submit", name="submit", id='btn').btn
+  .modal-footer
+    a(href='#', data-dismiss='modal').btn Cancel>
+
+
+

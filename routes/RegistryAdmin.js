@@ -228,3 +228,13 @@ exports.DeleteMenuItem = function (req, res) {
     DefaultRedirect(err, res);
   });
 };
+
+
+exports.Upload = function (req, res) {
+  CheckIfLoggedIn(req, res);
+  var settings = require('../express_settings'),
+    id = req.param.id;
+  res.render('uploadModal', {
+    AWSAccessKeyID: settings.Config.AWSAccessKeyID
+  });
+};

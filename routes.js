@@ -35,4 +35,5 @@ module.exports = function (app) {
   app.post('/menuItem', registryAdmin.AddMenuItem);
   app.get('/menuItem/delete/:id', registryAdmin.DeleteMenuItem);
 
+  app.get('/upload/:id', registryAdmin.Upload);
 }

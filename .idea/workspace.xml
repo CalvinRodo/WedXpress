@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="10" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="Adding the project files back in">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/uploadModal.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="C:\Users\calvin\Documents\GitHub\Wedxpress\views\includes\admin\registryAdminList.jade" afterPath="$PROJECT_DIR$/views/includes/admin/registryItemList.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/RegistryAdmin.jade" afterPath="$PROJECT_DIR$/views/RegistryAdmin.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/RegistryAdmin.js" afterPath="$PROJECT_DIR$/routes/RegistryAdmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/admin/inviteList.jade" afterPath="$PROJECT_DIR$/views/includes/admin/inviteList.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
+    </list>
+    <ignored path="Wedxpress.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/registry.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358825095783" ignored="false" />
+    <file path="/app.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358995697910" ignored="false" />
+    <file path="/registry.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362364006420" ignored="false" />
+    <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362362565574" ignored="false" />
+    <file path="/layout.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362363038562" ignored="false" />
+    <file path="/.gitignore" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358105906751" ignored="false" />
+    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362620202155" ignored="false" />
+    <file path="/a.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564379010" ignored="false" />
+    <file path="/a.html" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107778521" ignored="false" />
+    <file path="/a.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107769410" ignored="false" />
+    <file path="/a.less" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107779643" ignored="false" />
+    <file path="/a.rxml" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107784742" ignored="false" />
+    <file path="/a.py" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107785594" ignored="false" />
+    <file path="/a.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358132356133" ignored="false" />
+    <file path="/Config.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358121586714" ignored="false" />
+    <file path="/express_settings.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362602846304" ignored="false" />
+    <file path="/routes.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362623052695" ignored="false" />
+    <file path="/charge.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358391748996" ignored="false" />
+    <file path="/fragment.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361119298638" ignored="false" />
+    <file path="/package.json" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360027864995" ignored="false" />
+    <file path="/persist.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358304752765" ignored="false" />
+    <file path="/readme.md" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358133132439" ignored="false" />
+    <file path="/a.dummy" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360554172310" ignored="false" />
+    <file path="/DataLayer.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1359427732929" ignored="false" />
+    <file path="/fragment.js2" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361039061048" ignored="false" />
+    <file path="/StripeCharger.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358392034329" ignored="false" />
+    <file path="/RegistryAdmin.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362623710322" ignored="false" />
+    <file path="/registryAdmin.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358899632588" ignored="false" />
+    <file path="/registryAdmin.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360198534257" ignored="false" />
+    <file path="/login.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358738312623" ignored="false" />
+    <file path="/login.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358701595908" ignored="false" />
+    <file path="/fragment.java" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564474246" ignored="false" />
+    <file path="/style.less" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362362487042" ignored="false" />
+    <file path="/index.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362361003227" ignored="false" />
+    <file path="/songs.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358726567370" ignored="false" />
+    <file path="/rsvpForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362104220625" ignored="false" />
+    <file path="/registryForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361118346352" ignored="false" />
+    <file path="/nameMeal.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362095007880" ignored="false" />
+    <file path="/foo.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358824612321" ignored="false" />
+    <file path="/guestForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361120601200" ignored="false" />
+    <file path="/guestList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1359321833454" ignored="false" />
+    <file path="/rsvpList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358900639048" ignored="false" />
+    <file path="/notcomingGuestList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358900434613" ignored="false" />
+    <file path="/controllers.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358995160898" ignored="false" />
+    <file path="/admin.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361144911780" ignored="false" />
+    <file path="/RegistryAdmin.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361149202001" ignored="false" />
+    <file path="/registryAdminList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361118503892" ignored="false" />
+    <file path="/inviteList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362619097015" ignored="false" />
+    <file path="/db.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360032646471" ignored="false" />
+    <file path="/inviteDB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360204405896" ignored="false" />
+    <file path="/registryDB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1359683227196" ignored="false" />
+    <file path="$PROJECT_DIR$/DataLayer/registryDB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1359683254836" ignored="false" />
+    <file path="/RegistryDB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360552788185" ignored="false" />
+    <file path="/CustomerDB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362363935158" ignored="false" />
+    <file path="/InviteDB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360552796238" ignored="false" />
+    <file path="$PROJECT_DIR$/routes/registryAdmin.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360204222805" ignored="false" />
+    <file path="/DB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360719574380" ignored="false" />
+    <file path="$PROJECT_DIR$/node_modules/mongoskin/integration/integration_tests.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360554287434" ignored="false" />
+    <file path="/*.regexp" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361039040391" ignored="false" />
+    <file path="/bootstrap.min.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361118855959" ignored="false" />
+    <file path="/bootstrap.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361118885678" ignored="false" />
+    <file path="/menuItems.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361149065955" ignored="false" />
+    <file path="/menuList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361148671636" ignored="false" />
+    <file path="/MenuDB.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361147202915" ignored="false" />
+    <file path="$PROJECT_DIR$/public/stylesheets/style.less" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362365741270" ignored="false" />
+    <file path="/registryItemList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362622908475" ignored="false" />
+    <file path="/uploadModal.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362625841033" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Wedxpress" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="RegistryAdmin.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/RegistryAdmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="237" column="50" selection-start="5475" selection-end="5475" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
+                <element signature="n#!!block;n#CreateRegistryItemFromRequest#0" expanded="false" />
+                <element signature="n#!!block;n#CreateInviteFromRequest#0" expanded="false" />
+                <element signature="n#!!block;n#DefaultRedirect#0" expanded="false" />
+                <element signature="n#!!block;n#SendResultAsJson#0" expanded="false" />
+                <element signature="e#1451#1685#0" expanded="false" />
+                <element signature="e#1732#2229#0" expanded="false" />
+                <element signature="e#2272#2490#0" expanded="false" />
+                <element signature="e#2536#2742#0" expanded="false" />
+                <element signature="e#2785#2991#0" expanded="false" />
+                <element signature="e#3033#3245#0" expanded="false" />
+                <element signature="e#3314#3589#0" expanded="false" />
+                <element signature="e#3638#3869#0" expanded="false" />
+                <element signature="e#3921#4133#0" expanded="false" />
+                <element signature="e#4182#4430#0" expanded="false" />
+                <element signature="e#4478#4697#0" expanded="false" />
+                <element signature="e#4760#5002#0" expanded="false" />
+                <element signature="e#5050#5250#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registry.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/registry.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registry.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/registry.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inviteList.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/admin/inviteList.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="6" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registryItemList.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/admin/registryItemList.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="76" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uploadModal.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/uploadModal.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="49" selection-start="961" selection-end="961" vertical-scroll-proportion="0.45945945">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/login.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="158" column="17" selection-start="11026" selection-end="11026" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="tag#section#0;tag#.container-fluid#0;tag#.span9#0;tag#.row-fluid#0;tag#.container-fluid#0;tag#block#1" expanded="false" />
+                <element signature="tag#section#1;tag#.container-fluid#0;tag#.span9#0;tag#.row-fluid#0;tag#.container-fluid#0;tag#block#1" expanded="false" />
+                <element signature="tag#section#2;tag#.container-fluid#0;tag#.span9#0;tag#.row-fluid#0;tag#.container-fluid#0;tag#block#1" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/views/includes/index/nameMeal.jade" />
+        <option value="$PROJECT_DIR$/views/includes/index/rsvpForm.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.less" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/routes/registry.js" />
+        <option value="$PROJECT_DIR$/DataLayer/CustomerDB.js" />
+        <option value="$PROJECT_DIR$/express_settings.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/views/includes/admin/inviteList.jade" />
+        <option value="$PROJECT_DIR$/views/includes/admin/uploadModal.jade" />
+        <option value="$PROJECT_DIR$/views/includes/admin/registryItemList.jade" />
+        <option value="$PROJECT_DIR$/routes.js" />
+        <option value="$PROJECT_DIR$/routes/RegistryAdmin.js" />
+        <option value="$PROJECT_DIR$/views/uploadModal.jade" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="739" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Django</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="136" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="158" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="161" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="839" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="832" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="154" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="146" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\calvin\Documents\GitHub\Wedxpress\views" />
+      <recent name="C:\Users\calvin\Documents\GitHub\Wedxpress\views\includes\index" />
+      <recent name="C:\Users\calvin\Documents\GitHub\Wedxpress\public\javascripts\frameworks" />
+      <recent name="C:\Users\calvin\Documents\GitHub\Wedxpress\views\includes\admin" />
+      <recent name="C:\Users\calvin\Documents\GitHub\Wedxpress" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.app.js">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="app.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
+      <RunnerSettings RunnerId="NodeJS.debug" />
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.debug" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
+    </list>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="" />
+      <created>1358095542223</created>
+      <updated>1358095542223</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Adding code to create the datalayer constructor.&#10;trying to save to db.">
+      <created>1358306166392</created>
+      <updated>1358306166392</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created a new stripe charge instead of a customer like I should have done in the first place.">
+      <created>1358392218631</created>
+      <updated>1358392218631</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Got forms working properly">
+      <created>1358559381859</created>
+      <updated>1358559381859</updated>
+    </task>
+    <task id="LOCAL-00004" summary="working on adding registry items.">
+      <created>1358566494839</created>
+      <updated>1358566494839</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Getting registry items from database, and displaying it on pages where you add them &#10;also getting rid of some magic strings.">
+      <created>1358621487477</created>
+      <updated>1358621487477</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Working on styling some of the pages and adding functionality on the editing page.">
+      <created>1358638224731</created>
+      <updated>1358638224731</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding a bg image.">
+      <created>1358638250322</created>
+      <updated>1358638250322</updated>
+    </task>
+    <task id="LOCAL-00008" summary="working on getting the main page working.">
+      <created>1358715408509</created>
+      <updated>1358715408510</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Styling the main page.">
+      <created>1358738694706</created>
+      <updated>1358738694706</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Some more styling and adding more forms to the admin site.">
+      <created>1358825533044</created>
+      <updated>1358825533044</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Starting to do some work on integrating angularjs into my app">
+      <created>1358996200910</created>
+      <updated>1358996200910</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixing the main page.">
+      <created>1359332379662</created>
+      <updated>1359332379662</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Loading the songs asynchronously.">
+      <created>1359334277325</created>
+      <updated>1359334277325</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Trying to convert db stuff to prototypal objects, I'm pretty sure I'm not doing it correctly">
+      <created>1359342983621</created>
+      <updated>1359342983621</updated>
+    </task>
+    <task id="LOCAL-00015" summary="God damn I should have just done this in the first place.">
+      <created>1359684183522</created>
+      <updated>1359684183522</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Shite">
+      <created>1359861725887</created>
+      <updated>1359861725887</updated>
+    </task>
+    <task id="LOCAL-00017" summary="still not working">
+      <created>1359936955740</created>
+      <updated>1359936955740</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Remove My">
+      <created>1359937071802</created>
+      <updated>1359937071802</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Changed to crockfords functional way of creating objects">
+      <created>1360198620317</created>
+      <updated>1360198620317</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactored DB to keep common crud data in DB class, each DB object only needs to specify functions unique to themselves.">
+      <created>1360554269288</created>
+      <updated>1360554269289</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add GetItem to db&#10;load registryItem when edit button is clicked.">
+      <created>1360723258988</created>
+      <updated>1360723258988</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Pulling out some common callbacks into named functions. &#10;Working on edit functionality.">
+      <created>1361041281830</created>
+      <updated>1361041281830</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added menu icon got editing working &#10;">
+      <created>1361119136173</created>
+      <updated>1361119136173</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added menu icon got editing working &#10;">
+      <created>1361119137899</created>
+      <updated>1361119137899</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Adding editing of invites.">
+      <created>1361120789647</created>
+      <updated>1361120789647</updated>
+    </task>
+    <task id="LOCAL-00026" summary="finished adding editing to the form.">
+      <created>1361145007799</created>
+      <updated>1361145007799</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add menu items">
+      <created>1361149476545</created>
+      <updated>1361149476545</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Adding in some fake data for testing of JADE templates on the main page.">
+      <created>1361933374921</created>
+      <updated>1361933374921</updated>
+    </task>
+    <task id="LOCAL-00029" summary="working on rsvp form">
+      <created>1362102957685</created>
+      <updated>1362102957685</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fixing problems with rsvp form, adding accept and decline.">
+      <created>1362104426383</created>
+      <updated>1362104426383</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Working on some front end and back end stuff.">
+      <created>1362365741009</created>
+      <updated>1362365741009</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Working on adding client side aws uploading.\.">
+      <created>1362609223595</created>
+      <updated>1362609223595</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Adding the project files back in so it's not as much of a pain in the ass.">
+      <created>1362620206525</created>
+      <updated>1362620206525</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1" y="0" width="1364" height="739" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.76297575" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47160068" sideWeight="0.4878788" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4100346" sideWeight="0.4969697" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.5068182" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51342285" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24545455" sideWeight="0.67114097" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32795697" sideWeight="0.81206894" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25192013" sideWeight="0.5628227" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43717727" sideWeight="0.48181817" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39932886" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding the project files back in so it's not as much of a pain in the ass." />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Styling the main page." />
+    <MESSAGE value="Some more styling and adding more forms to the admin site." />
+    <MESSAGE value="Starting to do some work on integrating angularjs into my app" />
+    <MESSAGE value="Got some of the crud working." />
+    <MESSAGE value="Fixing the main page." />
+    <MESSAGE value="Loading the songs asynchronously." />
+    <MESSAGE value="Trying to convert db stuff to prototypal objects, I'm pretty sure I'm not doing it correctly" />
+    <MESSAGE value="God damn I should have just done this in the first place." />
+    <MESSAGE value="Shite" />
+    <MESSAGE value="still not working" />
+    <MESSAGE value="Remove My" />
+    <MESSAGE value="Changed to crockfords functional way of creating objects" />
+    <MESSAGE value="Refactored DB to keep common crud data in DB class, each DB object only needs to specify functions unique to themselves." />
+    <MESSAGE value="Add GetItem to db&#10;load registryItem when edit button is clicked." />
+    <MESSAGE value="Pulling out some common callbacks into named functions. &#10;Working on edit functionality." />
+    <MESSAGE value="Added menu icon got editing working &#10;" />
+    <MESSAGE value="Adding editing of invites." />
+    <MESSAGE value="finished adding editing to the form." />
+    <MESSAGE value="Add menu items" />
+    <MESSAGE value="Adding in some fake data for testing of JADE templates on the main page." />
+    <MESSAGE value="working on rsvp form" />
+    <MESSAGE value="Fixing problems with rsvp form, adding accept and decline." />
+    <MESSAGE value="Working on some front end and back end stuff." />
+    <MESSAGE value="Working on adding client side aws uploading.\." />
+    <MESSAGE value="Adding the project files back in so it's not as much of a pain in the ass." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/RegistryAdmin.js</url>
+          <line>184</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/jade/lib/jade.js</url>
+          <line>175</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="134" />
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="1" selection-start="16" selection-end="16" vertical-scroll-proportion="0.03068592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataLayer/InviteDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="36" selection-start="154" selection-end="154" vertical-scroll-proportion="0.39534885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataLayer/CustomerDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="14" selection-start="231" selection-end="231" vertical-scroll-proportion="0.62126243">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/node_modules/connect/lib/proto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="0" selection-start="2531" selection-end="2531" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="715" column="0" selection-start="16848" selection-end="16848" vertical-scroll-proportion="0.39285713">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jade/lib/jade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="0" selection-start="4312" selection-end="4312" vertical-scroll-proportion="0.32291666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="1" selection-start="423" selection-end="423" vertical-scroll-proportion="0.45182723">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/admin/inviteList.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="46" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.7855856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="17" selection-start="11026" selection-end="11026" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="tag#section#0;tag#.container-fluid#0;tag#.span9#0;tag#.row-fluid#0;tag#.container-fluid#0;tag#block#1" expanded="false" />
+            <element signature="tag#section#1;tag#.container-fluid#0;tag#.span9#0;tag#.row-fluid#0;tag#.container-fluid#0;tag#block#1" expanded="false" />
+            <element signature="tag#section#2;tag#.container-fluid#0;tag#.span9#0;tag#.row-fluid#0;tag#.container-fluid#0;tag#block#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/admin/registryItemList.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="76" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/registry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/registry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/RegistryAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="237" column="50" selection-start="5475" selection-end="5475" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
+            <element signature="n#!!block;n#CreateRegistryItemFromRequest#0" expanded="false" />
+            <element signature="n#!!block;n#CreateInviteFromRequest#0" expanded="false" />
+            <element signature="n#!!block;n#DefaultRedirect#0" expanded="false" />
+            <element signature="n#!!block;n#SendResultAsJson#0" expanded="false" />
+            <element signature="e#1451#1685#0" expanded="false" />
+            <element signature="e#1732#2229#0" expanded="false" />
+            <element signature="e#2272#2490#0" expanded="false" />
+            <element signature="e#2536#2742#0" expanded="false" />
+            <element signature="e#2785#2991#0" expanded="false" />
+            <element signature="e#3033#3245#0" expanded="false" />
+            <element signature="e#3314#3589#0" expanded="false" />
+            <element signature="e#3638#3869#0" expanded="false" />
+            <element signature="e#3921#4133#0" expanded="false" />
+            <element signature="e#4182#4430#0" expanded="false" />
+            <element signature="e#4478#4697#0" expanded="false" />
+            <element signature="e#4760#5002#0" expanded="false" />
+            <element signature="e#5050#5250#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/uploadModal.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="49" selection-start="961" selection-end="961" vertical-scroll-proportion="0.45945945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

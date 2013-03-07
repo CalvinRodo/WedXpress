@@ -4,6 +4,7 @@ table.table.table-hover.table-condensed
       th Name
       th Description
       th Price
+      th File
       th Actions
   tbody
     - each item in items
@@ -11,6 +12,8 @@ table.table.table-hover.table-condensed
         th #{item.name}
         th #{item.description}
         th #{item.price}
+          th
+            a(href='#', data-toggle='modal', data-remote='/upload/#{item._id}').btn#uploadImage Upload Image
         th
           .btn-group
             a(href='about:blank', data-id='#{item._id}').btn#editRegItem Edit
