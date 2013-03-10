@@ -10,6 +10,10 @@ form(action='/invite', method='post').form-horizontal.well.offset3.span6#guestIn
         .controls
           input(type='number', min=0, max=10, name='guests').guests
       .control-group
+        label(for='url').control-label Easy To Remember URL
+        .controls
+          input(type='text', name='url', data-toggle='tooltip',data-placement='top', title='Enter a url to be printed out on the invite and that this guest can use to easily access their rsvp').url
+      .control-group
         .controls.btn-group
           button(type='submit').btn Add Guest
           button(name='edit').btn Edit

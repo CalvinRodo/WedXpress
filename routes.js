@@ -7,6 +7,7 @@ module.exports = function (app) {
 
 
   app.get('/', index.index);
+  app.get('/:inviteurl', index.rsvp)
   app.get('/songList', index.SongList);
 
   app.get('/registry', registry.index);

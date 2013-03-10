@@ -13,7 +13,13 @@ table.table.table-hover.table-condensed
         th #{item.description}
         th #{item.price}
           th
-            a(href='#', data-toggle='modal', data-remote='/upload/#{item._id}').btn#uploadImage Upload Image
+            a(data-target='#modal#{item._id}', data-toggle='modal').btn#uploadImage Upload Image
+            div(id='modal#{item._id}', data-remote='./upload/#{item._id}').modal.hide.fade
+              .modal-header
+                h3 Upload an Image for this registry Item
+              .modal-body
+              .modal-footer
+                a(href='#', data-dismiss='modal').btn Cancel
         th
           .btn-group
             a(href='about:blank', data-id='#{item._id}').btn#editRegItem Edit

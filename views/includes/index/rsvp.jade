@@ -1,0 +1,23 @@
+h2 RSVP
+.row-fluid
+  form(action='/rsvp', method='post').form-horizontal.well.offset2.span7
+    legend RSVP
+    include rsvpForm
+    .control-group
+      label().control-label RSVP
+      .controls
+        label.radio.inline Accept
+          input(type='radio', name='rsvp', value='decline')
+        label.radio.inline Decline
+          input(type='radio', name='rsvp', value='decline')
+    .control-group
+      label(for='song').control-label Suggest a Song:
+      .controls
+        input(type='text', name='song').song
+    hr
+    - for (var i = 0; i < invites; i ++) {
+    include rsvpForm
+    hr
+    -}
+    button(type='submit') Submit
+

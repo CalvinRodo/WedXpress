@@ -15,7 +15,8 @@ function CreateRegistryItemFromRequest(req) {
 function CreateInviteFromRequest(req) {
   return {
     name: req.body.name,
-    invites: req.body.guests
+    invites: req.body.guests,
+    url: req.body.url
   };
 }
 
@@ -51,13 +52,18 @@ exports.index = function (req, res) {
       menuDB.GetItems(0, callback);
     }
   ], function (err, results) {
+    var registryItems = results[0],
+      invites = results[1],
+      menus = results[2];
+
     if (err) throw(err);
+
     res.render('registryAdmin', {
       title: 'Registry Administration',
       scrollspy: false,
-      inviteList: results[1],
-      items: results[0],
-      menuItems: results[2]
+      inviteList: invites,
+      items: registryItems,
+      menuItems: menus
     });
   });
 };
@@ -231,10 +237,43 @@ exports.DeleteMenuItem = function (req, res) {
 
 
 exports.Upload = function (req, res) {
-  CheckIfLoggedIn(req, res);
   var settings = require('../express_settings'),
+    crypto = require('crypto'),
+    mime = require('mime-magic'),
     id = req.param.id;
+
+
+  CheckIfLoggedIn(req, res);
   res.render('uploadModal', {
     AWSAccessKeyID: settings.Config.AWSAccessKeyID
+//    policy : Creates3Policy()
   });
 };
+
+
+//var CreateS3Credentials = function CreateS3Credentials( mimetype, callback ) {
+//  var s3PolicyBase64, _date, _s3Policy;
+//  _date = new Date();
+//  return {
+//    "expiration": "" + (_date.getFullYear()) + "-" + (_date.getMonth() + 1) + "-" + (_date.getDate()) + "T" + (_date.getHours() + 1) + ":" + (_date.getMinutes()) + ":" + (_date.getSeconds()) + "Z",
+//    "conditions": [
+//      { "bucket": "WedXPress" },
+//      ["starts-with", "$Content-Disposition", ""],
+//      ["starts-with", "$key", "someFilePrefix_"],
+//      { "acl": "public-read" },
+//      { "success_action_redirect": "localhost" },
+//      ["content-length-range", 0, 2147483648],
+//      ["eq", "$Content-Type", mimetype]
+//    ]
+//  }
+//}
+//
+//var CreateS3Policy = function CreateS3Policy () {
+//    return {
+//      s3PolicyBase64: new Buffer( JSON.stringify( s3Policy ) ).toString( 'base64' ),
+//      s3Signature: crypto.createHmac( "sha1", "yourAWSsecretkey" ).update( s3Policy ).digest( "base64" ),
+//      s3Key: "Your AWS Key",
+//      s3Redirect: "http://example.com/uploadsuccess",
+//      s3Policy: s3Policy
+//    }
+//}

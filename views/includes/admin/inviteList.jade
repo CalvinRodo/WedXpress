@@ -3,14 +3,14 @@ table.table.table-hover.table-condensed
     tr
       th Name
       th Invites
-      th Hash
+      th Url
       th Actions
   tbody
     - each invite in inviteList
       tr
       th #{invite.name}
       th #{invite.invites}
-      th #{invite.hashId}
+      th calvinandamy.ca/#{invite.url}
       th
         .btn-group
           a(href='/invite/edit/', data-id='#{invite._id}').btn#editInvite Edit

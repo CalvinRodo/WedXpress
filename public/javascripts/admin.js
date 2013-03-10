@@ -29,6 +29,7 @@ function loadRegistryItemForm(data, id) {
 function loadInviteForm(data, id) {
   $('#guestInviteForm input[name=name]').val(data.name);
   $('#guestInviteForm input[name=guests]').val(data.invites);
+  $('#guestInviteForm input[name=url]').val(data.url);
   $('#guestInviteForm button[name=edit]')
     .attr('disabled', false)
     .attr('formaction', '/invite/edit/' + id);

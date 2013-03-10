@@ -9,5 +9,14 @@ InviteDB.prototype.DBName = 'Guests';
 
 InviteDB.super_(InviteDB.prototype.DBName);
 
+
+InviteDB.prototype.getInviteByUrl = function getInviteByUrl(urlName, callback) {
+
+  var db = this.ConnectToDB();
+  db.findItems({url: urlName }, function (err, result) {
+    db.close();
+    callback(err, result);
+  });
+};
 module.exports = InviteDB;
 
