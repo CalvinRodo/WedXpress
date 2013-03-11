@@ -2,7 +2,14 @@
  * GET home page.
  */
 function createMenu(menuItems) {
-
+  var menu = {};
+  menuItems.forEach(function (item) {
+    if (menu[item.course] === undefined) {
+      menu[item.course] = [];
+    }
+    menu[item.course].push(item.name);
+  });
+  return menu;
 }
 
 exports.index = function index(req, res) {
@@ -19,10 +26,11 @@ exports.rsvp = function indexRsvp(req, res) {
     MenuDB = require('../DataLayer/MenuDB.js'),
     inviteDB = new InviteDB(),
     menuDB = new MenuDB(),
-    url = req.param.url;
+    url = req.params.inviteurl;
 
   if (url === undefined || url === null) {
     res.redirect('/');
+    return;
   }
 
   async.parallel([
@@ -40,7 +48,7 @@ exports.rsvp = function indexRsvp(req, res) {
       title: "Calvin and Amy's Wedding",
       scrollspy: true,
       rsvp: true,
-      invite: invite,
+      invites: invite,
       menu: createMenu(menuItems)
     });
   });

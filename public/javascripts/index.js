@@ -7,13 +7,24 @@ function loadSongList() {
     });
 }
 
+function accordionRsvp() {
+  $(this).parent().parent().parent().siblings().children('.meal-choice').stop().slideUp('fast');
+  $(this).parent().parent().siblings('.meal-choice').stop().slideDown('fast');
+};
+
 $(function () {
-  loadSongList();
+  //loadSongList();
   $('.meal-choice').hide();
-  $('.invite-name').on('click', function () {
-    $(this).parent().parent().parent().siblings().children('.meal-choice').stop().slideUp('fast');
-    $(this).parent().parent().siblings('.meal-choice').stop().slideDown('fast');
+  $('input[name="rsvp"]:radio').on('change', function () {
+    if ($(this).val() === 'decline') {
+      $('.meal-choice').stop().slideUp('fast');
+      $('.invite-name').off('focus');
+    } else {
+      $('.invite-name').on('focus', accordionRsvp);
+      $('.invite-name').parent().parent().siblings('.meal-choice').stop().slideDown('fast');
+    }
   });
+  $('.invite-name').on('focus', accordionRsvp);
   var $nav = $('#nav');
   $nav.affix({ offset: $nav.position() });
 });

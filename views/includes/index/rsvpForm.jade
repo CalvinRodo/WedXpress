@@ -2,32 +2,27 @@
   .control-group
     label(for='name').control-label Name:
     .controls
-      input(type='text', name='invite-name').invite-name
+      input(type='text', name='invite-name', ).invite-name
   .meal-choice
     .control-group
       label.control-label Appetizer
       .controls
         each item in menu.appetizer
-          label.radio.inline #{item.name}
-            input(type='radio', name='appetizer', value='#{item.name}')
+          label.radio.inline #{item}
+            input(type='radio', name='appetizer', value='#{item}')
     .control-group
       label.control-label Entree
       .controls
         each item in menu.entree
-          label.radio.inline #{item.name}
-            input(type='radio', name='entree', value='#{item.name}')
+          label.radio.inline #{item}
+            input(type='radio', name='entree', value='#{item}')
     .control-group
       label.control-label Dessert
       .controls
         each item in menu.dessert
-          label.radio.inline #{item.name}
-            input(type='radio', name='dessert', value='#{item.name}')
+          label.radio.inline #{item}
+            input(type='radio', name='dessert', value='#{item}')
     .control-group
       label.control-label Special Requirements
-      .controls
-        label.checkbox Yes
-          input(type='checkbox', name='special')
-    .control-group
-      label.control-label I am:
       .controls
         input(type='input', name='requirement')
