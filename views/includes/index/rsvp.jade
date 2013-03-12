@@ -16,8 +16,9 @@
         input(type='text', name='song').song
     hr
     - for (var i = 0; i < invite.invites; i ++) {
-    include rsvpForm
-    hr
+    .guest
+      include rsvpForm
+      hr
     -}
     button(type='submit') Submit
 

@@ -6,9 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\calvin\Documents\GitHub\Wedxpress\DataLayer\inviteDB.js" afterPath="$PROJECT_DIR$/DataLayer/InviteDB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/index.js" afterPath="$PROJECT_DIR$/public/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/index/rsvp.jade" afterPath="$PROJECT_DIR$/views/includes/index/rsvp.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/index/rsvpForm.jade" afterPath="$PROJECT_DIR$/views/includes/index/rsvpForm.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
@@ -19,10 +18,10 @@
     <file path="/registry.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358825095783" ignored="false" />
     <file path="/app.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358995697910" ignored="false" />
     <file path="/registry.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362364006420" ignored="false" />
-    <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362968096112" ignored="false" />
+    <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363051217116" ignored="false" />
     <file path="/layout.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362363038562" ignored="false" />
     <file path="/.gitignore" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358105906751" ignored="false" />
-    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362970308679" ignored="false" />
+    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363049077830" ignored="false" />
     <file path="/a.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564379010" ignored="false" />
     <file path="/a.html" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107778521" ignored="false" />
     <file path="/a.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107769410" ignored="false" />
@@ -49,9 +48,9 @@
     <file path="/login.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358701595908" ignored="false" />
     <file path="/fragment.java" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564474246" ignored="false" />
     <file path="/style.less" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362362487042" ignored="false" />
-    <file path="/index.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363048519311" ignored="false" />
+    <file path="/index.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363053965150" ignored="false" />
     <file path="/songs.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358726567370" ignored="false" />
-    <file path="/rsvpForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363048585276" ignored="false" />
+    <file path="/rsvpForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363054036155" ignored="false" />
     <file path="/registryForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361118346352" ignored="false" />
     <file path="/nameMeal.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362095007880" ignored="false" />
     <file path="/foo.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358824612321" ignored="false" />
@@ -83,7 +82,7 @@
     <file path="$PROJECT_DIR$/public/stylesheets/style.less" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362365741270" ignored="false" />
     <file path="/registryItemList.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362792748003" ignored="false" />
     <file path="/uploadModal.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362791084854" ignored="false" />
-    <file path="/rsvp.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363048554276" ignored="false" />
+    <file path="/rsvp.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363051274494" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +149,7 @@
       <file leaf-file-name="rsvp.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/includes/index/rsvp.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="52" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+            <state line="18" column="5" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -159,16 +158,16 @@
       <file leaf-file-name="rsvpForm.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/includes/index/rsvpForm.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="21" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+            <state line="7" column="81" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="28" selection-start="723" selection-end="723" vertical-scroll-proportion="0.59177214">
+            <state line="155" column="30" selection-start="9832" selection-end="9832" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -177,11 +176,20 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="11" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
+            <state line="23" column="11" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#296#405#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.43037975">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -216,8 +224,8 @@
         <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/views/includes/admin/inviteList.jade" />
         <option value="$PROJECT_DIR$/DataLayer/InviteDB.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/includes/index/rsvp.jade" />
         <option value="$PROJECT_DIR$/views/includes/index/rsvpForm.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
@@ -323,7 +331,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,7 +649,11 @@
       <created>1362970315308</created>
       <updated>1362970315308</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Displaying Invites Name">
+      <created>1363049082102</created>
+      <updated>1363049082102</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -690,7 +742,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got rsvp urls mostly working&#10;Got menu items working properly&#10;Got Accept Decline working properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Displaying Invites Name" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -703,7 +755,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Got some of the crud working." />
     <MESSAGE value="Fixing the main page." />
     <MESSAGE value="Loading the songs asynchronously." />
     <MESSAGE value="Trying to convert db stuff to prototypal objects, I'm pretty sure I'm not doing it correctly" />
@@ -728,6 +779,7 @@
     <MESSAGE value="setting a modal to upload to AWS S3" />
     <MESSAGE value="Adding URL to invite form&#10;Adding URL to invite List &#10;Allow user to edit the url &#10;adding code to load rsvp form if entered from url" />
     <MESSAGE value="Got rsvp urls mostly working&#10;Got menu items working properly&#10;Got Accept Decline working properly" />
+    <MESSAGE value="Displaying Invites Name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -754,20 +806,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/RegistryAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="0" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/node_modules/connect/lib/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="353" column="0" selection-start="6921" selection-end="6921" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.IntelliJIdea12/system/extLibs/nodejs-v0.8.12-src/core-modules-sources/lib/fs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="162" column="0" selection-start="4828" selection-end="4828" vertical-scroll-proportion="0.0">
@@ -817,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="16" selection-start="476" selection-end="476" vertical-scroll-proportion="0.26842105">
@@ -838,9 +869,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/charge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataLayer/StripeCharger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="0.914557">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="30" selection-start="9832" selection-end="9832" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/index/rsvp.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="11" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
+        <state line="23" column="11" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#296#405#0" expanded="false" />
@@ -848,23 +907,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/index/rsvp.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="52" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/includes/index/rsvpForm.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+        <state line="7" column="81" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="723" selection-end="723" vertical-scroll-proportion="0.59177214">
+        <state line="8" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.43037975">
           <folding />
         </state>
       </provider>
