@@ -2,7 +2,10 @@
   .control-group
     label(for='name').control-label Name:
     .controls
-      input(type='text', name='invite-name', ).invite-name
+      if firstNameFlag
+        input(type='text', name='invite-name', ).invite-name
+      else
+        input(type='text', name='invite-name', value='#{invite.name}')
   .meal-choice
     .control-group
       label.control-label Appetizer

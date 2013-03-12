@@ -2,6 +2,7 @@
   form(action='/rsvp', method='post').form-horizontal.well.offset2.span7
     legend RSVP
     include rsvpForm
+    - var firstNameFlag = true;
     .control-group
       label().control-label RSVP
       .controls
@@ -14,7 +15,7 @@
       .controls
         input(type='text', name='song').song
     hr
-    - for (var i = 0; i < invites; i ++) {
+    - for (var i = 0; i < invite.invites; i ++) {
     include rsvpForm
     hr
     -}

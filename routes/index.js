@@ -48,7 +48,7 @@ exports.rsvp = function indexRsvp(req, res) {
       title: "Calvin and Amy's Wedding",
       scrollspy: true,
       rsvp: true,
-      invites: invite,
+      invite: invite,
       menu: createMenu(menuItems)
     });
   });

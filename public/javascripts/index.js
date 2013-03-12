@@ -21,7 +21,7 @@ $(function () {
       $('.invite-name').off('focus');
     } else {
       $('.invite-name').on('focus', accordionRsvp);
-      $('.invite-name').parent().parent().siblings('.meal-choice').stop().slideDown('fast');
+      $('.meal-choice:first').stop().slideDown('fast');
     }
   });
   $('.invite-name').on('focus', accordionRsvp);
