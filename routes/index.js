@@ -5,9 +5,16 @@ function createMenu(menuItems) {
   var menu = {};
   menuItems.forEach(function (item) {
     if (menu[item.course] === undefined) {
-      menu[item.course] = [];
+
+      menu[item.course] = {
+        name: item.course,
+        courses: []
+      };
+
     }
-    menu[item.course].push(item.name);
+
+    menu[item.course].courses
+      .push(item.name);
   });
   return menu;
 }

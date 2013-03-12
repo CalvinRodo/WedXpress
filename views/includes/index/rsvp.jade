@@ -1,14 +1,29 @@
 .row-fluid
   form(action='/rsvp', method='post').form-horizontal.well.offset2.span7
     legend RSVP
-    include rsvpForm
-    - var firstNameFlag = true;
+    .invite
+      .control-group
+        label(for='name').control-label Name:
+        .controls
+          input(type='text', name='invite-name-main', value='#{invite.name}').invite-name
+      .meal-choice
+        .control-group
+          label(for='requirement-main').control-label Special Requirements
+          .controls
+            input(type='text', name='requirement-main')
+        each menuItem in menu
+          .control-group
+            label.control-label #{menuItem.name}
+            .controls
+              each course in menuItem.courses
+                label.radio #{course}
+                  input(type='radio', name='#{menuItem.name}-main', value='#{course}')
     .control-group
       label().control-label RSVP
       .controls
-        label.radio.inline Accept
+        label.radio Accept
           input(type='radio', name='rsvp', value='accept')
-        label.radio.inline Decline
+        label.radio Decline
           input(type='radio', name='rsvp', value='decline')
     .control-group
       label(for='song').control-label Suggest a Song:
@@ -17,7 +32,23 @@
     hr
     - for (var i = 0; i < invite.invites; i ++) {
     .guest
-      include rsvpForm
+      .invite
+        .control-group
+          label(for='name').control-label Name:
+          .controls
+            input(type='text', name='invite-name-#{i}', ).invite-name
+        .meal-choice
+          .control-group
+            label(for='requirement-#{i}').control-label Special Requirements
+            .controls
+              input(type='text', name='requirement-#{i}')
+          each item in menu
+            .control-group
+              label.control-label #{item.name}
+              .controls
+                each course in item.courses
+                  label.radio #{course}
+                    input(type='radio', name='#{item.name}-#{i}', value='#{course}')
       hr
     -}
     button(type='submit') Submit
