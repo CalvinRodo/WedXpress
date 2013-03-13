@@ -61,6 +61,10 @@ exports.rsvp = function indexRsvp(req, res) {
   });
 };
 
+
+exports.saveRsvp = function saveRsvp(req, res) {
+
+};
 exports.SongList = function songList(req, res) {
   res.render('includes/index/songs',
     { songs: [

@@ -8,7 +8,7 @@ module.exports = function (app) {
 
   app.get('/', index.index);
   app.get('/rsvp/:inviteurl', index.rsvp)
-  app.post('/rsvp/:id')
+  app.post('/rsvp/:id', index.saveRsvp)
   app.get('/songList', index.SongList);
 
   app.get('/registry', registry.index);
