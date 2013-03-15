@@ -33,28 +33,38 @@ function SendResultAsJson(err, result, res) {
 
 exports.index = function (req, res) {
   CheckIfLoggedIn(req, res);
-  var async = require('async'),
-    RegistryDB = require('../DataLayer/RegistryDB.js'),
-    InviteDB = require('../DataLayer/InviteDB.js'),
-    MenuDB = require('../DataLayer/MenuDB.js'),
-    regDB = new RegistryDB(),
-    invDB = new InviteDB(),
-    menuDB = new MenuDB();
+  var async = require('async');
 
   async.parallel([
     function (callback) {
-      regDB.GetItems(0, callback);
+      var RegistryDB = require('../DataLayer/RegistryDB.js'),
+        registryDB = new RegistryDB();
+
+      registryDB.GetItems(0, callback);
     },
     function (callback) {
-      invDB.GetItems(0, callback)
+      var InviteDB = require('../DataLayer/InviteDB.js'),
+        inviteDB = new InviteDB();
+
+      inviteDB.getAllUnusedRSVPs(callback);
     },
     function (callback) {
+      var MenuDB = require('../DataLayer/MenuDB.js'),
+        menuDB = new MenuDB();
+
       menuDB.GetItems(0, callback);
+    },
+    function (callback) {
+      var RsvpDB = require('../DataLayer/RsvpDB.js'),
+        rsvpDB = new RsvpDB();
+
+      rsvpDB.GetItems(0, callback);
     }
   ], function (err, results) {
     var registryItems = results[0],
       invites = results[1],
-      menus = results[2];
+      menus = results[2],
+      rsvpList = results[3];
 
     if (err) throw(err);
 
@@ -63,7 +73,8 @@ exports.index = function (req, res) {
       scrollspy: false,
       inviteList: invites,
       items: registryItems,
-      menuItems: menus
+      menuItems: menus,
+      rsvpList: rsvpList
     });
   });
 };
@@ -143,7 +154,7 @@ exports.GetInvite = function (req, res) {
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
 
-  db.GetItem(req.params.id, function (err, result) {
+  db.GetItemByID(req.params.id, function (err, result) {
     SendResultAsJson(err, result, res);
   });
 }
@@ -202,7 +213,7 @@ exports.GetRegistryItem = function (req, res) {
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
-  db.GetItem(req.params.id, function (err, result) {
+  db.GetItemByID(req.params.id, function (err, result) {
     SendResultAsJson(err, result, res);
   });
 
@@ -234,7 +245,6 @@ exports.DeleteMenuItem = function (req, res) {
     DefaultRedirect(err, res);
   });
 };
-
 
 exports.Upload = function (req, res) {
   var settings = require('../express_settings'),

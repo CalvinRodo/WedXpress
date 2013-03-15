@@ -19,7 +19,6 @@ function createMenu(menuItems) {
   return menu;
 }
 
-
 function getInvite(req, appender) {
   return {
     name: req.body['invite-name-' + appender],
@@ -31,6 +30,7 @@ function getInvite(req, appender) {
     }
   }
 }
+
 exports.index = function index(req, res) {
   res.render('index', {
     title: "Calvin and Amy's Wedding",
@@ -73,7 +73,6 @@ exports.rsvp = function indexRsvp(req, res) {
   });
 };
 
-
 exports.saveRsvp = function saveRsvp(req, res) {
   var id = req.params.id,
     async = require('async');
@@ -83,7 +82,7 @@ exports.saveRsvp = function saveRsvp(req, res) {
         var InviteDB = require('../DataLayer/InviteDB.js'),
           inviteDB = new InviteDB();
 
-        inviteDB.GetItem(id, callback);
+        inviteDB.GetItemByID(id, callback);
       },
       SaveSong: function (callback) {
         var SongDb = require('../DataLayer/SongDB.js'),
@@ -121,6 +120,7 @@ exports.saveRsvp = function saveRsvp(req, res) {
       res.redirect('/');
     });
 };
+
 exports.SongList = function songList(req, res) {
   res.render('includes/index/songs',
     { songs: [

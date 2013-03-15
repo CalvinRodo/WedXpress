@@ -3,8 +3,7 @@ module.exports = function (app) {
     registry = require('./routes/registry.js'),
     charge = require('./routes/charge.js'),
     login = require('./routes/login.js'),
-    registryAdmin = require('./routes/registryAdmin.js');
-
+    admin = require('./routes/admin.js');
 
   app.get('/', index.index);
   app.get('/rsvp/:inviteurl', index.rsvp)
@@ -17,25 +16,25 @@ module.exports = function (app) {
   app.get('/login', login.index);
   app.post('/login', login.login);
 
-  app.get('/registryAdmin', registryAdmin.index);
+  app.get('/registryAdmin', admin.index);
 
-  app.get('/regList', registryAdmin.GetRegistryList);
-  app.post('/registry', registryAdmin.AddRegistryItem);
+  app.get('/regList', admin.GetRegistryList);
+  app.post('/registry', admin.AddRegistryItem);
 
-  app.get('/registry/delete/:id', registryAdmin.DeleteRegistryItem);
-  app.get('/registry/edit/:id', registryAdmin.GetRegistryItem);
-  app.post('/registry/edit/:id', registryAdmin.EditRegistryItem);
+  app.get('/registry/delete/:id', admin.DeleteRegistryItem);
+  app.get('/registry/edit/:id', admin.GetRegistryItem);
+  app.post('/registry/edit/:id', admin.EditRegistryItem);
 
-  app.get('/guestList', registryAdmin.GetGuestList);
+  app.get('/guestList', admin.GetGuestList);
 
-  app.post('/invite', registryAdmin.AddInvite);
-  app.get('/inviteList', registryAdmin.GetInviteList);
-  app.get('/invite/delete/:id', registryAdmin.DeleteInvite);
-  app.post('/invite/edit/:id', registryAdmin.EditInvite);
-  app.get('/invite/edit/:id', registryAdmin.GetInvite);
+  app.post('/invite', admin.AddInvite);
+  app.get('/inviteList', admin.GetInviteList);
+  app.get('/invite/delete/:id', admin.DeleteInvite);
+  app.post('/invite/edit/:id', admin.EditInvite);
+  app.get('/invite/edit/:id', admin.GetInvite);
 
-  app.post('/menuItem', registryAdmin.AddMenuItem);
-  app.get('/menuItem/delete/:id', registryAdmin.DeleteMenuItem);
+  app.post('/menuItem', admin.AddMenuItem);
+  app.get('/menuItem/delete/:id', admin.DeleteMenuItem);
 
-  app.get('/upload/:id', registryAdmin.Upload);
+  app.get('/upload/:id', admin.Upload);
 }
