@@ -79,43 +79,47 @@ exports.saveRsvp = function saveRsvp(req, res) {
     async = require('async');
 
   async.auto({
-    SaveSong: function (callback) {
-      var SongDb = require('../DataLayer/SongDB.js'),
-        songDb = new SongDb();
-      songDb.SaveItem({
-        userId: id,
-        songName: req.body.song
-      }, callback);
-    },
-    SaveRsvp: function (callback) {
-      var RsvpDb = require('../DataLayer/RsvpDB.js'),
-        rsvpDB = new RsvpDb(),
-        invites = results.invites;
-      inviteArr = new Array(invites),
-        rsvp = {
-          coming: req.body.rsvp,
-          inviteId: id,
-          mainInvite: getInvite(req, 'main')
-        }
-      inviteArr.forEach(function (i) {
-        rsvp['guest' + i] = getInvite(req, i);
-      });
-      rsvpDB.SaveItem(rsvp, callback);
-    },
-    UpdateInvite: [ 'SaveSong', 'SaveRsvp', function (callback, results) {
-      var InviteDb = require('../DataLayer/InviteDB.js'),
-        inviteDb = new InviteDb();
+      LoadInvite: function (callback) {
+        var InviteDB = require('../DataLayer/InviteDB.js'),
+          inviteDB = new InviteDB();
 
-      inviteDb.updateRsvpStatus(id, true, callback);
-    }]
-  }, function (err, results) {
-    if (err) throw err;
-    res.render('index', {
+        inviteDB.GetItem(id, callback);
+      },
+      SaveSong: function (callback) {
+        var SongDb = require('../DataLayer/SongDB.js'),
+          songDb = new SongDb();
 
-    })
-  });
+        songDb.SaveItem({ userId: id, songName: req.body.song }, callback);
 
-  res.redirect('/');
+      },
+      SaveRsvp: ['LoadInvite', function (callback, results) {
+        var RsvpDb = require('../DataLayer/RsvpDB.js'),
+          rsvpDB = new RsvpDb(),
+          invites = results.invites,
+          inviteArr = new Array(invites),
+          rsvp = {
+            coming: req.body.rsvp,
+            inviteId: id,
+            mainInvite: getInvite(req, 'main')
+          };
+
+        inviteArr.forEach(function (i) {
+          rsvp['guest' + i] = getInvite(req, i);
+        });
+
+        rsvpDB.SaveItem(rsvp, callback);
+      }],
+      UpdateInvite: [ 'SaveSong', 'SaveRsvp', function (callback, results) {
+        var InviteDb = require('../DataLayer/InviteDB.js'),
+          inviteDb = new InviteDb();
+
+        inviteDb.updateRSVPStatus(id, true, callback);
+      }]},
+    function (err, results) {
+      if (err) throw err;
+      //TODO Redirect to success page
+      res.redirect('/');
+    });
 };
 exports.SongList = function songList(req, res) {
   res.render('includes/index/songs',
