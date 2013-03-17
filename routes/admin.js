@@ -36,25 +36,25 @@ exports.index = function (req, res) {
   var async = require('async');
 
   async.parallel([
-    function (callback) {
+    function getRegistryItems(callback) {
       var RegistryDB = require('../DataLayer/RegistryDB.js'),
         registryDB = new RegistryDB();
 
       registryDB.GetItems(0, callback);
     },
-    function (callback) {
+    function getUnusedInvites(callback) {
       var InviteDB = require('../DataLayer/InviteDB.js'),
         inviteDB = new InviteDB();
 
       inviteDB.getAllUnusedRSVPs(callback);
     },
-    function (callback) {
+    function getMenuItems(callback) {
       var MenuDB = require('../DataLayer/MenuDB.js'),
         menuDB = new MenuDB();
 
       menuDB.GetItems(0, callback);
     },
-    function (callback) {
+    function getRsvpItems(callback) {
       var RsvpDB = require('../DataLayer/RsvpDB.js'),
         rsvpDB = new RsvpDB();
 
@@ -79,44 +79,6 @@ exports.index = function (req, res) {
   });
 };
 
-//Invite Functions
-exports.GetGuestList = function (req, res) {
-  CheckIfLoggedIn(req, res);
-
-  var InviteDB = require('../DataLayer/InviteDB.js'),
-    db = new InviteDB();
-
-  db.GetItems(function (err, results) {
-    if (err) throw(err);
-    res.render('includes/admin/guestList.jade');
-  });
-
-};
-
-exports.GetInviteList = function (req, res) {
-  CheckIfLoggedIn(req, res);
-
-  var Invite = require('../DataLayer/InviteDB.js'),
-    db = new Invite();
-
-  db.GetItems(0, function (err, results) {
-    if (err) throw(err);
-
-    var settings = require('../express_settings.js'),
-      HashID = require('hashids'),
-      hashID = new HashID(settings.Config.HashIDSalt);
-
-    results.map(function (obj) {
-      obj.hashId = hashID.encrypt(obj._id);
-    });
-
-    res.render('includes/admin/inviteList', {
-      inviteList: results
-    });
-
-  });
-
-};
 
 exports.AddInvite = function (req, res) {
   CheckIfLoggedIn(req, res);

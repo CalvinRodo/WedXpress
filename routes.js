@@ -10,31 +10,24 @@ module.exports = function (app) {
   app.post('/rsvp/:id', index.saveRsvp)
   app.get('/songList', index.SongList);
 
-  app.get('/registry', registry.index);
   app.post('/charge', charge.pay);
+
+  app.get('/registry', registry.index);
 
   app.get('/login', login.index);
   app.post('/login', login.login);
 
   app.get('/registryAdmin', admin.index);
-
-  app.get('/regList', admin.GetRegistryList);
-  app.post('/registry', admin.AddRegistryItem);
-
   app.get('/registry/delete/:id', admin.DeleteRegistryItem);
   app.get('/registry/edit/:id', admin.GetRegistryItem);
-  app.post('/registry/edit/:id', admin.EditRegistryItem);
-
-  app.get('/guestList', admin.GetGuestList);
-
-  app.post('/invite', admin.AddInvite);
-  app.get('/inviteList', admin.GetInviteList);
   app.get('/invite/delete/:id', admin.DeleteInvite);
-  app.post('/invite/edit/:id', admin.EditInvite);
   app.get('/invite/edit/:id', admin.GetInvite);
-
-  app.post('/menuItem', admin.AddMenuItem);
   app.get('/menuItem/delete/:id', admin.DeleteMenuItem);
-
   app.get('/upload/:id', admin.Upload);
+
+  app.post('/registry/edit/:id', admin.EditRegistryItem);
+  app.post('/invite', admin.AddInvite);
+  app.post('/invite/edit/:id', admin.EditInvite);
+  app.post('/menuItem', admin.AddMenuItem);
+  app.post('/registry', admin.AddRegistryItem);
 }

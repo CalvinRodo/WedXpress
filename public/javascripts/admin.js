@@ -1,21 +1,3 @@
-function loadRegistryList() {
-  $.get('./regList')
-    .done(function (data) {
-      $('#regAdminList').html(data);
-    }).fail(function (data) {
-      console.log(data);
-    });
-}
-
-function loadInviteList() {
-  $.get('./inviteList')
-    .done(function (data) {
-      $('#inviteList').html(data);
-    }).fail(function (data) {
-      console.log(data);
-    });
-}
-
 function loadRegistryItemForm(data, id) {
   $('#registryItemForm input[name=name]').val(data.name);
   $('#registryItemForm textarea[name=description]').val(data.description);
