@@ -9,22 +9,17 @@ InviteDB.prototype.DBName = 'Guests';
 
 InviteDB.super_(InviteDB.prototype.DBName);
 
-
 InviteDB.prototype.getInviteByUrl = function getInviteByUrl(urlName, callback) {
+  this.FindOne({url: urlName }, callback);
+};
 
-  var db = this.ConnectToDB();
-  db.collection(this.DBName).findOne({url: urlName }, function (err, result) {
-    db.close();
-    callback(err, result);
-  });
+InviteDB.prototype.getAllUnusedRSVPs = function getAllUnusedRSVPs(callback) {
+  this.Find({'rsvpStatus': {$ne: true}}, callback);
 };
 
 InviteDB.prototype.updateRSVPStatus = function updateRSVPStatus(id, status, callback) {
-  var db = this.ConnectToDB();
-  db.collection(this.DBName).updateById(id, {$set: {rsvpStatus: status}}, function (err, result) {
-    db.close();
-    callback(err, result);
-  });
+  this.UpdateByID(id, {rsvpStatus: status}, callback);
 }
+
 module.exports = InviteDB;
 
