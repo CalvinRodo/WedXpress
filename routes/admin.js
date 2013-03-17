@@ -22,7 +22,7 @@ function CreateInviteFromRequest(req) {
 
 function DefaultRedirect(err, res) {
   if (err) throw err;
-  res.redirect('/registryAdmin');
+  res.redirect('/admin');
 }
 
 function SendResultAsJson(err, result, res) {
@@ -68,7 +68,7 @@ exports.index = function (req, res) {
 
     if (err) throw(err);
 
-    res.render('registryAdmin', {
+    res.render('admin', {
       title: 'Registry Administration',
       scrollspy: false,
       inviteList: invites,
@@ -78,7 +78,6 @@ exports.index = function (req, res) {
     });
   });
 };
-
 
 exports.AddInvite = function (req, res) {
   CheckIfLoggedIn(req, res);
@@ -122,20 +121,6 @@ exports.GetInvite = function (req, res) {
 }
 
 //Registry Functions
-exports.GetRegistryList = function (req, res) {
-  CheckIfLoggedIn(req, req);
-
-  var RegistryDB = require('../DataLayer/RegistryDB.js'),
-    db = new RegistryDB();
-
-  db.GetItems(0, function (err, results) {
-    if (err) throw(err);
-    res.render('includes/admin/registryAdminList', {
-      items: results
-    });
-  });
-};
-
 exports.AddRegistryItem = function (req, res) {
   CheckIfLoggedIn(req, res);
 
@@ -182,7 +167,6 @@ exports.GetRegistryItem = function (req, res) {
 };
 
 //Menu Functions
-
 exports.AddMenuItem = function (req, res) {
   CheckIfLoggedIn(req, res);
 
@@ -208,6 +192,46 @@ exports.DeleteMenuItem = function (req, res) {
   });
 };
 
+
+function getGuests(rsvp, numInvites) {
+  var guests = [],
+    guest;
+  guests.push(rsvp.mainInvite);
+  for (var i, i = 0; i < numInvites; i++) {
+    guest = rsvp["guest" + i];
+    if (guest !== undefined) {
+      guests.push(guest);
+    }
+  }
+  return guests;
+}
+exports.ViewRSVP = function ViewRSVP(req, res) {
+  var async = require('async'),
+    id = req.params.id;
+
+  async.waterfall([function (callback) {
+    var RsvpDB = require('../DataLayer/RsvpDB.js'),
+      rsvpDB = new RsvpDB();
+    rsvpDB.GetItemByID(id, function (err, result) {
+      if (err) throw err;
+      callback(null, result);
+    });
+  },
+    function (rsvp, callback) {
+      var InviteDB = require('../DataLayer/InviteDB.js'),
+        inviteDB = new InviteDB();
+      inviteDB.GetItemByID(rsvp.inviteId, function (err, result) {
+        if (err) throw err;
+        callback(null, rsvp, result);
+      });
+    }, function (rsvp, invite, callback) {
+      res.render('includes/admin/rsvpModal', {
+        coming: rsvp.coming,
+        guests: getGuests(rsvp, invite.invites)
+      });
+    }
+  ]);
+}
 exports.Upload = function (req, res) {
   var settings = require('../express_settings'),
     crypto = require('crypto'),

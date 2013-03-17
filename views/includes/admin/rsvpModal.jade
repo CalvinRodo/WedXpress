@@ -1,0 +1,12 @@
+p Coming : #{coming}
+  - console.log(guests)
+  each guest in guests
+    - console.log(guest)
+    h3 #{guest.name}
+    p Special Requirements :
+      - guest.specialRequirements || "None"
+    h4 Menu
+    p Appetizer: #{guest.menu.appetizer}
+    | Entree: #{guest.menu.entree}
+    | Dessert: #{guest.menu.dessert}
+    hr

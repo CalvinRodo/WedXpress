@@ -18,7 +18,7 @@ exports.login = function (req, res) {
   if (uname === settings.Config.AdminUsername &&
     pword === settings.Config.AdminPassword) {
     req.session.loggedIn = true;
-    res.redirect('../registryAdmin');
+    res.redirect('../admin');
     return;
   }
   res.redirect('../');

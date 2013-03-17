@@ -94,17 +94,16 @@ exports.saveRsvp = function saveRsvp(req, res) {
       SaveRsvp: ['LoadInvite', function (callback, results) {
         var RsvpDb = require('../DataLayer/RsvpDB.js'),
           rsvpDB = new RsvpDb(),
-          invites = results.invites,
-          inviteArr = new Array(invites),
+          invites = results.LoadInvite.invites,
           rsvp = {
             coming: req.body.rsvp,
             inviteId: id,
             mainInvite: getInvite(req, 'main')
           };
+        for (var i, i = 0; i < invites; i++) {
 
-        inviteArr.forEach(function (i) {
           rsvp['guest' + i] = getInvite(req, i);
-        });
+        }
 
         rsvpDB.SaveItem(rsvp, callback);
       }],
@@ -121,19 +120,3 @@ exports.saveRsvp = function saveRsvp(req, res) {
     });
 };
 
-exports.SongList = function songList(req, res) {
-  res.render('includes/index/songs',
-    { songs: [
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'},
-      { name: 'Thunderstruck'}
-    ]
-    });
-};
