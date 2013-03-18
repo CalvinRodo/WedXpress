@@ -199,7 +199,11 @@ function getGuests(rsvp, numInvites) {
   guests.push(rsvp.mainInvite);
   for (var i, i = 0; i < numInvites; i++) {
     guest = rsvp["guest" + i];
-    if (guest !== undefined) {
+    //TODO: find a better way to handle this
+    if (guest !== undefined &&
+      guest.name !== '' &&
+      guest.name !== undefined &&
+      guest.name !== null) {
       guests.push(guest);
     }
   }
@@ -233,17 +237,7 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
   ]);
 }
 exports.Upload = function (req, res) {
-  var settings = require('../express_settings'),
-    crypto = require('crypto'),
-    mime = require('mime-magic'),
-    id = req.param.id;
-
-
-  CheckIfLoggedIn(req, res);
-  res.render('uploadModal', {
-    AWSAccessKeyID: settings.Config.AWSAccessKeyID
-//    policy : Creates3Policy()
-  });
+  res.render('uploadModal');
 };
 
 

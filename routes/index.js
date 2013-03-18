@@ -24,9 +24,9 @@ function getInvite(req, appender) {
     name: req.body['invite-name-' + appender],
     specialRequirements: req.body['requirement-' + appender],
     menu: {
-      appetizer: req.body['appetizer-' + appender],
-      entree: req.body['entree-' + appender],
-      dessert: req.body['dessert-' + appender]
+      appetizer: req.body['Appetizer-' + appender],
+      entree: req.body['Entree-' + appender],
+      dessert: req.body['Dessert-' + appender]
     }
   }
 }
