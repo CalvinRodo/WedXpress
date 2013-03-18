@@ -25,10 +25,60 @@ function DefaultRedirect(err, res) {
   res.redirect('/admin');
 }
 
+function getGuests(rsvp, numInvites) {
+  var guests = [],
+    guest;
+  guests.push(rsvp.mainInvite);
+  for (var i, i = 0; i < numInvites; i++) {
+    guest = rsvp["guest" + i];
+    //TODO: find a better way to handle this
+    if (guest !== undefined &&
+      guest.name !== '' &&
+      guest.name !== undefined &&
+      guest.name !== null) {
+      guests.push(guest);
+    }
+  }
+  return guests;
+}
+
 function SendResultAsJson(err, result, res) {
   if (err) throw err;
   res.send(200, result);
 
+}
+
+function foo() {
+  var settings = require('../express_settings.js'),
+    crypto = require('crypto'),
+    uuid = require('node-uuid'),
+    policy = createPolicy();
+  return {
+    key: settings.Config.AWSAccessKeyID,
+    signature: crypto.createHmac('sha1', settings.Config.AWSAccessKeySecret)
+      .update(policy)
+      .digest('base64'),
+    policy: policy,
+    uid: uuid.v1(),
+    aws_key: settings.Config.AWSAccessKeyID,
+    aws_bucket: settings.Config.Bucket
+  }
+}
+
+function createPolicy() {
+  var settings = require('../express_settings.js'),
+    moment = require('moment'),
+    s3Policy = {
+      expiration: moment.utc().add('minutes', 30).format('YYYY-MM-DDTHH:mm:ss\\Z'),
+      conditions: [
+        { bucket: settings.Config.Bucket },
+        { acl: 'public-read-write' },
+        { success_action_status: '201' },
+        ['starts-with', '$key', ''],
+        ['starts-with', '$Content-Type', 'image/']
+      ]
+    };
+  return new Buffer(JSON.stringify(s3Policy)).toString("base64")
 }
 
 exports.index = function (req, res) {
@@ -60,7 +110,7 @@ exports.index = function (req, res) {
 
       rsvpDB.GetItems(0, callback);
     }
-  ], function (err, results) {
+  ], function RenderPage(err, results) {
     var registryItems = results[0],
       invites = results[1],
       menus = results[2],
@@ -74,7 +124,8 @@ exports.index = function (req, res) {
       inviteList: invites,
       items: registryItems,
       menuItems: menus,
-      rsvpList: rsvpList
+      rsvpList: rsvpList,
+      upload: foo()
     });
   });
 };
@@ -192,23 +243,6 @@ exports.DeleteMenuItem = function (req, res) {
   });
 };
 
-
-function getGuests(rsvp, numInvites) {
-  var guests = [],
-    guest;
-  guests.push(rsvp.mainInvite);
-  for (var i, i = 0; i < numInvites; i++) {
-    guest = rsvp["guest" + i];
-    //TODO: find a better way to handle this
-    if (guest !== undefined &&
-      guest.name !== '' &&
-      guest.name !== undefined &&
-      guest.name !== null) {
-      guests.push(guest);
-    }
-  }
-  return guests;
-}
 exports.ViewRSVP = function ViewRSVP(req, res) {
   var async = require('async'),
     id = req.params.id;
@@ -236,34 +270,8 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
     }
   ]);
 }
+
 exports.Upload = function (req, res) {
-  res.render('uploadModal');
 };
 
 
-//var CreateS3Credentials = function CreateS3Credentials( mimetype, callback ) {
-//  var s3PolicyBase64, _date, _s3Policy;
-//  _date = new Date();
-//  return {
-//    "expiration": "" + (_date.getFullYear()) + "-" + (_date.getMonth() + 1) + "-" + (_date.getDate()) + "T" + (_date.getHours() + 1) + ":" + (_date.getMinutes()) + ":" + (_date.getSeconds()) + "Z",
-//    "conditions": [
-//      { "bucket": "WedXPress" },
-//      ["starts-with", "$Content-Disposition", ""],
-//      ["starts-with", "$key", "someFilePrefix_"],
-//      { "acl": "public-read" },
-//      { "success_action_redirect": "localhost" },
-//      ["content-length-range", 0, 2147483648],
-//      ["eq", "$Content-Type", mimetype]
-//    ]
-//  }
-//}
-//
-//var CreateS3Policy = function CreateS3Policy () {
-//    return {
-//      s3PolicyBase64: new Buffer( JSON.stringify( s3Policy ) ).toString( 'base64' ),
-//      s3Signature: crypto.createHmac( "sha1", "yourAWSsecretkey" ).update( s3Policy ).digest( "base64" ),
-//      s3Key: "Your AWS Key",
-//      s3Redirect: "http://example.com/uploadsuccess",
-//      s3Policy: s3Policy
-//    }
-//}

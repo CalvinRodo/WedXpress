@@ -1,4 +1,6 @@
-p Until I get image resizing working make sure the image is small enough to fit as a registry item
+input(type="file" id="fileupload" name="file")
+input(type="text" name="content-type" value="text/plain")
+input(type="submit" value="Save")
 //-form(action='http://wedxpress.s3.amazonaws.com/', method='post', enctype='multipart/form-data', id='upload#{item._id}')
 //-  input(type='hidden', name='key', value='${filename}')                                            ---
 //-  input(type="hidden", name='AWSAccessKeyId', value='#{AWSAccessKeyId}')

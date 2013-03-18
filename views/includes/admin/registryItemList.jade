@@ -14,7 +14,7 @@ table.table.table-hover.table-condensed
         th #{item.price}
           th
             a(data-target='#rsvpModal#{item._id}', data-toggle='modal').btn#uploadImage Upload Image
-            div(id='rsvpModal#{item._id}', data-remote='./upload/#{item._id}').modal.hide.fade
+            div(id='rsvpModal#{item._id}', data-remote='./upload/#{item._id}', enctype='multipart/form-data').modal.hide.fade
               .modal-header
                 h3 Upload an Image for this registry Item
               .modal-body

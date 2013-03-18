@@ -38,5 +38,7 @@ $(function () {
   $('#editRegistryItem').on('click', function () {
     $('#addNew').attr('disabled', false);
   });
-});
+})
+
+
 

@@ -33,3 +33,24 @@ block content
       .row-fluid
         #rsvpList
           include includes/admin/rsvpList
+
+block scripts
+  script(type='text/javascript')
+    $(function(){
+      $('#fileupload').fileupload({
+        url: 'https://' + #{upload.bucket} + '.s3.amazonaws.com/',
+        type: 'POST',
+        autoUpload: true,
+        uuid: 'upload.uuid'
+      }).bind('fileuploadsubmit', function (e, data) {
+        data.formData =  {
+          "key": "${filename}",
+          "AWSAccessKeyId": #{upload.key},
+          "acl": "public-read-write",
+          "policy": '#{upload.policy}',
+          "signature": '#{upload.signature}',
+          "success_action_status": "201",
+          "Content-Type": data.files[0].type
+         }
+      });
+    }
