@@ -6,5 +6,5 @@ exports.Config = {
   MongoDbConnection: process.env.MongoConnection || 'mongodb://localhost:27017/db',
   AWSAccessKeyID: process.env.AWSPublicAccessKey,
   AWSAccessKeySecret: process.env.AWSSecretAccessKey,
-  Bucket: 'WedXPress'
+  Bucket: 'wedxpress'
 };

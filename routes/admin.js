@@ -272,6 +272,7 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
 }
 
 exports.Upload = function (req, res) {
+  res.render('includes/admin/uploadModal');
 };
 
 

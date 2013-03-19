@@ -12,14 +12,8 @@ table.table.table-hover.table-condensed
         th #{item.name}
         th #{item.description}
         th #{item.price}
-          th
-            a(data-target='#rsvpModal#{item._id}', data-toggle='modal').btn#uploadImage Upload Image
-            div(id='rsvpModal#{item._id}', data-remote='./upload/#{item._id}', enctype='multipart/form-data').modal.hide.fade
-              .modal-header
-                h3 Upload an Image for this registry Item
-              .modal-body
-              .modal-footer
-                a(href='#', data-dismiss='modal').btn Cancel
+        th
+          input(type="file", id='fileupload',  name="file").btn
         th
           .btn-group
             a(href='about:blank', data-id='#{item._id}').btn#editRegItem Edit

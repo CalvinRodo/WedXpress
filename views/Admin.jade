@@ -19,7 +19,7 @@ block content
       h2 Add Menu Items
       .row-fluid
         include includes/admin/menuItems
-      h2 Menu List
+      h2 Menu Listuu
       .row-fluid
         include includes/admin/menuList
       h2 Add Guest
@@ -35,22 +35,28 @@ block content
           include includes/admin/rsvpList
 
 block scripts
+  script(src="javascripts/libraries/jquery.fileupload.js")
+  script(src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js")
+  script(src="http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js")
+  script(src="javascripts/libraries/jquery.fileupload-fp.js")
   script(type='text/javascript')
     $(function(){
       $('#fileupload').fileupload({
-        url: 'https://' + #{upload.bucket} + '.s3.amazonaws.com/',
-        type: 'POST',
-        autoUpload: true,
-        uuid: 'upload.uuid'
-      }).bind('fileuploadsubmit', function (e, data) {
+        dataType: 'json',
+        url: 'https://' + '#{upload.aws_bucket}' + '.s3.amazonaws.com/',
+        type: 'POST'
+      }).bind('fileuploadsubmit',function(e, data){
         data.formData =  {
-          "key": "${filename}",
-          "AWSAccessKeyId": #{upload.key},
+          "key": data.files[0].name,
+          "AWSAccessKeyId": '#{upload.key}',
           "acl": "public-read-write",
           "policy": '#{upload.policy}',
           "signature": '#{upload.signature}',
           "success_action_status": "201",
           "Content-Type": data.files[0].type
-         }
+        };
+      }).bind('fileuploadfail', function(e, data){
+        alert('failed to upload');
       });
-    }
+
+    });
