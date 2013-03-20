@@ -1,4 +1,6 @@
 extends layout
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/tooltipster.css')
 block content
   .container-fluid.mainContent
     section
@@ -40,3 +42,4 @@ block scripts
   script(src="http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js")
   script(src="javascripts/libraries/jquery.fileupload-fp.js")
   script(src="javascripts/admin.js")
+  script(src="javascripts/libraries/jquery.tooltipster.min.js")

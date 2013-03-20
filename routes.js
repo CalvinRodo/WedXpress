@@ -10,7 +10,7 @@ module.exports = function (app) {
   app.post('/rsvp/:id', index.saveRsvp);
   app.get('/admin/rsvp/view/:id', admin.ViewRSVP);
 
-  app.post('/charge', charge.pay);
+  app.post('/charge/:id', charge.pay);
 
   app.get('/login', login.index);
   app.post('/login', login.login);

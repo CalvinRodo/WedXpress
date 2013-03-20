@@ -17,7 +17,7 @@ table.table.table-hover.table-condensed
             input(type="file", id='fileupload#{item._id}', data-id='#{item._id}', name="file").btn.fileupload
           else
             a(href='#{item.image.location}')
-              p Image
+              p(title="<img src='#{item.image.location}' width='100' height='100'>", class='tooltipster') Image View Full Size
         th
           .btn-group
             a(href='about:blank', data-id='#{item._id}').btn#editRegItem Edit

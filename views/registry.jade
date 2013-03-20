@@ -4,9 +4,11 @@ block content
     - each item in items
       li.span3
         .thumbnail
-          form(action="/charge", method="post").form-horizontal
+          form(action="/charge/#{item._id}", method="post").form-horizontal
             fieldset
               legend #{item.name}
+              if (item.image !== undefined)
+                img(src='#{item.image.location}')
               p #{item.description}
               em $#{item.price}
               .control
@@ -18,5 +20,3 @@ block content
                 data-name="Wedding Registry",
                 data-description='#{item.name}'
                 )
-
-

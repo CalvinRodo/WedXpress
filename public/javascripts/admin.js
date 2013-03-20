@@ -28,41 +28,7 @@ function GetFromServer(obj, path, func) {
   return false;
 }
 
-$(function () {
-  $('.fileupload').fileupload({
-    dataType: 'xml',
-    url: 'https://wedxpress.s3.amazonaws.com/'
-  }).bind('fileuploadsubmit',function (e, data) {
-      var $this = $(this);
-      $.getJSON('./upload', function (formData) {
-        data.formData = formData;
-        data.formData['key'] = data.files[0].name;
-        data.formData['Content-Type'] = data.files[0].type;
-        $this.fileupload('send', data);
-      });
-      //TODO: Add a progressbar
-      return false;
-    }).bind('fileuploaddone',function (e, data) {
-      var location = data.result.childNodes[0].childNodes[0].textContent,
-        fileName = data.result.childNodes[0].childNodes[1].textContent,
-        bucket = data.result.childNodes[0].childNodes[2].textContent,
-        key = data.result.childNodes[0].childNodes[3].textContent,
-        $this = $(this),
-        id = $this.attr('data-id');
-
-      $.post('./upload', {
-        'location': location,
-        'filename': fileName,
-        'bucket': bucket,
-        'key': key,
-        'id': id
-      }, function () {
-        $this.replaceWith('<a href="' + location + '">' + fileName + '</a>');
-      });
-    }).bind('fileuploadfail', function (e, data) {
-      alert('failed to upload');
-    });
-
+function bindClickEvents() {
   $('#editRegItem').on("click", function () {
     return GetFromServer(this, './registry/edit', loadRegistryItemForm)
   });
@@ -72,7 +38,72 @@ $(function () {
   $('#editRegistryItem').on('click', function () {
     $('#addNew').attr('disabled', false);
   });
-})
+}
+
+function SetupFileUploads() {
+  $('.fileupload').fileupload({
+    dataType: 'xml',
+    url: 'https://wedxpress.s3.amazonaws.com/',
+    process: [
+      {
+        action: 'load',
+        fileTypes: /^image\/(gif|jpeg|png)$/,
+        maxFileSize: 20000000 // 20MB
+      },
+      {
+        //set the sizes to fit well with bootstrap thumbnails
+        action: 'resize',
+        maxWidth: 360,
+        maxHeight: 270,
+        minWidth: 160,
+        minHeight: 120
+      },
+      {
+        action: 'save'
+      }
+    ]
+  }).bind('fileuploadsubmit',function (e, data) {
+      var $this = $(this);
+      $.getJSON('./upload', function (formData) {
+        data.formData = formData;
+        data.formData['key'] = data.files[0].name;
+        data.formData['Content-Type'] = data.files[0].type;
+        meow('Upload', 'Uploading ' + data.files[0].name);
+        $this.fileupload('send', data);
+      });
+      //TODO: Add a progressbar
+      return false;
+    }).bind('fileuploaddone',function (e, data) {
+      //TODO: Find a better way to do this
+      var location = data.result.childNodes[0].childNodes[0].textContent,
+        fileName = data.result.childNodes[0].childNodes[1].textContent,
+        bucket = data.result.childNodes[0].childNodes[2].textContent,
+        key = data.result.childNodes[0].childNodes[3].textContent,
+        $this = $(this),
+        id = $this.attr('data-id');
+      $.post('./upload', {
+        'location': location,
+        'filename': fileName,
+        'bucket': bucket,
+        'key': key,
+        'id': id
+      }).done(function () {
+          meow('Upload', 'Upload Successful!');
+          $this.replaceWith('<a href="' + location + '">' + fileName + '</a>');
+        }).fail(function () {
+          meow('Error', 'Error Updating Registry Item, try again');
+        });
+    }).bind('fileuploadfail', function (e, data) {
+      meow('Error', 'Failed to Upload image');
+    });
+}
+$(function () {
+  SetupFileUploads();
+  bindClickEvents();
+  $('.tooltipster').tooltipster({
+    'position': 'top-left'
+  });
+});
 
 
 

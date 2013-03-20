@@ -6,6 +6,8 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='http://zacstewart.github.com/Meow/jquery.meow.css')
+    block stylesheets
   - if (scrollspy)
     body(data-spy='scroll', data-target='.nav-sidebar')
   -else
@@ -15,4 +17,6 @@ html
   script(src='//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
   script(src='http://code.jquery.com/ui/1.10.2/jquery-ui.js')
   script(src='/javascripts/libraries/bootstrap.min.js')
+  script(src='http://zacstewart.github.com/Meow/jquery.meow.js')
+  script(src='/javascripts/global.js')
   block scripts
