@@ -39,24 +39,4 @@ block scripts
   script(src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js")
   script(src="http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js")
   script(src="javascripts/libraries/jquery.fileupload-fp.js")
-  script(type='text/javascript')
-    $(function(){
-      $('#fileupload').fileupload({
-        dataType: 'json',
-        url: 'https://' + '#{upload.aws_bucket}' + '.s3.amazonaws.com/',
-        type: 'POST'
-      }).bind('fileuploadsubmit',function(e, data){
-        data.formData =  {
-          "key": data.files[0].name,
-          "AWSAccessKeyId": '#{upload.key}',
-          "acl": "public-read-write",
-          "policy": '#{upload.policy}',
-          "signature": '#{upload.signature}',
-          "success_action_status": "201",
-          "Content-Type": data.files[0].type
-        };
-      }).bind('fileuploadfail', function(e, data){
-        alert('failed to upload');
-      });
-
-    });
+  script(src="javascripts/admin.js")

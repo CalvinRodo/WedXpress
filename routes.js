@@ -23,7 +23,8 @@ module.exports = function (app) {
 
   app.get('/admin', admin.index);
   app.get('/menuItem/delete/:id', admin.DeleteMenuItem);
-  app.get('/upload/:id', admin.Upload);
+  app.get('/upload', admin.Upload);
+  app.post('/upload', admin.SaveUploadInfo);
 
   app.post('/menuItem', admin.AddMenuItem);
 

@@ -48,23 +48,6 @@ function SendResultAsJson(err, result, res) {
 
 }
 
-function foo() {
-  var settings = require('../express_settings.js'),
-    crypto = require('crypto'),
-    uuid = require('node-uuid'),
-    policy = createPolicy();
-  return {
-    key: settings.Config.AWSAccessKeyID,
-    signature: crypto.createHmac('sha1', settings.Config.AWSAccessKeySecret)
-      .update(policy)
-      .digest('base64'),
-    policy: policy,
-    uid: uuid.v1(),
-    aws_key: settings.Config.AWSAccessKeyID,
-    aws_bucket: settings.Config.Bucket
-  }
-}
-
 function createPolicy() {
   var settings = require('../express_settings.js'),
     moment = require('moment'),
@@ -124,8 +107,7 @@ exports.index = function (req, res) {
       inviteList: invites,
       items: registryItems,
       menuItems: menus,
-      rsvpList: rsvpList,
-      upload: foo()
+      rsvpList: rsvpList
     });
   });
 };
@@ -272,7 +254,47 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
 }
 
 exports.Upload = function (req, res) {
-  res.render('includes/admin/uploadModal');
+  var settings = require('../express_settings.js'),
+    crypto = require('crypto'),
+    uuid = require('node-uuid'),
+    policy = createPolicy(),
+    signature = crypto.createHmac('sha1', settings.Config.AWSAccessKeySecret).update(policy).digest('base64');
+  res.json({
+    "AWSAccessKeyId": settings.Config.AWSAccessKeyID,
+    "acl": "public-read-write",
+    "policy": policy,
+    "signature": signature,
+    "success_action_status": "201"
+  });
 };
+
+exports.SaveUploadInfo = function (req, res) {
+  var id = req.body.id,
+    filename = req.body.filename,
+    location = req.body.location,
+    bucket = req.body.bucket,
+    key = req.body.key,
+    async = require('async'),
+    RegistryDB = require('../DataLayer/RegistryDB.js'),
+    registryDB = new RegistryDB();
+
+  async.waterfall([function (callback) {
+    registryDB.GetItemByID(id, function (err, result) {
+      if (err) throw err;
+      callback(null, result);
+    });
+  }, function (invite, callback) {
+    invite.upload = {
+      'filename': filename,
+      'location': location,
+      'bucket': bucket,
+      'key': key
+    };
+    registryDB.UpdateByID(id, invite, function (err, result) {
+      if (err) throw err;
+      res.statusCode(200);
+    });
+  }]);
+}
 
 
