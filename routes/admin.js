@@ -284,15 +284,15 @@ exports.SaveUploadInfo = function (req, res) {
       callback(null, result);
     });
   }, function (invite, callback) {
-    invite.upload = {
+    var upload = {
       'filename': filename,
       'location': location,
       'bucket': bucket,
       'key': key
     };
-    registryDB.UpdateByID(id, invite, function (err, result) {
+    registryDB.UpdateByID(id, {'image': upload }, function (err, result) {
       if (err) throw err;
-      res.statusCode(200);
+      res.send(200);
     });
   }]);
 }

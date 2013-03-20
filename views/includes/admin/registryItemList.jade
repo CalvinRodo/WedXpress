@@ -13,7 +13,11 @@ table.table.table-hover.table-condensed
         th #{item.description}
         th #{item.price}
         th
-          input(type="file", id='fileupload#{item._id}', data-id='#{item._id}', name="file").btn.fileupload
+          if (item.image === undefined)
+            input(type="file", id='fileupload#{item._id}', data-id='#{item._id}', name="file").btn.fileupload
+          else
+            a(href='#{item.image.location}')
+              p Image
         th
           .btn-group
             a(href='about:blank', data-id='#{item._id}').btn#editRegItem Edit
