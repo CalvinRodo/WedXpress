@@ -11,7 +11,7 @@ exports.index = function (req, res) {
     RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
-  db.GetItems(0, function (err, results) {
+  db.GetUnboughtItems(function (err, results) {
     if (err) throw(err); //TODO: Handle errors
     res.render("registry", {
       publicKey: settings.Config.StripePublicKey,

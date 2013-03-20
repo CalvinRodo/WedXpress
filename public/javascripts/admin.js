@@ -97,6 +97,7 @@ function SetupFileUploads() {
       meow('Error', 'Failed to Upload image');
     });
 }
+
 $(function () {
   SetupFileUploads();
   bindClickEvents();

@@ -2,21 +2,25 @@ extends layout
 block content
   ul#RegistryContents.thumbnails
     - each item in items
-      li.span3
-        .thumbnail
-          form(action="/charge/#{item._id}", method="post").form-horizontal
-            fieldset
-              legend #{item.name}
-              if (item.image !== undefined)
-                img(src='#{item.image.location}')
-              p #{item.description}
-              em $#{item.price}
-              .control
-                script(
-                src="https://checkout.stripe.com/v2/checkout.js",
-                class="stripe-button",
-                data-key='#{publicKey}',
-                data-amount='#{item.price}',
-                data-name="Wedding Registry",
-                data-description='#{item.name}'
-                )
+      li.span3.thumbnail
+        form(action="/charge/#{item._id}", method="post").form-horizontal
+          fieldset
+            legend.name #{item.name}
+            if (item.image !== undefined)
+              img(src='#{item.image.location}').image
+            else
+              img(src='https://wedxpress.s3.amazonaws.com/tumblr_mj0nj6gosx1s71q1zo1_1280.png').image
+            p.description #{item.description}
+            - var price = item.price / 100;
+            em.price $#{price.toFixed(2)}
+            .control
+              script( src="https://checkout.stripe.com/v2/checkout.js",
+              class="stripe-button",
+              data-key='#{publicKey}',
+              data-amount='#{item.price}',
+              data-name="Wedding Registry",
+              data-description='#{item.name}'
+              )
+block scripts
+  script(src='javascripts/libraries/equalize.min.js')
+  script(src='javascripts/registry.js')

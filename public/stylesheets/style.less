@@ -15,6 +15,16 @@ body {
   background-color: #ffffff;
 }
 
+#RegistryContents {
+  text-align: center;
+}
+
+#RegistryContents > li {
+  display: inline-block;
+  *display: inline; /* ie7 fix */
+  float: none; /* this is the part that makes it work */
+}
+
 a {
   color: #00B7FF;
 }
