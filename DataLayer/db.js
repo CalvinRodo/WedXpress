@@ -5,7 +5,7 @@ DB.prototype = {
   ConnectToDB: function () {
     var mongoDb = require('mongoskin'),
       settings = require('../express_settings.js');
-    return mongoDb.db(settings.Config.MongoDbConnection);
+    return mongoDb.db(settings.Config.MongoDbConnection, { safe: true});
   },
 
   GetItems: function (skipValue, callback) {

@@ -66,14 +66,13 @@ function createPolicy() {
 
 exports.index = function (req, res) {
   CheckIfLoggedIn(req, res);
-  var async = require('async');
+  var async = require('async'),
+    RegistryDB = require('../DataLayer/RegistryDB.js'),
+    registryDB = new RegistryDB();
 
   async.parallel([
-    function getRegistryItems(callback) {
-      var RegistryDB = require('../DataLayer/RegistryDB.js'),
-        registryDB = new RegistryDB();
-
-      registryDB.GetItems(0, callback);
+    function getUnboughtRegistryItems(callback) {
+      registryDB.GetUnboughtItems(callback);
     },
     function getUnusedInvites(callback) {
       var InviteDB = require('../DataLayer/InviteDB.js'),
@@ -92,12 +91,16 @@ exports.index = function (req, res) {
         rsvpDB = new RsvpDB();
 
       rsvpDB.GetItems(0, callback);
+    },
+    function getBoughtItems(callback) {
+      registryDB.GetBoughtItems(callback);
     }
   ], function RenderPage(err, results) {
-    var registryItems = results[0],
+    var unboughtItems = results[0],
       invites = results[1],
       menus = results[2],
-      rsvpList = results[3];
+      rsvpList = results[3],
+      boughtItems = results[4];
 
     if (err) throw(err);
 
@@ -105,7 +108,8 @@ exports.index = function (req, res) {
       title: 'Registry Administration',
       scrollspy: false,
       inviteList: invites,
-      items: registryItems,
+      items: unboughtItems,
+      boughtItems: boughtItems,
       menuItems: menus,
       rsvpList: rsvpList
     });

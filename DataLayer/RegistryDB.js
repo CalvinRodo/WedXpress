@@ -13,4 +13,8 @@ RegistryDB.prototype.GetUnboughtItems = function GetUnboughtItems(callback) {
   this.Find({'purchased': {$ne: true} }, callback);
 };
 
+RegistryDB.prototype.GetBoughtItems = function GetBoughtItems(callback) {
+  this.Find({'purchased': true}, callback);
+};
+
 module.exports = RegistryDB;

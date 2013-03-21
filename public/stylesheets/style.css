@@ -5,6 +5,16 @@ body {
   background-color: #1A6A82;
 }
 
+.nav {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.tab-pane {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 .form-inline input,
 .form-inline button {
   margin: 0 5px;
