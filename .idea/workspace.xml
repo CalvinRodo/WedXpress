@@ -6,13 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/includes/admin/boughtRegistryItemList.jade" />
-      <change type="MOVED" beforePath="C:\Users\calvin\Documents\GitHub\Wedxpress\DataLayer\db.js" afterPath="$PROJECT_DIR$/DataLayer/DB.js" />
-      <change type="MOVED" beforePath="C:\Users\calvin\Documents\GitHub\Wedxpress\views\Admin.jade" afterPath="$PROJECT_DIR$/views/admin.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataLayer/RegistryDB.js" afterPath="$PROJECT_DIR$/DataLayer/RegistryDB.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/admin.js" afterPath="$PROJECT_DIR$/routes/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.less" afterPath="$PROJECT_DIR$/public/stylesheets/style.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/index/songs.jade" afterPath="$PROJECT_DIR$/views/includes/index/songs.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Wedxpress.iws" />
@@ -20,10 +16,10 @@
     <file path="/registry.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363821902397" ignored="false" />
     <file path="/app.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363130285249" ignored="false" />
     <file path="/registry.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363821697752" ignored="false" />
-    <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363051217116" ignored="false" />
+    <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363826000428" ignored="false" />
     <file path="/layout.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363748823658" ignored="false" />
     <file path="/.gitignore" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358105906751" ignored="false" />
-    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363822379053" ignored="false" />
+    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363825980418" ignored="false" />
     <file path="/a.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564379010" ignored="false" />
     <file path="/a.html" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107778521" ignored="false" />
     <file path="/a.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107769410" ignored="false" />
@@ -50,8 +46,8 @@
     <file path="/login.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358701595908" ignored="false" />
     <file path="/fragment.java" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564474246" ignored="false" />
     <file path="/style.less" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363825853660" ignored="false" />
-    <file path="/index.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363541217415" ignored="false" />
-    <file path="/songs.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358726567370" ignored="false" />
+    <file path="/index.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363826411448" ignored="false" />
+    <file path="/songs.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363826452215" ignored="false" />
     <file path="/rsvpForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363127731862" ignored="false" />
     <file path="/registryForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361118346352" ignored="false" />
     <file path="/nameMeal.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1362095007880" ignored="false" />
@@ -155,114 +151,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RegistryDB.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataLayer/RegistryDB.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="43" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.4790997">
-              <folding>
-                <element signature="e#183#231#0" expanded="false" />
-                <element signature="e#242#284#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inviteList.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/includes/admin/inviteList.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="2" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+            <state line="183" column="41" selection-start="11642" selection-end="11642" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="boughtRegistryItemList.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/includes/admin/boughtRegistryItemList.jade">
+      <file leaf-file-name="songs.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/includes/index/songs.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="19" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
+            <state line="2" column="28" selection-start="53" selection-end="53" vertical-scroll-proportion="0.10240964">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataLayer/DB.js">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="8" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0">
+            <state line="29" column="4" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#287#510#0" expanded="false" />
-                <element signature="e#551#726#0" expanded="false" />
-                <element signature="e#767#928#0" expanded="false" />
-                <element signature="e#975#1158#0" expanded="false" />
-                <element signature="e#1200#1375#0" expanded="false" />
-                <element signature="e#1416#1594#0" expanded="false" />
-                <element signature="e#1870#2072#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="8" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
-                <element signature="n#!!block;n#CreateRegistryItemFromRequest#0" expanded="false" />
-                <element signature="n#!!block;n#CreateInviteFromRequest#0" expanded="false" />
-                <element signature="n#!!block;n#DefaultRedirect#0" expanded="false" />
-                <element signature="n#!!block;n#getGuests#0" expanded="false" />
-                <element signature="n#!!block;n#SendResultAsJson#0" expanded="false" />
-                <element signature="n#!!block;n#createPolicy#0" expanded="false" />
-                <element signature="e#2937#3155#0" expanded="false" />
-                <element signature="e#3201#3407#0" expanded="false" />
-                <element signature="e#3450#3656#0" expanded="false" />
-                <element signature="e#3698#3914#0" expanded="false" />
-                <element signature="e#3983#4214#0" expanded="false" />
-                <element signature="e#4266#4478#0" expanded="false" />
-                <element signature="e#4527#4775#0" expanded="false" />
-                <element signature="e#4823#5046#0" expanded="false" />
-                <element signature="e#5108#5350#0" expanded="false" />
-                <element signature="e#5398#5598#0" expanded="false" />
-                <element signature="e#5648#6408#0" expanded="false" />
-                <element signature="e#6447#6897#0" expanded="false" />
-                <element signature="e#6945#7672#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -287,9 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/views/includes/admin/registryItemList.jade" />
-        <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/DataLayer/StripeCharger.js" />
         <option value="$PROJECT_DIR$/routes/charge.js" />
         <option value="$PROJECT_DIR$/public/javascripts/registry.js" />
@@ -303,6 +212,9 @@
         <option value="$PROJECT_DIR$/views/includes/admin/boughtRegistryItemList.jade" />
         <option value="$PROJECT_DIR$/views/admin.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.less" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/views/includes/index/songs.jade" />
       </list>
     </option>
   </component>
@@ -419,7 +331,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,11 +353,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -796,7 +730,11 @@
       <created>1363822381768</created>
       <updated>1363822381768</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Got Tabs Working">
+      <created>1363825982112</created>
+      <updated>1363825982112</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -837,9 +775,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24544074" sideWeight="0.590604" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242424" sideWeight="0.590604" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3242424" sideWeight="0.6006711" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075758" sideWeight="0.6006711" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39932886" sideWeight="0.47878787" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39932886" sideWeight="0.47878787" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -885,7 +823,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Positioning of Registry Items, also getting unbought items from RegistryDB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got Tabs Working" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -898,7 +836,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Fixing problems with rsvp form, adding accept and decline." />
     <MESSAGE value="Working on some front end and back end stuff." />
     <MESSAGE value="Working on adding client side aws uploading.\." />
     <MESSAGE value="Adding the project files back in so it's not as much of a pain in the ass." />
@@ -923,6 +860,7 @@
     <MESSAGE value="Image link works." />
     <MESSAGE value="Got upload working just finishing up registry stuff." />
     <MESSAGE value="Positioning of Registry Items, also getting unbought items from RegistryDB" />
+    <MESSAGE value="Got Tabs Working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -936,11 +874,21 @@
           <line>16</line>
           <option name="timeStamp" value="204" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/index.js</url>
+          <line>81</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/index.js</url>
+          <line>72</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="205" />
+      <option name="time" value="207" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -948,27 +896,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DataLayer/SongDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataLayer/StripeCharger.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataLayer/InviteDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="100" column="0" selection-start="3238" selection-end="3238" vertical-scroll-proportion="0.2982456">
@@ -1004,23 +931,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="8" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
+            <element signature="n#!!block;n#CreateRegistryItemFromRequest#0" expanded="false" />
+            <element signature="n#!!block;n#CreateInviteFromRequest#0" expanded="false" />
+            <element signature="n#!!block;n#DefaultRedirect#0" expanded="false" />
+            <element signature="n#!!block;n#getGuests#0" expanded="false" />
+            <element signature="n#!!block;n#SendResultAsJson#0" expanded="false" />
+            <element signature="n#!!block;n#createPolicy#0" expanded="false" />
+            <element signature="e#2935#3153#0" expanded="false" />
+            <element signature="e#3199#3405#0" expanded="false" />
+            <element signature="e#3448#3654#0" expanded="false" />
+            <element signature="e#3696#3912#0" expanded="false" />
+            <element signature="e#3981#4212#0" expanded="false" />
+            <element signature="e#4264#4476#0" expanded="false" />
+            <element signature="e#4525#4773#0" expanded="false" />
+            <element signature="e#4821#5044#0" expanded="false" />
+            <element signature="e#5106#5348#0" expanded="false" />
+            <element signature="e#5396#5596#0" expanded="false" />
+            <element signature="e#5646#6406#0" expanded="false" />
+            <element signature="e#6445#6895#0" expanded="false" />
+            <element signature="e#6943#7670#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#184#232#0" expanded="false" />
+            <element signature="e#244#286#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/includes/admin/boughtRegistryItemList.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
+        <state line="10" column="19" selection-start="186" selection-end="186" vertical-scroll-proportion="0.1800643">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+    <entry file="file://$PROJECT_DIR$/views/admin.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="2" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataLayer/RegistryDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
+        <state line="14" column="24" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1032,70 +990,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="2" selection-start="686" selection-end="686" vertical-scroll-proportion="0.92168677">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DataLayer/DB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="8" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0">
+        <state line="74" column="3" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.38554215">
           <folding>
-            <element signature="e#287#510#0" expanded="false" />
-            <element signature="e#551#726#0" expanded="false" />
-            <element signature="e#767#928#0" expanded="false" />
-            <element signature="e#975#1158#0" expanded="false" />
-            <element signature="e#1200#1375#0" expanded="false" />
-            <element signature="e#1416#1594#0" expanded="false" />
-            <element signature="e#1870#2072#0" expanded="false" />
+            <element signature="e#288#511#0" expanded="false" />
+            <element signature="e#552#727#0" expanded="false" />
+            <element signature="e#768#929#0" expanded="false" />
+            <element signature="e#976#1159#0" expanded="false" />
+            <element signature="e#1201#1376#0" expanded="false" />
+            <element signature="e#1417#1595#0" expanded="false" />
+            <element signature="e#1871#2073#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataLayer/RegistryDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.5368421">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+        <state line="183" column="41" selection-start="11642" selection-end="11642" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="8" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
-            <element signature="n#!!block;n#CreateRegistryItemFromRequest#0" expanded="false" />
-            <element signature="n#!!block;n#CreateInviteFromRequest#0" expanded="false" />
-            <element signature="n#!!block;n#DefaultRedirect#0" expanded="false" />
-            <element signature="n#!!block;n#getGuests#0" expanded="false" />
-            <element signature="n#!!block;n#SendResultAsJson#0" expanded="false" />
-            <element signature="n#!!block;n#createPolicy#0" expanded="false" />
-            <element signature="e#2937#3155#0" expanded="false" />
-            <element signature="e#3201#3407#0" expanded="false" />
-            <element signature="e#3450#3656#0" expanded="false" />
-            <element signature="e#3698#3914#0" expanded="false" />
-            <element signature="e#3983#4214#0" expanded="false" />
-            <element signature="e#4266#4478#0" expanded="false" />
-            <element signature="e#4527#4775#0" expanded="false" />
-            <element signature="e#4823#5046#0" expanded="false" />
-            <element signature="e#5108#5350#0" expanded="false" />
-            <element signature="e#5398#5598#0" expanded="false" />
-            <element signature="e#5648#6408#0" expanded="false" />
-            <element signature="e#6447#6897#0" expanded="false" />
-            <element signature="e#6945#7672#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="43" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+        <state line="487" column="6" selection-start="11076" selection-end="11076" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.4790997">
+        <state line="29" column="4" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#183#231#0" expanded="false" />
-            <element signature="e#242#284#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/index/songs.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="28" selection-start="53" selection-end="53" vertical-scroll-proportion="0.10240964">
+          <folding />
         </state>
       </provider>
     </entry>

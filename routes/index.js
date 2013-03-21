@@ -32,19 +32,22 @@ function getInvite(req, appender) {
 }
 
 exports.index = function index(req, res) {
-  res.render('index', {
-    title: "Calvin and Amy's Wedding",
-    scrollspy: true,
-    rsvp: false
+  var SongDB = require('../DataLayer/SongDB.js'),
+    songDB = new SongDB();
+
+  songDB.GetItems(0, function (err, results) {
+    if (err) throw err;
+    res.render('index', {
+      title: "Calvin and Amy's Wedding",
+      scrollspy: true,
+      rsvp: false,
+      songs: results
+    });
   });
 };
 
 exports.rsvp = function indexRsvp(req, res) {
   var async = require('async'),
-    InviteDB = require('../DataLayer/InviteDB.js'),
-    MenuDB = require('../DataLayer/MenuDB.js'),
-    inviteDB = new InviteDB(),
-    menuDB = new MenuDB(),
     url = req.params.inviteurl;
 
   if (url === undefined || url === null) {
@@ -54,20 +57,33 @@ exports.rsvp = function indexRsvp(req, res) {
 
   async.parallel([
     function (callback) {
+      var InviteDB = require('../DataLayer/InviteDB.js'),
+        inviteDB = new InviteDB();
       inviteDB.getInviteByUrl(url, callback);
     },
     function (callback) {
+      var MenuDB = require('../DataLayer/MenuDB.js'),
+        menuDB = new MenuDB();
       menuDB.GetItems(0, callback);
     }
+    , function GetSongs(callback) {
+      var SongDB = require('../DataLayer/SongDB.js'),
+        songDB = new SongDB();
+      songDB.GetItems(0, callback);
+
+    }
   ], function (err, results) {
+    if (err) throw err;
     var invite = results[0],
-      menuItems = results[1];
+      menuItems = results[1],
+      songs = results[2];
 
     res.render('index', {
       title: "Calvin and Amy's Wedding",
       scrollspy: true,
       rsvp: true,
       invite: invite,
+      songs: songs,
       menu: createMenu(menuItems)
     });
   });
