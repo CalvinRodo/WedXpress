@@ -6,10 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/admin.js" afterPath="$PROJECT_DIR$/routes/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/login.js" afterPath="$PROJECT_DIR$/routes/login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -21,7 +19,7 @@
     <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363828591220" ignored="false" />
     <file path="/layout.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363748823658" ignored="false" />
     <file path="/.gitignore" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358105906751" ignored="false" />
-    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363826535515" ignored="false" />
+    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363913514697" ignored="false" />
     <file path="/a.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564379010" ignored="false" />
     <file path="/a.html" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107778521" ignored="false" />
     <file path="/a.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107769410" ignored="false" />
@@ -45,10 +43,10 @@
     <file path="/registryAdmin.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358899632588" ignored="false" />
     <file path="/registryAdmin.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1360198534257" ignored="false" />
     <file path="/login.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358738312623" ignored="false" />
-    <file path="/login.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358701595908" ignored="false" />
+    <file path="/login.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363992610853" ignored="false" />
     <file path="/fragment.java" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564474246" ignored="false" />
     <file path="/style.less" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363825853660" ignored="false" />
-    <file path="/index.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363828151016" ignored="false" />
+    <file path="/index.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363992713521" ignored="false" />
     <file path="/songs.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363826452215" ignored="false" />
     <file path="/rsvpForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363127731862" ignored="false" />
     <file path="/registryForm.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1361118346352" ignored="false" />
@@ -155,16 +153,40 @@
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="13" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="21" column="16" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1363828793153" expanded="true" signature="21:67" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="74:6374" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="91:140" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="226:615" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="286:321" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="336:378" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="393:445" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="460:497" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="512:563" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="578:615" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="906:3549" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="1033:1861" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="1877:2705" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="2721:3549" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="3567:4460" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="4478:4971" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="4588:4757" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="4801:4971" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="4989:5897" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="5069:5897" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="5915:6374" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="5964:6309" placeholder="..." />
+                <marker date="1363828793153" expanded="true" signature="6380:6443" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="260" column="0" selection-start="6447" selection-end="6447" vertical-scroll-proportion="0.6070175">
+            <state line="65" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!block;n#CreateRegistryItemFromRequest#0" expanded="false" />
                 <element signature="n#!!block;n#CreateInviteFromRequest#0" expanded="false" />
@@ -184,6 +206,53 @@
                 <element signature="e#5646#6406#0" expanded="false" />
                 <element signature="e#6910#7637#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="27" selection-start="1912" selection-end="1912" vertical-scroll-proportion="0.7368421">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongDB.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataLayer/SongDB.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RsvpDB.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataLayer/RsvpDB.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="express_settings.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/express_settings.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -216,7 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/routes/registry.js" />
         <option value="$PROJECT_DIR$/views/registry.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/admin.js" />
         <option value="$PROJECT_DIR$/views/includes/admin/boughtRegistryItemlist.jade" />
@@ -225,21 +293,20 @@
         <option value="$PROJECT_DIR$/views/includes/admin/boughtRegistryItemList.jade" />
         <option value="$PROJECT_DIR$/views/admin.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.less" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/includes/index/songs.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/routes/admin.js" />
+        <option value="$PROJECT_DIR$/routes/login.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1360" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -349,6 +416,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataLayer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -701,7 +782,11 @@
       <created>1363826537611</created>
       <updated>1363826537611</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Adding packages to package.json&#10;&#10;removong unused packages">
+      <created>1363913520554</created>
+      <updated>1363913520554</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -725,14 +810,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="0" y="0" width="1360" height="738" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.76297575" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46979865" sideWeight="0.6006711" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46896553" sideWeight="0.6006711" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40939596" sideWeight="0.4969697" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4010067" sideWeight="0.5159091" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.590604" order="2" side_tool="true" content_ui="tabs" />
@@ -743,8 +828,8 @@
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242424" sideWeight="0.6006711" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075758" sideWeight="0.6728188" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.47878787" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2550077" sideWeight="0.60172415" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39827585" sideWeight="0.47878787" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -790,7 +875,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Songs are added to front page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding packages to package.json&#10;&#10;removong unused packages" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -803,7 +888,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Working on adding client side aws uploading.\." />
     <MESSAGE value="Adding the project files back in so it's not as much of a pain in the ass." />
     <MESSAGE value="setting a modal to upload to AWS S3" />
     <MESSAGE value="Adding URL to invite form&#10;Adding URL to invite List &#10;Allow user to edit the url &#10;adding code to load rsvp form if entered from url" />
@@ -828,6 +912,7 @@
     <MESSAGE value="Positioning of Registry Items, also getting unbought items from RegistryDB" />
     <MESSAGE value="Got Tabs Working" />
     <MESSAGE value="Songs are added to front page" />
+    <MESSAGE value="Adding packages to package.json&#10;&#10;removong unused packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -843,19 +928,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/index.js</url>
-          <line>81</line>
-          <option name="timeStamp" value="205" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/index.js</url>
-          <line>72</line>
-          <option name="timeStamp" value="206" />
+          <line>79</line>
+          <option name="timeStamp" value="208" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="207" />
+      <option name="time" value="209" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -863,55 +943,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/includes/admin/boughtRegistryItemList.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="186" selection-end="186" vertical-scroll-proportion="0.1800643">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/admin/inviteList.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataLayer/DB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="3" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.38554215">
-          <folding>
-            <element signature="e#288#511#0" expanded="false" />
-            <element signature="e#552#727#0" expanded="false" />
-            <element signature="e#768#929#0" expanded="false" />
-            <element signature="e#976#1159#0" expanded="false" />
-            <element signature="e#1201#1376#0" expanded="false" />
-            <element signature="e#1417#1595#0" expanded="false" />
-            <element signature="e#1871#2073#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataLayer/RegistryDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.5368421">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="487" column="6" selection-start="11076" selection-end="11076" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="4" selection-start="644" selection-end="644" vertical-scroll-proportion="0.05120482">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/express_settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="571" selection-end="571" vertical-scroll-proportion="0.816">
@@ -971,16 +999,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/express_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="21" column="16" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1363828793153" expanded="true" signature="21:67" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="74:6374" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="91:140" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="226:615" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="286:321" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="336:378" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="393:445" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="460:497" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="512:563" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="578:615" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="906:3549" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="1033:1861" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="1877:2705" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="2721:3549" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="3567:4460" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="4478:4971" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="4588:4757" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="4801:4971" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="4989:5897" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="5069:5897" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="5915:6374" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="5964:6309" placeholder="..." />
+            <marker date="1363828793153" expanded="true" signature="6380:6443" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="0" selection-start="6447" selection-end="6447" vertical-scroll-proportion="0.6070175">
+        <state line="65" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!block;n#CreateRegistryItemFromRequest#0" expanded="false" />
             <element signature="n#!!block;n#CreateInviteFromRequest#0" expanded="false" />
@@ -999,6 +1058,52 @@
             <element signature="e#5396#5596#0" expanded="false" />
             <element signature="e#5646#6406#0" expanded="false" />
             <element signature="e#6910#7637#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataLayer/RsvpDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataLayer/DB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="1598" selection-end="1598" vertical-scroll-proportion="0.67509025">
+          <folding>
+            <element signature="e#288#511#0" expanded="false" />
+            <element signature="e#552#727#0" expanded="false" />
+            <element signature="e#768#929#0" expanded="false" />
+            <element signature="e#976#1159#0" expanded="false" />
+            <element signature="e#1201#1376#0" expanded="false" />
+            <element signature="e#1417#1595#0" expanded="false" />
+            <element signature="e#1633#1813#0" expanded="false" />
+            <element signature="e#1871#2073#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataLayer/SongDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="27" selection-start="1912" selection-end="1912" vertical-scroll-proportion="0.7368421">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -54,7 +54,6 @@ exports.rsvp = function indexRsvp(req, res) {
     res.redirect('/');
     return;
   }
-
   async.parallel([
     function (callback) {
       var InviteDB = require('../DataLayer/InviteDB.js'),
@@ -77,6 +76,13 @@ exports.rsvp = function indexRsvp(req, res) {
     var invite = results[0],
       menuItems = results[1],
       songs = results[2];
+
+    if (invite === null ||
+      invite === {} ||
+      invite === undefined) {
+      res.redirect('/');
+      return;
+    }
 
     res.render('index', {
       title: "Calvin and Amy's Wedding",
