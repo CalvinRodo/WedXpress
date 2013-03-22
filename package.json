@@ -13,6 +13,9 @@
     "mongoskin": "*",
     "stripe": "*",
     "hashids": "*",
-    "async": "*"
+    "async": "*",
+    "crypto": "*",
+    "moment": "*",
+    "crypto": "*"
   }
 }

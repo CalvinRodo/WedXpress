@@ -260,7 +260,6 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
 exports.Upload = function (req, res) {
   var settings = require('../express_settings.js'),
     crypto = require('crypto'),
-    uuid = require('node-uuid'),
     policy = createPolicy(),
     signature = crypto.createHmac('sha1', settings.Config.AWSAccessKeySecret).update(policy).digest('base64');
   res.json({
