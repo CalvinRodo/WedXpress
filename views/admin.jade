@@ -1,0 +1,54 @@
+extends layout
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/tooltipster.css')
+block content
+  .tabbable
+    ul.nav.nav-tabs
+      li
+        a(href='#RegistryAdmin', data-toggle='tab').active Registry Admin
+      li
+        a(href='#MenuAdmin', data-toggle='tab') Menu Admin
+      li
+        a(href='#GuestAdmin', data-toggle='tab') Guest Admin
+    .mainContent.tab-content.container-fluid
+      section#RegistryAdmin.tab-pane
+        h1 Registry Admin
+        h2 Add Registry Item
+        .row-fluid
+          include includes/admin/registryForm
+        h2 Unbought Registry Items
+        .row-fluid
+          #regAdminList
+            include includes/admin/registryItemList
+        h2 Bought Registry Items
+        .row-fluid
+          #regAdminList
+            include includes/admin/boughtRegistryItemList
+      section#MenuAdmin.tab-pane
+        h1 Menu Admin
+        h2 Add Menu Items
+        .row-fluid
+          include includes/admin/menuItems
+        h2 Menu List
+        .row-fluid
+          include includes/admin/menuList
+      section#GuestAdmin.tab-pane
+        h1 Guest Admin
+        h2 Add Guest
+        .row-fluid
+          include includes/admin/guestForm
+        h2 Guest List
+        .row-fluid
+          #guestList
+            include includes/admin/inviteList
+        h2 RSVP List
+        .row-fluid
+          #rsvpList
+            include includes/admin/rsvpList
+block scripts
+  script(src="javascripts/libraries/jquery.fileupload.js")
+  script(src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js")
+  script(src="http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js")
+  script(src="javascripts/libraries/jquery.fileupload-fp.js")
+  script(src="javascripts/admin.js")
+  script(src="javascripts/libraries/jquery.tooltipster.min.js")
