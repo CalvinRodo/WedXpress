@@ -1,6 +1,6 @@
 function CheckIfLoggedIn(req, res) {
   if (req.session.loggedIn != true) {
-    res.redirect('/index');
+    res.redirect('/');
   }
 }
 
@@ -20,9 +20,9 @@ function CreateInviteFromRequest(req) {
   };
 }
 
-function DefaultRedirect(err, res) {
+function DefaultRedirect(err, res, section) {
   if (err) throw err;
-  res.redirect('/admin');
+  res.redirect('/admin' + section);
 }
 
 function getGuests(rsvp, numInvites) {
@@ -105,6 +105,7 @@ exports.index = function (req, res) {
     if (err) throw(err);
 
     res.render('admin', {
+      loggedIn: true,
       title: 'Registry Administration',
       scrollspy: false,
       inviteList: invites,
@@ -122,7 +123,7 @@ exports.AddInvite = function (req, res) {
     db = new InviteDB();
 
   db.SaveItem(CreateInviteFromRequest(req), function (err, results) {
-    DefaultRedirect(err, res)
+    DefaultRedirect(err, res, '#GuestAdmin');
   });
 };
 
@@ -133,7 +134,7 @@ exports.DeleteInvite = function (req, res) {
     db = new InviteDB();
 
   db.DeleteItem(req.params.id, function (err, result) {
-    DefaultRedirect(err, res);
+    DefaultRedirect(err, res, '#GuestAdmin');
   });
 }
 
@@ -142,7 +143,7 @@ exports.EditInvite = function (req, res) {
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
   db.UpdateItem(req.params.id, CreateInviteFromRequest(req), function (err, result) {
-    DefaultRedirect(err, res);
+    DefaultRedirect(err, res, '#GuestAdmin');
   });
 }
 
@@ -165,7 +166,7 @@ exports.AddRegistryItem = function (req, res) {
     db = new RegistryDB();
 
   db.SaveItem(CreateRegistryItemFromRequest(req), function (err, result) {
-    DefaultRedirect(err, res);
+    DefaultRedirect(err, res, '#RegistryAdmin');
   });
 };
 
@@ -176,7 +177,7 @@ exports.DeleteRegistryItem = function (req, res) {
     db = new RegistryDB();
 
   db.DeleteItem(req.params.id, function (err, result) {
-    DefaultRedirect(err, res);
+    DefaultRedirect(err, res, "#RegistryAdmin");
   });
 }
 
@@ -186,7 +187,7 @@ exports.EditRegistryItem = function (req, res) {
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
   db.UpdateItem(req.params.id, CreateRegistryItemFromRequest(req), function (err, result) {
-    DefaultRedirect(err, res);
+    DefaultRedirect(err, res, "#RegistryAdmin");
   });
 
 }
@@ -214,7 +215,7 @@ exports.AddMenuItem = function (req, res) {
     name: req.body.name,
     course: req.body.course
   }, function (err, result) {
-    DefaultRedirect(err, res);
+    DefaultRedirect(err, res, '#MenuAdmin');
   })
 };
 
@@ -225,7 +226,7 @@ exports.DeleteMenuItem = function (req, res) {
     db = new MenuDB();
 
   db.DeleteItem(req.params.id, function (err, result) {
-    DefaultRedirect(err, res);
+    DefaultRedirect(err, res, "#MenuAdmin");
   });
 };
 
@@ -250,6 +251,7 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
       });
     }, function (rsvp, invite, callback) {
       res.render('includes/admin/rsvpModal', {
+        loggedIn: true,
         coming: rsvp.coming,
         guests: getGuests(rsvp, invite.invites)
       });
