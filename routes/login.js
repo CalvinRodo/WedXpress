@@ -23,7 +23,7 @@ exports.login = function (req, res) {
     res.redirect('../admin');
     return;
   }
-  console.log(uname + ' did not match ' + adminUsername);
-  console.log(pword + ' did not match ' + adminPassword);
+  console.trace(uname + ' did not match ' + adminUsername);
+  console.trace(pword + ' did not match ' + adminPassword);
   res.redirect('../');
 };
