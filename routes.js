@@ -14,6 +14,7 @@ module.exports = function (app) {
 
   app.get('/login', login.index);
   app.post('/login', login.login);
+  app.get('/logout', login.logout);
 
   app.get('/registry', registry.index);
   app.get('/registry/delete/:id', admin.DeleteRegistryItem);

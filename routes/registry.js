@@ -14,6 +14,7 @@ exports.index = function (req, res) {
   db.GetUnboughtItems(function (err, results) {
     if (err) throw(err); //TODO: Handle errors
     res.render("registry", {
+      loggedIn: req.session.loggedIn,
       publicKey: settings.Config.StripePublicKey,
       title: "Wedding Registry",
       items: results,

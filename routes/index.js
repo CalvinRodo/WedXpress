@@ -38,6 +38,7 @@ exports.index = function index(req, res) {
   songDB.GetItems(0, function (err, results) {
     if (err) throw err;
     res.render('index', {
+      loggedIn: req.session.loggedIn,
       title: "Calvin and Amy's Wedding",
       scrollspy: true,
       rsvp: false,
@@ -85,6 +86,7 @@ exports.rsvp = function indexRsvp(req, res) {
     }
 
     res.render('index', {
+      loggedIn: req.session.loggedIn,
       title: "Calvin and Amy's Wedding",
       scrollspy: true,
       rsvp: true,

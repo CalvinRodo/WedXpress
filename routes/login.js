@@ -7,7 +7,11 @@
  */
 
 exports.index = function (req, res) {
-  res.render('login', {title: 'login', scrollspy: false});
+  res.render('login', {
+    loggedIn: req.session.loggedIn,
+    title: 'login',
+    scrollspy: false
+  });
 };
 
 exports.login = function (req, res) {
@@ -27,3 +31,8 @@ exports.login = function (req, res) {
   console.trace(pword + ' did not match ' + adminPassword);
   res.redirect('../');
 };
+
+exports.logout = function (req, res) {
+  req.session.loggedIn = false;
+  res.redirect('/');
+}
