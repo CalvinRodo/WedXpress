@@ -1,18 +1,15 @@
-/**
- * Created with IntelliJ IDEA.
- * User: calvin
- * Date: 1/13/13
- * Time: 12:04 PM
- * To change this template use File | Settings | File Templates.
- */
-
 exports.index = function (req, res) {
   var settings = require('../express_settings'),
     RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
 
   db.GetUnboughtItems(function (err, results) {
-    if (err) throw(err); //TODO: Handle errors
+    if (err) {
+      console.error('Error getting registry Items');
+      console.error(err);
+      res.redirect('/oops');
+    }
+
     res.render("registry", {
       loggedIn: req.session.loggedIn,
       publicKey: settings.Config.StripePublicKey,
@@ -20,5 +17,5 @@ exports.index = function (req, res) {
       items: results,
       scrollspy: false
     });
-  });
-};
+    k
+  };
