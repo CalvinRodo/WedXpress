@@ -36,7 +36,12 @@ exports.index = function index(req, res) {
     songDB = new SongDB();
 
   songDB.GetItems(0, function (err, results) {
-    if (err) throw err;
+    if (err) {
+      console.error(err);
+      console.error('Failed on loading song list');
+      res.redirect('/oops');
+    }
+
     res.render('index', {
       loggedIn: req.session.loggedIn,
       title: "Calvin and Amy's Wedding",
@@ -73,7 +78,12 @@ exports.rsvp = function indexRsvp(req, res) {
 
     }
   ], function (err, results) {
-    if (err) throw err;
+//
+    if (err) {
+      console.error(err);
+      res.redirect('/oops');
+    }
+
     var invite = results[0],
       menuItems = results[1],
       songs = results[2];
@@ -138,7 +148,12 @@ exports.saveRsvp = function saveRsvp(req, res) {
         inviteDb.updateRSVPStatus(id, true, callback);
       }]},
     function (err, results) {
-      if (err) throw err;
+      if (err) {
+        console.error('error saving rsvp');
+        console.error(err);
+        console.error(results);
+        res.redirect('/oops');
+      }
       //TODO Redirect to success page
       res.redirect('/');
     });

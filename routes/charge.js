@@ -7,23 +7,36 @@ exports.pay = function (req, res) {
 
   async.waterfall([function (callback) {
     registryDB.GetItemByID(id, function (err, result) {
-      if (err) throw err;
+      if (err) {
+        console.error('failed on getting registry item from db');
+        console.error(err);
+        res.redirect('/oops');
+      }
       callback(null, result);
     });
   }, function (regItem, callback) {
     var stripe = require('../DataLayer/StripeCharger.js');
 
     stripe.ChargeCustomer(token, regItem.price, regItem.name, function (err, result) {
-      if (err) throw err;
+      if (err) {
+        console.error('failed on charging customer error');
+        console.error(err);
+        res.redirect('/oops');
+      }
+
       callback(null, result, regItem);
     });
 
   }, function (customer, regItem) {
 
     registryDB.UpdateByID(regItem._id, {'purchased': true }, function (err, result) {
-      if (err) throw err;
+      if (err) {
+        console.error('failed on saving charge to our db');
+        console.error(err);
+        res.redirect('/oops');
+      }
+
       res.redirect('/thanks/' + regItem._id);
     });
-
   }]);
 };

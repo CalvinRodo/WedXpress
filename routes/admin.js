@@ -21,7 +21,13 @@ function CreateInviteFromRequest(req) {
 }
 
 function DefaultRedirect(err, res, section) {
-  if (err) throw err;
+  if (err) {
+    console.log('failed on error concerning ' + section);
+    console.error(err);
+    res.redirect('/oops');
+
+  }
+  ;
   res.redirect('/admin' + section);
 }
 
@@ -102,7 +108,11 @@ exports.index = function (req, res) {
       rsvpList = results[3],
       boughtItems = results[4];
 
-    if (err) throw(err);
+    if (err) {
+      console.error('Failed on rendering admin page');
+      console.error(err);
+    }
+
 
     res.render('admin', {
       loggedIn: true,
@@ -238,7 +248,12 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
     var RsvpDB = require('../DataLayer/RsvpDB.js'),
       rsvpDB = new RsvpDB();
     rsvpDB.GetItemByID(id, function (err, result) {
-      if (err) throw err;
+      if (err) {
+        console.error('failed on getting rsvp from db');
+        console.error(err);
+        res.redirect('/oops');
+      }
+
       callback(null, result);
     });
   },
@@ -246,7 +261,11 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
       var InviteDB = require('../DataLayer/InviteDB.js'),
         inviteDB = new InviteDB();
       inviteDB.GetItemByID(rsvp.inviteId, function (err, result) {
-        if (err) throw err;
+        if (err) {
+          console.error('failed on getting invite from db');
+          console.error(err);
+          res.redirect('/oops');
+        }
         callback(null, rsvp, result);
       });
     }, function (rsvp, invite, callback) {
