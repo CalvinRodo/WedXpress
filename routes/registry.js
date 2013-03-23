@@ -17,5 +17,5 @@ exports.index = function (req, res) {
       items: results,
       scrollspy: false
     });
-    k
-  };
+  });
+}
