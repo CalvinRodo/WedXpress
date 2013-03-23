@@ -3,7 +3,9 @@ module.exports = function (app) {
     registry = require('./routes/registry.js'),
     charge = require('./routes/charge.js'),
     login = require('./routes/login.js'),
-    admin = require('./routes/admin.js');
+    admin = require('./routes/admin.js'),
+    oops = require('./routes/oops.js'),
+    thanks = require('./routes/thanks.js');
 
   app.get('/', index.index);
   app.get('/rsvp/:inviteurl', index.rsvp);
@@ -34,4 +36,7 @@ module.exports = function (app) {
   app.post('/invite', admin.AddInvite);
   app.post('/invite/edit/:id', admin.EditInvite);
 
+  app.get('/oops', oops.index);
+
+  app.get('/thanks/:id', thanks.index);
 }
