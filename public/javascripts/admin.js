@@ -1,7 +1,7 @@
 function loadRegistryItemForm(data, id) {
   $('#registryItemForm input[name=name]').val(data.name);
   $('#registryItemForm textarea[name=description]').val(data.description);
-  $('#registryItemForm input[name=price]').val(data.price);
+  $('#registryItemForm input[name=price]').val((parseInt(data.price) / 100).toFixed(2));
   $('#registryItemForm button[name=edit]')
     .attr('disabled', false)
     .attr('formaction', '/registry/edit/' + id);
@@ -29,10 +29,10 @@ function GetFromServer(obj, path, func) {
 }
 
 function bindClickEvents() {
-  $('#editRegItem').on("click", function () {
+  $('.editRegItem').on("click", function () {
     return GetFromServer(this, './registry/edit', loadRegistryItemForm)
   });
-  $('#editInvite').on('click', function () {
+  $('.editInvite').on('click', function () {
     return GetFromServer(this, './invite/edit', loadInviteForm)
   });
   $('#editRegistryItem').on('click', function () {
