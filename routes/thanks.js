@@ -8,15 +8,10 @@ exports.index = function (req, res) {
       console.error(err);
       res.redirect('/oops');
     }
-
     res.render('thanks', {
       loggedIn: req.session.loggedIn,
       title: 'Thank You!!!',
       item: result
     });
-
-
-  })
-
-
+  });
 };

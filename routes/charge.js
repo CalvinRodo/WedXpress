@@ -11,7 +11,7 @@ exports.pay = function (req, res) {
       callback(null, result);
     });
   }, function (regItem, callback) {
-    var stripe = require('~/DataLayer/StripeCharger.js');
+    var stripe = require('../DataLayer/StripeCharger.js');
 
     stripe.ChargeCustomer(token, regItem.price, regItem.name, function (err, result) {
       if (err) throw err;
