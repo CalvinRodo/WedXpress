@@ -8,7 +8,7 @@ function CreateRegistryItemFromRequest(req) {
   return {
     name: req.body.name,
     description: req.body.description,
-    price: req.body.price
+    price: req.body.price * 100 //convert the amount into cents
   };
 }
 

@@ -11,7 +11,8 @@ table.table.table-hover.table-condensed
       tr
         th #{item.name}
         th #{item.description}
-        th #{item.price}
+        -var price = item.price / 100;
+        th #{price.toFixed(2)}
         th
           if (item.image === undefined)
             input(type="file", id='fileupload#{item._id}', data-id='#{item._id}', name="file").btn.fileupload
