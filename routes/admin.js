@@ -49,7 +49,10 @@ function getGuests(rsvp, numInvites) {
 }
 
 function SendResultAsJson(err, result, res) {
-  if (err) throw err;
+  if (err) {
+    console.error(err);
+    res.send(500, result);
+  }
   res.send(200, result);
 
 }
@@ -70,7 +73,7 @@ function createPolicy() {
   return new Buffer(JSON.stringify(s3Policy)).toString("base64")
 }
 
-exports.index = function (req, res) {
+exports.index = function index(req, res) {
   CheckIfLoggedIn(req, res);
   var async = require('async'),
     RegistryDB = require('../DataLayer/RegistryDB.js'),
@@ -127,7 +130,7 @@ exports.index = function (req, res) {
   });
 };
 
-exports.AddInvite = function (req, res) {
+exports.AddInvite = function AddInvite(req, res) {
   CheckIfLoggedIn(req, res);
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
@@ -137,7 +140,7 @@ exports.AddInvite = function (req, res) {
   });
 };
 
-exports.DeleteInvite = function (req, res) {
+exports.DeleteInvite = function DeleteInvite(req, res) {
   CheckIfLoggedIn(req, res);
 
   var InviteDB = require('../DataLayer/InviteDB.js'),
@@ -148,7 +151,7 @@ exports.DeleteInvite = function (req, res) {
   });
 }
 
-exports.EditInvite = function (req, res) {
+exports.EditInvite = function EditInvite(req, res) {
 
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
@@ -157,7 +160,7 @@ exports.EditInvite = function (req, res) {
   });
 }
 
-exports.GetInvite = function (req, res) {
+exports.GetInvite = function GetInvite(req, res) {
   CheckIfLoggedIn(req, res);
 
   var InviteDB = require('../DataLayer/InviteDB.js'),
@@ -169,7 +172,7 @@ exports.GetInvite = function (req, res) {
 }
 
 //Registry Functions
-exports.AddRegistryItem = function (req, res) {
+exports.AddRegistryItem = function AddRegistryItem(req, res) {
   CheckIfLoggedIn(req, res);
 
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
@@ -180,7 +183,7 @@ exports.AddRegistryItem = function (req, res) {
   });
 };
 
-exports.DeleteRegistryItem = function (req, res) {
+exports.DeleteRegistryItem = function DeleteRegistryItem(req, res) {
   CheckIfLoggedIn(req, res);
 
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
@@ -191,7 +194,7 @@ exports.DeleteRegistryItem = function (req, res) {
   });
 }
 
-exports.EditRegistryItem = function (req, res) {
+exports.EditRegistryItem = function EditRegistryItem(req, res) {
   CheckIfLoggedIn(req, res);
 
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
@@ -202,7 +205,7 @@ exports.EditRegistryItem = function (req, res) {
 
 }
 
-exports.GetRegistryItem = function (req, res) {
+exports.GetRegistryItem = function GetRegistryItem(req, res) {
   CheckIfLoggedIn(req, res);
 
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
@@ -214,8 +217,36 @@ exports.GetRegistryItem = function (req, res) {
 
 };
 
+exports.CopyRegistryItem = function CopyRegistryItem(req, res) {
+  var RegistryDB = require('../DataLayer/RegistryDB.js'),
+    registryDB = new RegistryDB(),
+    async = require('async'),
+    id = req.params.id;
+
+  async.waterfall([ function GetRegistryItem(callback) {
+    registryDB.GetItemByID(id, function (err, result) {
+      if (err) {
+        console.error(err);
+        res.redirect('/oops');
+      }
+
+      callback(null, result);
+    })
+  }, function (result, callback) {
+    result._id = undefined;
+    registryDB.SaveItem(result, function (err, result) {
+      if (err) {
+        console.error(err);
+        res.redirect('/oops');
+      }
+      res.redirect('/admin#RegistryAdmin');
+    });
+  }]);
+
+
+}
 //Menu Functions
-exports.AddMenuItem = function (req, res) {
+exports.AddMenuItem = function AddMenuItem(req, res) {
   CheckIfLoggedIn(req, res);
 
   var MenuDB = require('../DataLayer/MenuDB.js'),
@@ -229,7 +260,7 @@ exports.AddMenuItem = function (req, res) {
   })
 };
 
-exports.DeleteMenuItem = function (req, res) {
+exports.DeleteMenuItem = function DeleteMenuItem(req, res) {
   CheckIfLoggedIn(req, res);
 
   var MenuDB = require('../DataLayer/MenuDB.js'),
@@ -278,7 +309,9 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
   ]);
 }
 
-exports.Upload = function (req, res) {
+
+//Upload functions
+exports.Upload = function Upload(req, res) {
   var settings = require('../express_settings.js'),
     crypto = require('crypto'),
     policy = createPolicy(),
@@ -292,7 +325,7 @@ exports.Upload = function (req, res) {
   });
 };
 
-exports.SaveUploadInfo = function (req, res) {
+exports.SaveUploadInfo = function SaveUploadInfo(req, res) {
   var id = req.body.id,
     filename = req.body.filename,
     location = req.body.location,

@@ -22,5 +22,6 @@ table.table.table-hover.table-condensed
         th
           .btn-group
             a(href='about:blank', data-id='#{item._id}').btn.editRegItem Edit
+            a(href='/registry/copy/#{item._id}').btn Copy
             a(href='/registry/delete/#{item._id}').btn
               i.icon-remove

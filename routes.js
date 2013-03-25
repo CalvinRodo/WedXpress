@@ -23,6 +23,7 @@ module.exports = function (app) {
   app.get('/registry/edit/:id', admin.GetRegistryItem);
   app.post('/registry/edit/:id', admin.EditRegistryItem);
   app.post('/registry', admin.AddRegistryItem);
+  app.get('/registry/copy/:id', admin.CopyRegistryItem);
 
   app.get('/admin', admin.index);
   app.get('/menuItem/delete/:id', admin.DeleteMenuItem);
