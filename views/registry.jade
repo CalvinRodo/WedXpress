@@ -10,7 +10,8 @@ block content
               img(src='#{item.image.location}').image
             else
               img(src='https://wedxpress.s3.amazonaws.com/tumblr_mj0nj6gosx1s71q1zo1_1280.png').image
-            p.description #{item.description}
+            .description
+              | !{md(item.description)}
             - var price = item.price / 100;
             em.price $#{price.toFixed(2)}
             .control

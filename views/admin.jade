@@ -1,6 +1,8 @@
 extends layout
 block stylesheets
   link(rel='stylesheet', href='/stylesheets/tooltipster.css')
+  link(rel="stylesheet", href="markitup/skins/markitup/style.css")
+  link(rel="stylesheet", href="markitup/sets/markdown/style.css")
 block content
   .tabbable
     ul.nav.nav-tabs
@@ -50,5 +52,8 @@ block scripts
   script(src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js")
   script(src="http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js")
   script(src="javascripts/libraries/jquery.fileupload-fp.js")
-  script(src="javascripts/admin.js")
   script(src="javascripts/libraries/jquery.tooltipster.min.js")
+  script(src="markitup/jquery.markitup.js")
+  script(src="markitup/sets/markdown/set.js")
+  script(src="javascripts/admin.js")
+

@@ -104,6 +104,7 @@ $(function () {
   $('.tooltipster').tooltipster({
     'position': 'top-left'
   });
+  $('.description').markItUp(mySettings);
 });
 
 

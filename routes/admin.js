@@ -109,7 +109,8 @@ exports.index = function index(req, res) {
       invites = results[1],
       menus = results[2],
       rsvpList = results[3],
-      boughtItems = results[4];
+      boughtItems = results[4],
+      md = require('markdown-js').markdown;
 
     if (err) {
       console.error('Failed on rendering admin page');
@@ -125,7 +126,8 @@ exports.index = function index(req, res) {
       items: unboughtItems,
       boughtItems: boughtItems,
       menuItems: menus,
-      rsvpList: rsvpList
+      rsvpList: rsvpList,
+      md: md
     });
   });
 };
