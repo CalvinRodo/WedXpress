@@ -19,6 +19,12 @@ table.table.table-hover.table-condensed
           else
             a(href='#{item.image.location}')
               p(title="<img src='#{item.image.location}' width='100' height='100'>", class='tooltipster') Image View Full Size
+          a(href='#imageModal#{item._id}', data-toggle='modal').btn Select Image
+          div(id='#imageModal#{item._id}', data-remote='/admin/image/#{item._id}').modal.hide.fade
+            .modal-header
+            .modal-body
+            .modal-footer
+              a(href='#', data-dismiss='modal').btn Cancel
         th
           .btn-group
             a(href='about:blank', data-id='#{item._id}').btn.editRegItem Edit

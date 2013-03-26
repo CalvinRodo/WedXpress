@@ -1,0 +1,8 @@
+if images === undefined || images === null
+  p No images uploaded
+else
+  ul.thumbnails
+    each image in images
+      li.span2
+        a(href='/setImage/#{id}/#{image._id}').thumbnail
+          img(data-src='#{image.location}')

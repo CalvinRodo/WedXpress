@@ -309,7 +309,6 @@ exports.ViewRSVP = function ViewRSVP(req, res) {
   ]);
 }
 
-
 //Upload functions
 exports.Upload = function Upload(req, res) {
   var settings = require('../express_settings.js'),
@@ -331,27 +330,46 @@ exports.SaveUploadInfo = function SaveUploadInfo(req, res) {
     location = req.body.location,
     bucket = req.body.bucket,
     key = req.body.key,
-    async = require('async'),
-    RegistryDB = require('../DataLayer/RegistryDB.js'),
-    registryDB = new RegistryDB();
+    async = require('async');
 
-  async.waterfall([function (callback) {
-    registryDB.GetItemByID(id, function (err, result) {
-      if (err) throw err;
-      callback(null, result);
-    });
-  }, function (invite, callback) {
-    var upload = {
-      'filename': filename,
-      'location': location,
-      'bucket': bucket,
-      'key': key
-    };
-    registryDB.UpdateByID(id, {'image': upload }, function (err, result) {
-      if (err) throw err;
-      res.send(200);
-    });
-  }]);
+  async.parallel([
+    function updateItem(callback) {
+      var RegistryDB = require('../DataLayer/RegistryDB.js'),
+        registryDB = new RegistryDB(),
+        upload = {
+          'filename': filename,
+          'location': location,
+          'bucket': bucket,
+          'key': key
+        };
+      registryDB.UpdateByID(id, {'image': upload }, callback);
+    },
+    function saveItemLocation(callback) {
+      var FileDB = require('../DataLayer/ImageDB.js'),
+        fileDB = new FileDB();
+      fileDB.SaveItem(location, callback);
+    }
+  ], function (err, results) {
+    if (err) {
+      console.error(err);
+      res.send(500);
+    }
+    res.send(200);
+  });
 }
 
-
+exports.GetImageList = function GetImageList(req, res) {
+  var ImageDB = require('../DataLayer/ImageDB.js'),
+    imageDB = new ImageDB();
+  imageDB.GetItems(0, function (err, result) {
+    if (err) {
+      console.log(error);
+      res.redirect('/oops');
+    }
+    var id = req.params.id;
+    res.render('FileSelectorModal', {
+      'id': id,
+      images: result
+    });
+  });
+}

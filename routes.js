@@ -29,6 +29,7 @@ module.exports = function (app) {
   app.get('/menuItem/delete/:id', admin.DeleteMenuItem);
   app.get('/upload', admin.Upload);
   app.post('/upload', admin.SaveUploadInfo);
+  app.get('/image/:id', admin.GetImageList);
 
   app.post('/menuItem', admin.AddMenuItem);
 
