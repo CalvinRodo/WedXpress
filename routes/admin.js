@@ -25,9 +25,8 @@ function DefaultRedirect(err, res, section) {
     console.log('failed on error concerning ' + section);
     console.error(err);
     res.redirect('/oops');
-
+    return;
   }
-  ;
   res.redirect('/admin' + section);
 }
 
