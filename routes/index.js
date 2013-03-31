@@ -54,7 +54,7 @@ exports.index = function index(req, res) {
 
 exports.rsvp = function indexRsvp(req, res) {
   var async = require('async'),
-    url = req.params.inviteurl;
+    url = req.params.inviteurl.toLowerCase();
 
   if (url === undefined || url === null) {
     res.redirect('/');

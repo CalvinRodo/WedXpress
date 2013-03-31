@@ -22,11 +22,21 @@ function CreateUpdateRegistryItemFromRequest(req) {
   };
 }
 
+function CreateUpdateInviteFromRequest(req) {
+  return {
+    $set: {
+      name: req.body.name,
+      invites: req.body.guests,
+      url: req.body.url
+    }
+  };
+}
+
 function CreateInviteFromRequest(req) {
   return {
     name: req.body.name,
     invites: req.body.guests,
-    url: req.body.url
+    url: req.body.url.toLowerCase()
   };
 }
 
@@ -166,7 +176,7 @@ exports.EditInvite = function EditInvite(req, res) {
 
   var InviteDB = require('../DataLayer/InviteDB.js'),
     db = new InviteDB();
-  db.UpdateItem(req.params.id, CreateInviteFromRequest(req), function (err, result) {
+  db.UpdateItem(req.params.id, CreateUpdateInviteFromRequest(req), function (err, result) {
     DefaultRedirect(err, res, '#GuestAdmin');
   });
 }
