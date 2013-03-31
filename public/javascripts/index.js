@@ -27,5 +27,5 @@ function SetupNavMenu() {
 
 $(function () {
   SetupRSVPList();
-  SetupNavMenu();
+//  SetupNavMenu();
 });
