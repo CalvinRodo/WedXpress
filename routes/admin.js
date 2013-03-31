@@ -12,6 +12,16 @@ function CreateRegistryItemFromRequest(req) {
   };
 }
 
+function CreateUpdateRegistryItemFromRequest(req) {
+  return {
+    $set: {
+      name: req.body.name,
+      description: req.body.description,
+      price: req.body.price * 100 //convert the amount into cents
+    }
+  };
+}
+
 function CreateInviteFromRequest(req) {
   return {
     name: req.body.name,
@@ -200,7 +210,7 @@ exports.EditRegistryItem = function EditRegistryItem(req, res) {
 
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
-  db.UpdateItem(req.params.id, CreateRegistryItemFromRequest(req), function (err, result) {
+  db.UpdateItem(req.params.id, CreateUpdateRegistryItemFromRequest(req), function (err, result) {
     DefaultRedirect(err, res, "#RegistryAdmin");
   });
 
