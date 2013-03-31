@@ -27,7 +27,7 @@ function CreateUpdateInviteFromRequest(req) {
     $set: {
       name: req.body.name,
       invites: req.body.guests,
-      url: req.body.url
+      url: req.body.url.toLowerCase()
     }
   };
 }
