@@ -4,6 +4,9 @@ $(function () {
   }, function () {
     $(this).siblings().stop().fadeTo("fast", 1);
   });
-  $('#RegistryContents').equalize();
-  $('#RegistryContents').equalize('width');
+  $('#thumbnails').masonry({
+    itemSelector: '.items'
+  });
+//  $('#RegistryContents').equalize();
+//  $('#RegistryContents').equalize('width');
 });

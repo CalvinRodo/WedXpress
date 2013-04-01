@@ -6,19 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/libraries/jquery.masonry.min.js" />
       <change type="MOVED" beforePath="C:\Users\calvin\Documents\GitHub\Wedxpress\views\Admin.jade" afterPath="$PROJECT_DIR$/views/admin.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/admin.js" afterPath="$PROJECT_DIR$/routes/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/registry.jade" afterPath="$PROJECT_DIR$/views/registry.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/registry.js" afterPath="$PROJECT_DIR$/public/javascripts/registry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Wedxpress.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/registry.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364341825815" ignored="false" />
+    <file path="/registry.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364776962927" ignored="false" />
     <file path="/app.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363130285249" ignored="false" />
-    <file path="/registry.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364341748841" ignored="false" />
-    <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1363828591220" ignored="false" />
+    <file path="/registry.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364776801853" ignored="false" />
+    <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364776036720" ignored="false" />
     <file path="/layout.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364009031691" ignored="false" />
     <file path="/.gitignore" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364002844441" ignored="false" />
-    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364773791595" ignored="false" />
+    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364773818875" ignored="false" />
     <file path="/a.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564379010" ignored="false" />
     <file path="/a.html" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107778521" ignored="false" />
     <file path="/a.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107769410" ignored="false" />
@@ -163,10 +167,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="685" selection-end="685" vertical-scroll-proportion="0.43656716">
+            <state line="29" column="36" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
                 <element signature="n#!!block;n#CreateUpdateRegistryItemFromRequest#0" expanded="false" />
@@ -183,10 +187,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <file leaf-file-name="registry.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/registry.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="3550" selection-end="3550" vertical-scroll-proportion="0.0">
+            <state line="26" column="58" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.69911504">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registry.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/registry.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="4" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -225,12 +238,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/routes.js" />
-        <option value="$PROJECT_DIR$/views/admin.jade" />
         <option value="$PROJECT_DIR$/views/includes/admin/registryForm.jade" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/routes/registry.js" />
-        <option value="$PROJECT_DIR$/views/registry.jade" />
         <option value="$PROJECT_DIR$/views/includes/admin/uploadModal.jade" />
         <option value="$PROJECT_DIR$/views/includes/admin/FileSelectorModal.jade" />
         <option value="$PROJECT_DIR$/views/includes/admin/registryItemList.jade" />
@@ -241,12 +251,17 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style.less" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/admin.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/registry.js" />
+        <option value="$PROJECT_DIR$/views/registry.jade" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1360" />
-    <option name="height" value="720" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -355,7 +370,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wedxpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -800,7 +887,11 @@
       <created>1364773794331</created>
       <updated>1364773794331</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Setting RSVP url to lowercase">
+      <created>1364773825638</created>
+      <updated>1364773825638</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -824,7 +915,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1360" height="720" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.762069" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -841,8 +932,8 @@
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242424" sideWeight="0.6006711" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2550077" sideWeight="0.6743772" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41103202" sideWeight="0.47878787" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075758" sideWeight="0.6124161" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38758388" sideWeight="0.47878787" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -957,21 +1048,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.IntelliJIdea12/system/extLibs/nodejs-v0.8.12-src/core-modules-sources/lib/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="13" selection-start="5903" selection-end="5903" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="1" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.23300971" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/admin/registryItemList.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="0.6038835" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.031716418">
@@ -981,7 +1057,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/includes/admin/inviteList.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="446" selection-end="446" vertical-scroll-proportion="0.5708955" />
+        <state line="18" column="24" selection-start="446" selection-end="446" vertical-scroll-proportion="0.5708955">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoskin/node_modules/mongodb/lib/mongodb/connection/server.js">
@@ -1034,7 +1112,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="3550" selection-end="3550" vertical-scroll-proportion="0.0">
+        <state line="30" column="19" selection-start="726" selection-end="5115" vertical-scroll-proportion="0.95149255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="36" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
+            <element signature="n#!!block;n#CreateUpdateRegistryItemFromRequest#0" expanded="false" />
+            <element signature="n#!!block;n#DefaultRedirect#0" expanded="false" />
+            <element signature="n#!!block;n#getGuests#0" expanded="false" />
+            <element signature="n#!!block;n#SendResultAsJson#0" expanded="false" />
+            <element signature="n#!!block;n#createPolicy#0" expanded="false" />
+            <element signature="e#2182#3686#0" expanded="false" />
+            <element signature="e#3738#3972#0" expanded="false" />
+            <element signature="e#4030#4251#0" expanded="false" />
+            <element signature="e#8992#9842#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1051,21 +1154,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/registry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="685" selection-end="685" vertical-scroll-proportion="0.43656716">
-          <folding>
-            <element signature="n#!!block;n#CheckIfLoggedIn#0" expanded="false" />
-            <element signature="n#!!block;n#CreateUpdateRegistryItemFromRequest#0" expanded="false" />
-            <element signature="n#!!block;n#DefaultRedirect#0" expanded="false" />
-            <element signature="n#!!block;n#getGuests#0" expanded="false" />
-            <element signature="n#!!block;n#SendResultAsJson#0" expanded="false" />
-            <element signature="n#!!block;n#createPolicy#0" expanded="false" />
-            <element signature="e#2182#3686#0" expanded="false" />
-            <element signature="e#3738#3972#0" expanded="false" />
-            <element signature="e#4030#4251#0" expanded="false" />
-            <element signature="e#8992#9842#0" expanded="false" />
-          </folding>
+        <state line="8" column="4" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/registry.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="58" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.69911504">
+          <folding />
         </state>
       </provider>
     </entry>
