@@ -5,7 +5,8 @@ $(function () {
     $(this).siblings().stop().fadeTo("fast", 1);
   });
   $('#thumbnails').masonry({
-    itemSelector: '.items'
+    itemSelector: '.item',
+    columnWidth: $('.span3').width()
   });
 //  $('#RegistryContents').equalize();
 //  $('#RegistryContents').equalize('width');
