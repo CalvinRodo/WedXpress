@@ -1,5 +1,5 @@
 $(function () {
-  $('#thumbnails').masonry({
+  $('#RegistryContents').masonry({
     itemSelector: '.item'
   });
 //  $('#RegistryContents').equalize();
