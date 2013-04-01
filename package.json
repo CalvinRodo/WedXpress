@@ -17,6 +17,7 @@
     "crypto": "*",
     "moment": "*",
     "crypto": "*",
-    "markdown-js": "*"
+    "markdown-js": "*",
+    "lodash": "*"
   }
 }

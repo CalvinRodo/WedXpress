@@ -9,12 +9,15 @@ exports.index = function (req, res) {
       console.error(err);
       res.redirect('/oops');
     }
-    var md = require('markdown-js').markdown;
+    var md = require('markdown-js').markdown,
+      _ = require('lodash');
+
+
     res.render("registry", {
       loggedIn: req.session.loggedIn,
       publicKey: settings.Config.StripePublicKey,
       title: "Wedding Registry",
-      items: results,
+      items: _.uniq(results, 'name'),
       scrollspy: false,
       md: md
     });
