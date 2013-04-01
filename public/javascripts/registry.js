@@ -1,7 +1,13 @@
-$(function () {
+function Masonry() {
   $('#RegistryContents').masonry({
-    itemSelector: '.item'
+    itemSelector: '.item',
+    columnWidth: $('.span3').width()
   });
-//  $('#RegistryContents').equalize();
-//  $('#RegistryContents').equalize('width');
+}
+
+$(function () {
+  Masonry();
+  $('window').on('resize', function () {
+    Masonry();
+  });
 });
