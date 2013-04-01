@@ -5,10 +5,9 @@
     <option name="SCOPE_TYPE" value="10" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="Getting masonry to work">
+    <list default="true" id="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" name="Default" comment="">
       <change type="MOVED" beforePath="C:\Users\calvin\Documents\GitHub\Wedxpress\views\Admin.jade" afterPath="$PROJECT_DIR$/views/admin.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/registry.js" afterPath="$PROJECT_DIR$/public/javascripts/registry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.less" afterPath="$PROJECT_DIR$/public/stylesheets/style.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Wedxpress.iws" />
@@ -19,7 +18,7 @@
     <file path="/index.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364776036720" ignored="false" />
     <file path="/layout.jade" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364009031691" ignored="false" />
     <file path="/.gitignore" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364002844441" ignored="false" />
-    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364778110311" ignored="false" />
+    <file path="/Dummy.txt" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1364778162894" ignored="false" />
     <file path="/a.js" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358564379010" ignored="false" />
     <file path="/a.html" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107778521" ignored="false" />
     <file path="/a.css" changelist="c4b6e41f-0430-4a94-a896-c83b95bb2e7e" time="1358107769410" ignored="false" />
@@ -173,19 +172,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registry.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="registry.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/registry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+            <state line="2" column="24" selection-start="80" selection-end="80" vertical-scroll-proportion="0.100294985">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.49557522">
+            <state line="50" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -238,8 +237,8 @@
         <option value="$PROJECT_DIR$/routes/admin.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/registry.jade" />
-        <option value="$PROJECT_DIR$/public/javascripts/registry.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.less" />
+        <option value="$PROJECT_DIR$/public/javascripts/registry.js" />
       </list>
     </option>
   </component>
@@ -875,7 +874,11 @@
       <created>1364777794556</created>
       <updated>1364777794556</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Getting masonry to work">
+      <created>1364778165524</created>
+      <updated>1364778165524</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1133,13 +1136,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/registry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/registry.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="35" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
@@ -1149,7 +1145,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.49557522">
+        <state line="50" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/registry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="24" selection-start="80" selection-end="80" vertical-scroll-proportion="0.100294985">
           <folding />
         </state>
       </provider>
