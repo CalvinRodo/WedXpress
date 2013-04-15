@@ -29,7 +29,10 @@ exports.pay = function (req, res) {
 
   }, function (customer, regItem) {
 
-    registryDB.UpdateByID(regItem._id, {'purchased': true }, function (err, result) {
+    registryDB.UpdateByID(regItem._id, {
+      'purchased': true,
+      'customer': customer
+    }, function (err, result) {
       if (err) {
         console.error('failed on saving charge to our db');
         console.error(err);
