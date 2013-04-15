@@ -9,7 +9,8 @@ table.table.table-hover.table-condensed
     - each item in boughtItems
       tr
         th #{item.name}
-        th #{item.price}
+        - var price = item.price / 100
+        th #{price.toFixed(2)}
         if (item.customer !== undefined)
           th #{item.customer.card.name}
         else
