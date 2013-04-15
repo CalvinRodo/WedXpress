@@ -2,16 +2,17 @@ extends layout
 
 block scripts
   script(src='/javascripts/index.js')
-
-block content
-  header.jumbotron.subhead
-    .container
-      h1= title
-  .container-fluid
-    .row-fluid
-      .span3
-        #menu.nav-sidebar
-          ul#nav.nav.nav-list.affix-top
+block navbar
+  #menu.navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        a(data-toggle="collapse",data-target=".nav-collapse").btn.btn-navbar
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(href="#").brand #{title}
+        .nav-collapse.collapse
+          ul#nav.nav
             li
               a(href='#RSVP') RSVP
             li
@@ -24,7 +25,14 @@ block content
               a(href='#Registry') Wedding Registry
             li
               a(href='#Songs') Songs
-      .span9.mainContent
+block content
+  header.jumbotron.subhead
+    .container
+      h1= title
+  .container-fluid
+    .row-fluid
+      .span2
+      .mainContent.span8
         .container-fluid
           section#RSVP
           h2 RSVP
@@ -48,7 +56,7 @@ block content
                   h3 Katrina Roberts
                   img(src='images/kat400x200.jpg')
                 #Sparky.person
-                  h3 Lyndsay Downling
+                  h3 Lindsay Dowling
                   img(src='images/sparky400x200.jpg')
               .span6#groomsmen
                 #Noel.person

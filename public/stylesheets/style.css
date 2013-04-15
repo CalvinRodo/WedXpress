@@ -9,11 +9,6 @@ body {
   background-color: #1A6A82;
 }
 
-.nav {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
 .tab-pane {
   margin-top: 0px;
   padding-top: 0px;
@@ -25,7 +20,6 @@ body {
 }
 
 .thumbnail,
-.nav,
 .mainContent,
 .page-header {
   background-color: #ffffff;
@@ -96,14 +90,4 @@ a {
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
-}
-
-.nav {
-  background: none;
-  font-size: 28px;
-}
-
-#nav.affix {
-  position: fixed;
-  top: 10px;
 }
