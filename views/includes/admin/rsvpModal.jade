@@ -4,9 +4,10 @@ p Coming : #{coming}
     - console.log(guest)
     h3 #{guest.name}
     p Special Requirements :
-      - guest.specialRequirements || "None"
+      if (guest.specialRequirements === "")
+        | None
+      else
+        | #{guest.specialRequirements}
     h4 Menu
-    p Appetizer: #{guest.menu.Appetizer}
-    | Entree: #{guest.menu.Entree}
-    | Dessert: #{guest.menu.Dessert}
+    p Entree: #{guest.menu.entree}
     hr
