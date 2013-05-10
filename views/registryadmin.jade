@@ -1,0 +1,109 @@
+fextends layout
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/tooltipster.css')
+  link(rel="stylesheet", href="markitup/skins/markitup/style.css")
+  link(rel="stylesheet", href="markitup/sets/markdown/style.css")
+block content
+    ul.nav
+      li
+        a(href='#RegistryAdmin') Registry Admin
+      li
+        a(href='#MenuAdmin') Menu Admin
+      li
+        a(href='#GuestAdmin') Guest Admin
+    .mainContent.container-fluid
+        h1 Registry Admin
+        h2 Add Registry Item
+        .row-fluid
+          form(action='/registry', method='post').form-horizontal.well.span10#registryItemForm
+            formset
+              legend Add Registry Item
+              .control-group
+                label(for='name').control-label Title:
+                .controls
+                  input(type='text', name='name', placeholder='Title').name
+              .control-group
+                label(for='description').control-label Description:
+                .controls
+                  textarea(rows='3',  name='description', placeholder='Description').description
+              .control-group
+                label(for='price').control-label Price:
+                .controls
+                  div.input-prepend.input-append
+                    span(class='add-on') $
+                    input(type='text', name='price', placeholder='Price').price
+                    span(class='add-on') .00
+              .control-group
+                .controls.btn-group
+                  button(type='submit', name='submit').btn.addnew#addNewItem Add New Item
+                  button(formaction='about:blank', disabled='true', name='edit').btn#editRegistryItem Edit
+        h2 Unbought Registry Items
+        .row-fluid
+          #regAdminList
+            table.table.table-hover.table-condensed
+              thead
+                tr
+                  th Name
+                  th Description
+                  th Price
+                  th File
+                  th Actions
+              tbody
+                - each item in items
+                  tr
+                    th #{item.name}
+                    th
+                      | !{md(item.description)}
+
+                    -var price = item.price / 100;
+                    th #{price.toFixed(2)}
+                    th
+                      if (item.image !== undefined)
+                        a(href='#{item.image.location}')
+                          p(title="<img src='#{item.image.location}' width='100' height='100'>", class='tooltipster') Image View Full Size
+                      else
+                        input(type="file", id='fileupload#{item._id}', data-id='#{item._id}', name="file").btn.fileupload
+                    th
+                      .btn-group
+                        a(href='about:blank', data-id='#{item._id}').btn.editRegItem Edit
+                        a(href='/registry/copy/#{item._id}').btn Copy
+                        a(href='/registry/delete/#{item._id}').btn
+                          i.icon-remove
+
+        h2 Bought Registry Items
+        .row-fluid
+          #regAdminList
+            table.table.table-hover.table-condensed
+              thead
+                tr
+                  th Name
+                  th Price
+                  th Purchased By
+                  th File
+              tbody
+                - each item in boughtItems
+                  tr
+                    th #{item.name}
+                    - var price = item.price / 100
+                    th #{price.toFixed(2)}
+                    if (item.customer !== undefined)
+                      th #{item.customer.card.name}
+                    else
+                      th They did it too early
+                    if (item.image !== undefined)
+                      th
+                        a(href='#{item.image.location}')
+                          p(title="<img src='#{item.image.location}' width='100' height='100'>", class='tooltipster') Image View Full Size
+                    else
+                      th
+                        p No Image Uploaded
+block scripts
+  script(src="javascripts/libraries/jquery.fileupload.js")
+  script(src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js")
+  script(src="http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js")
+  script(src="javascripts/libraries/jquery.fileupload-fp.js")
+  script(src="javascripts/libraries/jquery.tooltipster.min.js")
+  script(src="markitup/jquery.markitup.js")
+  script(src="markitup/sets/markdown/set.js")
+  script(src="javascripts/admin.js")
+

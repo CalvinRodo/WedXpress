@@ -1,0 +1,79 @@
+fextends layout
+block stylesheets
+block content
+    ul.nav
+      li
+        a(href='#RegistryAdmin') Registry Admin
+      li
+        a(href='#MenuAdmin') Menu Admin
+      li
+        a(href='#GuestAdmin') Guest Admin
+    .mainContent.container-fluid
+        h1 Guest Admin
+        h2 Add Guest
+        .row-fluid
+          form(action='/invite', method='post').form-horizontal.well.offset3.span6#guestInviteForm
+            formset
+              legend Add Guest
+                .contol-group
+                  label(for='name').control-label Name:
+                  .controls
+                    input(type='text', name='name').name
+                .control-group
+                  label(for='guests').control-label Number of Guests:
+                  .controls
+                    input(type='number', min=0, max=10, name='guests').guests
+                .control-group
+                  label(for='url').control-label Easy To Remember URL
+                  .controls
+                    input(type='text', name='url', data-toggle='tooltip',data-placement='top', title='Enter a url to be printed out on the invite and that this guest can use to easily access their rsvp').url
+                .control-group
+                  .controls.btn-group
+                    button(type='submit').btn Add Guest
+                    button(name='edit').btn Edit
+        h2 Guest List
+        .row-fluid
+          #guestList
+            table.table.table-hover.table-condensed
+              thead
+                tr
+                  th Name
+                  th Invites
+                  th Url
+                  th Actions
+              tbody
+                - each invite in inviteList
+                  tr
+                  th #{invite.name}
+                  th #{invite.invites}
+                  th calvinandamy.ca/rsvp/#{invite.url}
+                  th
+                    .btn-group
+                      a(href='/invite/edit/', data-id='#{invite._id}').btn.editInvite Edit
+                      a(href='/invite/delete/#{invite._id}').btn
+                        i.icon-remove
+        h2 RSVP List
+        .row-fluid
+          #rsvpList
+            table.table.table-hover.table-condensed
+              thead
+                tr
+                  th Name
+                  th Coming
+                  th Actions
+              tbody
+                each rsvp in rsvpList
+                  tr
+                  th #{rsvp.mainInvite.name}
+                  th #{rsvp.coming}
+                  th
+                    a(data-target='#modal#{rsvp._id}', data-toggle='modal').btn View
+                    div(id='modal#{rsvp._id}', data-remote='./admin/rsvp/view/#{rsvp._id}').modal.hide.fade
+                      .modal-header
+                        h3 #{rsvp.mainInvite.name}
+                      .modal-body
+                      .modal-footer
+                        a(href='#', data-dismiss='modal').btn Cancel
+
+block scripts
+  script(src="javascripts/admin.js")
