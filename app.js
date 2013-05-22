@@ -2,9 +2,9 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , http = require('http')
-  , path = require('path');
+var express = require('express'),
+    http = require('http'),
+    path = require('path');
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.configure('development', function () {
   app.locals.pretty = true;
 });
 
-require('./routes')(app);
+require('./routes').SetRoute(app);
 
 http.createServer(app).listen(app.get('port'), function () {
   console.log("Express server listening on port " + app.get('port'));
