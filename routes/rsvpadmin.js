@@ -60,9 +60,7 @@ function CreateInviteFromRequest(req) {
 
 exports.index = function index(req, res) {
   CheckIfLoggedIn(req, res);
-  var async = require('async'),
-    RegistryDB = require('../DataLayer/RegistryDB.js'),
-    registryDB = new RegistryDB();
+  var async = require('async');
 
   async.parallel([
     function getRsvpItems(callback) {
@@ -71,25 +69,26 @@ exports.index = function index(req, res) {
 
       rsvpDB.GetItems(0, callback);
     },
-    function getBoughtItems(callback) {
-      registryDB.GetBoughtItems(callback);
+    function getInvites(callback){
+      var InviteDB = require('../DataLayer/InviteDB.js'),
+          inviteDB = new InviteDB();
+      inviteDB.GetItems(0, callback);
+
     }
   ], function RenderPage(err, results) {
-    var invites = results[0],
-        rsvpList = results[1];
-
+      var rsvpList = results[0],
+          invites = results[1];
     if (err) {
       console.error('Failed on rendering admin page');
       console.error(err);
     }
 
-    res.render('admin', {
+    res.render('rsvpadmin', {
       loggedIn: true,
       title: 'Invite Administration',
       scrollspy: false,
       inviteList: invites,
-      rsvpList: rsvpList,
-      md: md
+      rsvpList: rsvpList
     });
   });
 };

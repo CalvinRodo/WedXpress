@@ -43,7 +43,7 @@ exports.SetRoute = function SetRoute (app) {
   app.post('/menuItem', menuadmin.AddMenuItem);
   app.get('/menuItem/delete/:id', menuadmin.DeleteMenuItem);
 
-  app.get('/invite', rsvpadmin.index);
+  app.get('/rsvpadmin', rsvpadmin.index);
   app.get('/invite/delete/:id', rsvpadmin.DeleteInvite);
   app.get('/invite/edit/:id', rsvpadmin.GetInvite);
   app.post('/invite', rsvpadmin.AddInvite);

@@ -1,12 +1,25 @@
 extends layout
 
 block content
-  conainer
-    h1 Admin Table of Contents 
-    div.well 
+  .container-fluid.mainContent
+    div.row-fluid
+      h2 Admin Table of Contents 
       a(href='rsvpadmin') RSVP Admin Screen
       br
       a(href='registryadmin') Registry Admin Screen
       br 
       a(href='menuadmin') Menu Admin Screen
       br
+    div.row-fluid
+      h2 Dashboard
+      .span6
+        h3 rsvp 
+        p number accepted: #{totalComing}
+        p number declined: #{totalDeclined} 
+        p number unresponded: #{totalUnresponded}
+      .span3
+        h3 Registry
+        p Number Purchased: #{boughtCount}
+        p Number Unpurchased: #{unboughtCount}
+        p Total Money Gifted: $#{totalBought.toFixed(2)}
+        p Total Money asking for: $#{rsvpTotal.toFixed(2)}
