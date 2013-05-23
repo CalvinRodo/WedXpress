@@ -7,14 +7,6 @@ body {
   background-image: url('/images/random_grey_variations.png');
   background-color: #1A6A82;
 }
-<<<<<<< Updated upstream
-
-=======
-.nav {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
->>>>>>> Stashed changes
 .tab-pane {
   margin-top: 0px;
   padding-top: 0px;
@@ -85,14 +77,3 @@ a {
   letter-spacing: -1px;
   line-height: 1;
 }
-<<<<<<< Updated upstream
-=======
-.nav {
-  background: none;
-  font-size: 28px;
-}
-#nav.affix {
-  position: fixed;
-  top: 10px;
-}
->>>>>>> Stashed changes

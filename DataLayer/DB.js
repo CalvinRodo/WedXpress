@@ -1,5 +1,5 @@
 var DB = function DB() {
-}
+};
 
 DB.prototype = {
   ConnectToDB: function () {
@@ -8,10 +8,20 @@ DB.prototype = {
     return mongoDb.db(settings.Config.MongoDbConnection, { safe: true});
   },
 
+  GetPagedItems: function(pageSize, skipValue, callback){
+    var db = this.ConnectToDB();
+    db.collection(this.DBName)
+      .find({}, {items: pageSize, skip: skipValue})
+      .toArray(function(err, result){
+        db.close();
+        callback(err, result);
+      });
+  },
+
   GetItems: function (skipValue, callback) {
     var db = this.ConnectToDB();
     db.collection(this.DBName)
-      .find({}, { limit: 30, skip: skipValue || 0 })
+      .find({}, { skip: skipValue || 0 })
       .toArray(function (err, result) {
         db.close();
         callback(err, result);
@@ -82,7 +92,7 @@ DB.prototype = {
         callback(err, result);
       });
   }
-}
+};
 
 
 module.exports = DB;

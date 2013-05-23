@@ -28,7 +28,7 @@ function getInvite(req, appender) {
       entree: req.body['Entree-' + appender],
       dessert: req.body['Dessert-' + appender]
     }
-  }
+  };
 }
 
 exports.index = function index(req, res) {
@@ -70,8 +70,8 @@ exports.rsvp = function indexRsvp(req, res) {
       var MenuDB = require('../DataLayer/MenuDB.js'),
         menuDB = new MenuDB();
       menuDB.GetItems(0, callback);
-    }
-    , function GetSongs(callback) {
+    },
+    function GetSongs(callback) {
       var SongDB = require('../DataLayer/SongDB.js'),
         songDB = new SongDB();
       songDB.GetItems(0, callback);
