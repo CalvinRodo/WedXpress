@@ -22,14 +22,14 @@ function CheckIfLoggedIn(req, res) {
   }
 }
 
-function DefaultRedirect(err, res, section) {
+function DefaultRedirect(err, res) {
   if (err) {
     console.log('failed on error concerning ' + section);
     console.error(err);
     res.redirect('/oops');
     return;
   }
-  res.redirect('/admin' + section);
+  res.redirect('/registryadmin');
 }
 
 function SendResultAsJson(err, result, res) {
@@ -81,14 +81,13 @@ exports.index = function index(req, res) {
       console.error(err);
     }
 
-    console.log(count);
-    console.log(_(unboughtItems).unique('name').each(function(item){ item.num = count[item.name]; }).value());
-
     res.render('registryadmin', {
       loggedIn: true,
       title: 'Registry Administration',
       scrollspy: false,
-      items: _(unboughtItems).unique('name').each(function(item){ item.number = count[item.name]; }).value(),
+      items: _(unboughtItems).unique('name')
+                             .each(function(item){ item.number = count[item.name]; })
+                             .value(),
       boughtItems: boughtItems,
       md: md
     });
@@ -103,7 +102,7 @@ exports.AddRegistryItem = function AddRegistryItem(req, res) {
     db = new RegistryDB();
 
   db.SaveItem(CreateRegistryItemFromRequest(req), function (err, result) {
-    DefaultRedirect(err, res, '#RegistryAdmin');
+    DefaultRedirect(err, res);
   });
 };
 
@@ -114,7 +113,7 @@ exports.DeleteRegistryItem = function DeleteRegistryItem(req, res) {
     db = new RegistryDB();
 
   db.DeleteItem(req.params.id, function (err, result) {
-    DefaultRedirect(err, res, "#RegistryAdmin");
+    DefaultRedirect(err, res);
   });
 };
 
@@ -124,7 +123,7 @@ exports.EditRegistryItem = function EditRegistryItem(req, res) {
   var RegistryDB = require('../DataLayer/RegistryDB.js'),
     db = new RegistryDB();
   db.UpdateItem(req.params.id, CreateUpdateRegistryItemFromRequest(req), function (err, result) {
-    DefaultRedirect(err, res, "#RegistryAdmin");
+    DefaultRedirect(err, res);
   });
 
 };

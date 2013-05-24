@@ -29,22 +29,43 @@ exports.index = function AdminIndex(req, res){
       var _ = require('lodash'),
           regItems = _(results[0]),
           rsvpItems = _(results[2]),
-        inviteItems = _(results[1]),
-          total = regItems.pluck('price').reduce(sum, 0) / 100,
+          inviteItems = _(results[1]),
           bought = regItems.select('purchased'),
           unbought = regItems.reject('purchased'),
-          totalBought = bought.pluck('price').reduce(sum, 0) / 100;
+          coming = inviteItems.where({ 'coming' : 'accept'}),
+          invitesAccepted = coming.pluck('mainInvite')
+                                  .select('name')
+                                  .unique('name')
+                                  .size();
+      var foo = coming.map(function(rsvp){
+          var i = 0,
+              guest = [];
+          while(rsvp['guest' + i] !== undefined){
+            guest.push(rsvp['guest' + i]);
+            i++;
+          }
+          return guest;
+        }).flatten()
+          .select('name');
+        console.log(coming.value());
+
+        console.log(foo.value());
 
       res.render('admin', {
-        title : 'Admin Menu',
+        title : 'admin menu',
         loggedIn : true,
-        totalBought: totalBought,
-        rsvpTotal: total,
-        unboughtCount: unbought.size(),
-        boughtCount: bought.size(),
-        totalComing: inviteItems.where({ 'coming' : 'accept'}).size(),
-        totalUnresponded: rsvpItems.reject('rsvpStatus').size(),
-        totalDeclined: inviteItems.where({ 'coming': 'decline'}).size()
-      });
+        totalBought : bought.pluck('price')
+                            .reduce(sum, 0) / 100,
+        rsvpTotal : regItems.pluck('price')
+                            .reduce(sum, 0) / 100,
+        unboughtCount : unbought.size(),
+        boughtCount : bought.size(),
+        totalComing : invitesAccepted,
+        totalUnresponded : rsvpItems.reject('rsvpStatus')
+                                    .size(),
+        totalDeclined : inviteItems.where({ 'coming': 'decline'})
+                                   .size(),
+        totalGuests : foo.size() + invitesAccepted
+    });
   });
-}
+};
