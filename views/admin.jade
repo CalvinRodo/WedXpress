@@ -14,12 +14,13 @@ block content
       h2 Dashboard
       .span6
         h3 rsvp 
-        p number accepted: #{totalComing}
-        p number declined: #{totalDeclined} 
-        p number unresponded: #{totalUnresponded}
+        p Number Accepted: #{totalComing}
+        p Number of People Coming: #{totalGuests}
+        p Number Declined: #{totalDeclined} 
+        p Number Unresponded: #{totalUnresponded}
       .span3
         h3 Registry
         p Number Purchased: #{boughtCount}
         p Number Unpurchased: #{unboughtCount}
         p Total Money Gifted: $#{totalBought.toFixed(2)}
-        p Total Money asking for: $#{rsvpTotal.toFixed(2)}
+        p Total Money Asking For: $#{rsvpTotal.toFixed(2)}
