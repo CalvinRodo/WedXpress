@@ -36,8 +36,10 @@ exports.index = function AdminIndex(req, res){
           invitesAccepted = coming.pluck('mainInvite')
                                   .select('name')
                                   .unique('name')
-                                  .size();
-      var foo = coming.map(function(rsvp){
+                                  .size(),
+          totalPeopleInvited = rsvpItems.pluck('invites')
+                                        .reduce(sum, 0) + rsvpItems.size(),
+          totalGuestsComing = coming.map(function(rsvp){
           var i = 0,
               guest = [];
           while(rsvp['guest' + i] !== undefined){
@@ -47,9 +49,6 @@ exports.index = function AdminIndex(req, res){
           return guest;
         }).flatten()
           .select('name');
-        console.log(coming.value());
-
-        console.log(foo.value());
 
       res.render('admin', {
         title : 'admin menu',
@@ -65,7 +64,8 @@ exports.index = function AdminIndex(req, res){
                                     .size(),
         totalDeclined : inviteItems.where({ 'coming': 'decline'})
                                    .size(),
-        totalGuests : foo.size() + invitesAccepted
+        totalGuests : totalGuestsComing.size() + invitesAccepted,
+      totalInvited : totalPeopleInvited
     });
   });
 };

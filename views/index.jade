@@ -2,97 +2,87 @@ extends layout
 
 block scripts
   script(src='/javascripts/index.js')
-block navbar
-  #menu.navbar.navbar-fixed-top
-    .navbar-inner
-      .container
-        a(data-toggle="collapse",data-target=".nav-collapse").btn.btn-navbar
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a(href="#").brand #{title}
-        .nav-collapse.collapse
-          ul#nav.nav
-            li
-              a(href='#RSVP') RSVP
-            li
-              a(href='#AboutUs') Us
-            li
-              a(href='#WeddingParty') Wedding Party
-            li
-              a(href='#Venue') Venue
-            li
-              a(href='#Registry') Wedding Registry
-            li
-              a(href='#Songs') Songs
 block content
-  header.jumbotron.subhead.hidden-phone
-    .container
+  header.jumbotron
       h1= title
+      h2 June 20th, 2013 in Oak Island NS 
   .container-fluid
-    .row-fluid
-      .mainContent.span8.offset2
-        .container-fluid
-          section#RSVP
-          h2 RSVP
-          .row-fluid
-          if rsvp === true
-            include includes/index/rsvp
-          else
-            p Please enter the URL that came with your Invite to see your RSVP
-          section#AboutUs
-            h2 Us
-            .row-fluid
-              img(src='/images/us800w.jpg')
-          section#WeddingParty
-            h2 Wedding Party
-            .row-fluid
-              .span6#bridesmaids
-                #Cheryl.person
-                  h3 Cheryl Carson
-                  img(src='/images/cheryl400x200.jpg')
-                #Katrina.person
-                  h3 Katrina Roberts
-                  img(src='/images/kat400x200.jpg')
-                #Sparky.person
-                  h3 Lindsay Dowling
-                  img(src='/images/sparky400x200.jpg')
-              .span6#groomsmen
-                #Noel.person
-                  h3 Noel Rodo-Vankeulen
-                  img(src='/images/noel400x200.jpg')
-                #Daniel.person
-                  h3 Daniel Vankeulen
-                  img(src='/images/dan400x200.jpg')
-                #Josh.person
-                  h3 Josh Remai
-                  img(src='/images/josh400x200.jpg')
-          section#Venue
-            h2 The Venue
-            .row-fluid
-              #Directions.span6
-                address.
-                  <strong>Atlantica Oak Island</strong><br>
-                  36 Treasure Dr.<br>
-                  Western Shore NS,<br>
-                  B0J 1K0<br>
-              #link.span6
-                p You can find directions to the Atlantica Oak Island on their
-                  a(href='http://www.atlanticaoakisland.com/en/utility/locationanddirections.aspx')  website
-          section#Registry
-            h2 Wedding Registry
-            .row-fluid
-              p To celebrate our marriage we are planning a trip to Paris and Malta, the first experience in a lifetime of shared memories.
-              p In the registy linked below you can check out our honeymoon wishlist. If something strikes your fancy and you feel inclined to contribute we would be most appreciative.
-              p Of course when all is said and done the best part is having you in our lives we can't wait to share the memories with you when we return!
-              a(href='http://calvinandamy.ca/registry')
-                h3 Calvin and Amy's Honeymoon Registry
-          section#Songs
-            h2 Wedding Songs
-            p Were trying our hardest to come up with a kick ass playlist to keep us all dancing far into the night.
-              | Luckily we don't have to do this alone, we've enlisted our guests in helping us get ideas of what they
-              | think we should play at our wedding. Below you will find a list of what our guests are suggesting we play.
-            #songList
-              include includes/index/songs
+    .row
+      .span6
+        h2.text-right The Bride
+        h3.text-right Amy Elizabeth Schroeder
+        p.text-right Amy grew up in Dartmouth Nova Scotia, Amy graduated from Acadia University with an undergraduate in History, she then attended Waterloo where she recieved a Masters in Public History. She moved to Ottawa to work for Public History before moving back to Dartmouth in 2007.
+        p.text-right She has a love of watching trashy reality tv, reading better books than Calvin, and cats of all shapes and sizes.
+      .span6
+        h2.text-left The Groom
+        h3.text-left Calvin Wesley John Rodo Vankeulen
+        p.text-left Calvin grew up in Mississauga Ontario, in 2002 he moved to Ottawa to attend Algonquin College and recieved an Advanced Diploma in Computer Science. In 2006 he started working for the Federal Government as a Software Developer.
+        p.text-left He has a great love of reading pulpy Science Fiction, playing Video Games, and one very fluffy cat.
+      .span6.offset3
+        h2.text-center Together
+        h3.text-center Calvin + Amy
+        p Calvin met Amy when they both decided to throw around a frisbee at Major's Hill Park on April 20th. Soon after meeting for the first time Amy decided it was time to move back to Dartmouth to make a go of it there. 
+        | Calvin being in need of a new house at the time took over the remander of Amy's lease and continued to keep in contact with her. Amy upon recieving a job offer with the Indian and Native Affairs moved back to Ottawa a year later. 
+        | They started dating not long after and soon became inseperable. 
+        p On a trip with some friends to New Zealand in 2012 Calvin proposed to Amy in Milford Sound in what is quite possibly the most romantic parking lot in the world. 
+        p Ask him about it some time...
+    section#RSVP
+      .row
+       h2.text-center RSVP
+      if rsvp === true
+        include includes/index/rsvp
+      else
+        h3.text-center Please enter the URL that came with your Invite to see your RSVP
+    section#WeddingParty
+      .row
+        h2.text-center Wedding Party
+        #bridesmaids
+          h2.text-center Bridesmaids
+          #Cheryl.person.span4
+            h3 Cheryl Carson
+            img(src='/images/cheryl400x200.jpg').img-rounded
+          #Katrina.person.span4
+            h3 Katrina Roberts
+            img(src='/images/kat400x200.jpg').img-rounded
+          #Sparky.person.span4
+            h3 Lindsay Dowling
+            img(src='/images/sparky400x200.jpg').img-rounded
+      .row
+        #groomsmen
+          h2.text-center Groomsmen
+          #Noel.person.span4
+            h3 Noel Rodo-Vankeulen
+            img(src='/images/noel400x200.jpg').img-rounded
+          #Daniel.person.span4
+            h3 Daniel Vankeulen
+            img(src='/images/dan400x200.jpg').img-rounded
+        #Josh.person.span4
+            h3 Josh Remai
+            img(src='/images/josh400x200.jpg').img-rounded
+    section#Venue
+      .row
+        h2.text-center The Venue
+        p.span8.offset2 The 
+          a(href='http://www.atlanticaoakisland.com/en/utility/locationanddirections.aspx')  Atlantica Oak Island 
+          | is offering special rates during the weekend. Please let them know you are staying with the Rodo/Schroeder 
+          | wedding so you can get a discount on your room. You can find directions to the Atlantica Oak Island from Halifax on their website.
+          
+    section#Registry
+      .row
+        h2.text-center Wedding Registry
+        p.span8.offset2 To celebrate our marriage we are planning a trip to Paris and Malta, the first experience in a lifetime of shared memories.
+          | In the registy linked below you can check out our honeymoon wishlist. If something strikes your fancy and you feel inclined to contribute we would be most appreciative.
+          | Of course when all is said and done the best part is having you in our lives we can't wait to share the memories with you when we return!
+      .row  
+        a(href='http://calvinandamy.ca/registry').span8.offset2
+          h3.text-center Calvin and Amy's Honeymoon Registry
+    section#Songs
+      .row
+        h2.text-center Wedding Songs
+        p Were trying our hardest to come up with a kick ass playlist to keep us all dancing far into the night.
+          | Luckily we don't have to do this alone, we've enlisted our guests in helping us get ideas of what they
+          | think we should play at our wedding. Below you will find a list of what our guests are suggesting we play.
+        #songList
+          include includes/index/songs
 block scripts
   script(src='javascripts/libraries/equalize.min.js')
