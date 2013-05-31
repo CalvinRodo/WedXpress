@@ -3,6 +3,9 @@ body {
   background-color: #7f8c8d;
   color: #midnigt_blue;
 }
+.brand {
+  text-decoration: none;
+}
 .mainContent {
   position: relative;
   top: 60px;

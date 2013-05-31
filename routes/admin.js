@@ -51,7 +51,7 @@ exports.index = function AdminIndex(req, res){
           .select('name');
 
       res.render('admin', {
-        title : 'admin menu',
+        title : 'Admin Dashboard',
         loggedIn : true,
         totalBought : bought.pluck('price')
                             .reduce(sum, 0) / 100,
