@@ -25,6 +25,14 @@ block navbar
               a(href='#Registry') Wedding Registry
             li
               a(href='#Songs') Songs
+            if loggedIn
+              li 
+                a(href='/admin') Admin
+              li
+                a(href='/logout') Logout
+            else
+              li
+                a(href='/login').fui-gear
 block content
   header.jumbotron
       h1= title
@@ -93,7 +101,7 @@ block content
               h3.text-center Daniel Vankeulen
               img(src='/img/dan400x200.jpg').img-rounded
               p Calvin's older brother Daniel entered his life when they were both around the age of five and they've been friends ever since.
-              p Pictured here is Dan's son Cory, in training to become a lifelong Toronto Leafs fan.
+              p He likes to spends his spare time training the next generation of Leafs Fans
             #Josh.person.span4
               h3.text-center Josh Remai
               img(src='/img/josh400x200.jpg').img-rounded

@@ -10,9 +10,9 @@ html
     block stylesheets
   body
     block navbar
-    .dropdown.cal-right
+    .dropdown
       a(href='#', data-toggle='dropdown')
-        i.icon-cog
+        i.fui-gear
       ul(role='menu').dropdown-menu
         if loggedIn
           li
@@ -27,5 +27,6 @@ html
     script(src='http://code.jquery.com/ui/1.10.2/jquery-ui.js')
     script(src='/javascripts/libraries/bootstrap.min.js')
     script(src='http://zacstewart.github.com/Meow/jquery.meow.js')
+    script(src='/javascripts/icon-font-ie7.js')
     script(src='/javascripts/global.js')
     block scripts
