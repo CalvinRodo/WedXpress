@@ -111,11 +111,11 @@ block content
         .row
           h2.text-center The Venue
           .span8.offset2
-            p The 
+            p.lead The 
               a(href='http://www.atlanticaoakisland.com/en/utility/locationanddirections.aspx')  Atlantica Oak Island 
               | is offering special rates during the weekend. Please let them know you are staying with the Rodo/Schroeder 
               | wedding so you can get a discount on your room. You can find directions to the Atlantica Oak Island from Halifax on their website.
-            p If you need any help getting a ride from the airport, make sure to email me at calvinv@gmail.com and I'll arrange a ride for you.
+            p If you need any help getting a ride from the airport, make sure to email me at calvinv@gmail.com and I'll help to arrange a ride for you.
             p Don't forget your bathing suit for the pool. 
     section#Registry.background.bgwhite
       .resize
@@ -138,5 +138,5 @@ block content
             #songList
               include includes/index/songs
 block scripts
-  script(src='/javascripts/libraries/flatui-radio.js')
+  //[if lt ie7]>script(src='/javascripts/libraries/flatui-radio.js')<![endif]
   script(src='/javascripts/index.js')
