@@ -2,8 +2,6 @@ extends layout
 block stylesheets
   link(rel='stylesheet', href='/stylesheets/flat-ui.css')
   link(rel='stylesheet', href='/stylesheets/style.css')
-block scripts
-  script(src='/javascripts/index.js')
 block navbar
   #menu.navbar.navbar-fixed-top
     .navbar-inner
@@ -69,25 +67,37 @@ block content
             h2.text-center Bridesmaids
             #Cheryl.person.span4
               h3.text-center Cheryl Carson
-              img(src='/images/cheryl400x200.jpg').img-rounded
+              img(src='/img/cheryl400x200.jpg').img-rounded
+              p Amy met Cheryl in the town of Anchorhead on the dessert planet of Tatooine.
+              p Cheryl was in dire need of a starship pilot to fly her and her mentor Obi Wan Kenobi to the Empires Deathstar and Amy was in need of some money to help pay off her debts to the Hutt crime lord Jabba.
+              p Little did they know that their meeting would put in motion the downfall of the Empire and the success of the Rebellion
             #Katrina.person.span4
               h3.text-center Katrina Roberts
-              img(src='/images/kat400x200.jpg').img-rounded
+              img(src='/img/kat400x200.jpg').img-rounded
+              p Katrina and Amy became good friends when they both found themselves playing a game of basketball out side of a school. They bonded over taking care of some kids that where up to no good. 
+              p While everything ended up working out, they share a strong conviction that parents just don't understand, and that they will both one day become princesses in a little place called bel-air.
             #Sparky.person.span4
               h3.text-center Lindsay Dowling
-              img(src='/images/sparky400x200.jpg').img-rounded
+              img(src='/img/sparky400x200.jpg').img-rounded
+              p Amy met Sparky at Gradschool in Waterloo where they were both doing their Masters in history, and ended up rooming together. They share a love of Cats and possibly other things.
+              p See Amy I do so listen to you.
         .row
           #groomsmen
             h2.text-center Groomsmen
             #Noel.person.span4
               h3.text-center Noel Rodo-Vankeulen
-              img(src='/images/noel400x200.jpg').img-rounded
+              img(src='/img/noel400x200.jpg').img-rounded
+              p Noel is Calvin's twin brother, hitting it off pretty much since the womb. Calvin doesn't know where he would be without him today. 
+              p We are still trying to figure out which one is the evil twin...
             #Daniel.person.span4
               h3.text-center Daniel Vankeulen
-              img(src='/images/dan400x200.jpg').img-rounded
+              img(src='/img/dan400x200.jpg').img-rounded
+              p Calvin's older brother Daniel entered his life when they were both around the age of five and they've been friends ever since.
+              p Pictured here is Dan's son Cory, in training to become a lifelong Toronto Leafs fan.
             #Josh.person.span4
               h3.text-center Josh Remai
-              img(src='/images/josh400x200.jpg').img-rounded
+              img(src='/img/josh400x200.jpg').img-rounded
+              p Calvin met Josh in Ottawa several years ago, these two become fast friends when Josh needed someone to help him take his boat up the Rideau Waterway from Kingston to Ottawa, and Calvin really needed a free vacation on a boat. 
     section.background.bggrey#Venue
       .resize
         .row
@@ -120,4 +130,5 @@ block content
             #songList
               include includes/index/songs
 block scripts
-  script(src='javascripts/libraries/equalize.min.js')
+  script(src='/javascripts/libraries/flatui-radio.js')
+  script(src='/javascripts/index.js')

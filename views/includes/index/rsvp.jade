@@ -17,14 +17,16 @@
             .controls
               each course in menuItem.courses
                 label.radio #{course}
-                  input(type='radio', name='#{menuItem.name}-main', data-toggle="radio", value='#{course}')
+                  input(type='radio', name='#{menuItem.name}-main', data-toggle='radio', value='#{course}')
     .control-group
       label.control-label RSVP
       .controls
-        label.radio Accept
-          input(type='radio', name='rsvp', value='accept')
-        label.radio Decline
-          input(type='radio', name='rsvp', value='decline')
+        label.radio
+          input(type='radio', name='rsvp', data-toggle='radio', value='accept')
+          | Accept
+        label.radio
+          input(type='radio', name='rsvp', data-toggle='radio', value='decline')
+          | Decline
     .control-group
       label(for='song').control-label Suggest a Song:
       .controls
@@ -47,8 +49,9 @@
               label.control-label #{item.name}
               .controls
                 each course in item.courses
-                  label.radio #{course}
-                    input(type='radio', name='#{item.name}-#{i}', value='#{course}')
+                  label.radio 
+                    input(type='radio', name='#{item.name}-#{i}', data-toggle='radio', value='#{course}')
+                    | #{course}
     -}
     .span3.offset1
       button(type='submit').btn.btn-block.btn-primary.btn-large Submit
