@@ -1,5 +1,5 @@
 function sum(result, value){
-  return result + value;
+  return parseInt(result) + parseInt(value);
 }
 
 exports.index = function AdminIndex(req, res){
@@ -38,7 +38,7 @@ exports.index = function AdminIndex(req, res){
                                   .unique('name')
                                   .size(),
           totalPeopleInvited = rsvpItems.pluck('invites')
-                                        .reduce(sum, 0) + rsvpItems.size(),
+                                      .reduce(sum, 0) + rsvpItems.size(),
           totalGuestsComing = coming.map(function(rsvp){
           var i = 0,
               guest = [];
@@ -51,7 +51,7 @@ exports.index = function AdminIndex(req, res){
           .select('name');
 
       res.render('admin', {
-        title : 'admin menu',
+        title : 'Admin Dashboard',
         loggedIn : true,
         totalBought : bought.pluck('price')
                             .reduce(sum, 0) / 100,
