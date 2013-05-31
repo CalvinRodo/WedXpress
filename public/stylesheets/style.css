@@ -9,6 +9,13 @@ body {
 a {
   color: #00B7FF;
 }
+.invite {
+  border: 2px none;
+}
+.well {
+  background: #ffffff;
+  color: #2c3e50;
+}
 .jumbotron {
   top: 60px;
   margin-left: 0px;

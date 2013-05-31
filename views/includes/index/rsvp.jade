@@ -1,5 +1,5 @@
-.row
-  form(action='/rsvp/#{invite._id}', method='post').form-horizontal.offset2.span8.bgwhite
+.row#rsvpform
+  form(action='/rsvp/#{invite._id}', method='post').form-horizontal.span6.offset3.well
     legend RSVP
     .invite
       .control-group
@@ -17,9 +17,9 @@
             .controls
               each course in menuItem.courses
                 label.radio #{course}
-                  input(type='radio', name='#{menuItem.name}-main', value='#{course}')
+                  input(type='radio', name='#{menuItem.name}-main', data-toggle="radio", value='#{course}')
     .control-group
-      label().control-label RSVP
+      label.control-label RSVP
       .controls
         label.radio Accept
           input(type='radio', name='rsvp', value='accept')
@@ -29,7 +29,6 @@
       label(for='song').control-label Suggest a Song:
       .controls
         input(type='text', name='song').song
-    hr
     - for (var i = 0; i < invite.invites; i ++) {
     .guest
       .invite
@@ -50,7 +49,7 @@
                 each course in item.courses
                   label.radio #{course}
                     input(type='radio', name='#{item.name}-#{i}', value='#{course}')
-      hr
     -}
-    button(type='submit').btn.btn-block.btn-primary Submit
+    .span3.offset1
+      button(type='submit').btn.btn-block.btn-primary.btn-large Submit
 

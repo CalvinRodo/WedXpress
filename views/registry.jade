@@ -1,28 +1,33 @@
 extends layout
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/flat-ui.css')
+  link(rel='stylesheet', href='/stylesheets/registry.css')
 block content
-  h1 Our Honeymoon Registry
-  #RegistryContents.thumbnails
-    - each item in items
-      .span3.thumbnail.item
-        form(action="/charge/#{item._id}", method="post").form-horizontal
-          fieldset
-            legend.name #{item.name}
-            if (item.image !== undefined)
-              img(src='#{item.image.location}').image
-            else
-              img(src='https://wedxpress.s3.amazonaws.com/tumblr_mj0nj6gosx1s71q1zo1_1280.png').image
-            .description
-              | !{md(item.description)}
-            - var price = item.price / 100;
-            em.price $#{price.toFixed(2)}
-            .control
-              script( src="https://checkout.stripe.com/v2/checkout.js",
-              class="stripe-button",
-              data-key='#{publicKey}',
-              data-amount='#{item.price}',
-              data-name="Wedding Registry",
-              data-description='#{item.name}'
-              )
+  .jumbotron
+    h1 Our Honeymoon Registry
+  .container
+    #RegistryContents.thumbnails
+      - each item in items
+        .span3.thumbnail.item
+          form(action="/charge/#{item._id}", method="post").form-horizontal
+            fieldset
+              legend.name #{item.name}
+              if (item.image !== undefined)
+                img(src='#{item.image.location}').image
+              else
+                img(src='https://wedxpress.s3.amazonaws.com/tumblr_mj0nj6gosx1s71q1zo1_1280.png').image
+              .description
+                | !{md(item.description)}
+              - var price = item.price / 100;
+              em.price $#{price.toFixed(2)}
+              .control
+                script( src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key='#{publicKey}',
+                data-amount='#{item.price}',
+                data-name="Wedding Registry",
+                data-description='#{item.name}'
+                )
 block scripts
   script(src='javascripts/libraries/jquery.masonry.min.js')
   script(src='javascripts/libraries/jquery.imagesloaded.min.js')
