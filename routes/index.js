@@ -41,13 +41,14 @@ exports.index = function index(req, res) {
       console.error('Failed on loading song list');
       res.redirect('/oops');
     }
-
+    var _ = require('lodash'),
+      songs = _(results).select('songName').value();
     res.render('index', {
       loggedIn: req.session.loggedIn,
       title: "Calvin and Amy's Wedding",
       scrollspy: true,
       rsvp: false,
-      songs: results
+      songs: songs
     });
   });
 };
@@ -86,7 +87,8 @@ exports.rsvp = function indexRsvp(req, res) {
 
     var invite = results[0],
       menuItems = results[1],
-      songs = results[2];
+      _ = require('lodash'),
+      songs = _(results[2]).select('songName').value();
 
     if (invite === null ||
       invite === {} ||
@@ -134,7 +136,7 @@ exports.saveRsvp = function saveRsvp(req, res) {
             inviteId: id,
             mainInvite: getInvite(req, 'main')
           };
-        for (var i, i = 0; i < invites; i++) {
+        for (var i = 0; i < invites; i++) {
 
           rsvp['guest' + i] = getInvite(req, i);
         }

@@ -1,7 +1,7 @@
 extends layout
-
-block scripts
-  script(src='/javascripts/index.js')
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/flat-ui.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
 block navbar
   #menu.navbar.navbar-fixed-top
     .navbar-inner
@@ -14,9 +14,9 @@ block navbar
         .nav-collapse.collapse
           ul#nav.nav
             li
-              a(href='#RSVP') RSVP
-            li
               a(href='#AboutUs') Us
+            li
+              a(href='#RSVP') RSVP
             li
               a(href='#WeddingParty') Wedding Party
             li
@@ -25,74 +25,118 @@ block navbar
               a(href='#Registry') Wedding Registry
             li
               a(href='#Songs') Songs
+            if loggedIn
+              li 
+                a(href='/admin') Admin
+              li
+                a(href='/logout') Logout
+            else
+              li
+                a(href='/login').fui-gear
 block content
-  header.jumbotron.subhead.hidden-phone
-    .container
+  header.jumbotron
       h1= title
+      h2 June 20th, 2013 in Oak Island NS 
   .container-fluid
-    .row-fluid
-      .mainContent.span8.offset2
-        .container-fluid
-          section#RSVP
-          h2 RSVP
-          .row-fluid
-          if rsvp === true
-            include includes/index/rsvp
-          else
-            p Please enter the URL that came with your Invite to see your RSVP
-          section#AboutUs
-            h2 Us
-            .row-fluid
-              img(src='/images/us800w.jpg')
-          section#WeddingParty
-            h2 Wedding Party
-            .row-fluid
-              .span6#bridesmaids
-                #Cheryl.person
-                  h3 Cheryl Carson
-                  img(src='/images/cheryl400x200.jpg')
-                #Katrina.person
-                  h3 Katrina Roberts
-                  img(src='/images/kat400x200.jpg')
-                #Sparky.person
-                  h3 Lindsay Dowling
-                  img(src='/images/sparky400x200.jpg')
-              .span6#groomsmen
-                #Noel.person
-                  h3 Noel Rodo-Vankeulen
-                  img(src='/images/noel400x200.jpg')
-                #Daniel.person
-                  h3 Daniel Vankeulen
-                  img(src='/images/dan400x200.jpg')
-                #Josh.person
-                  h3 Josh Remai
-                  img(src='/images/josh400x200.jpg')
-          section#Venue
-            h2 The Venue
-            .row-fluid
-              #Directions.span6
-                address.
-                  <strong>Atlantica Oak Island</strong><br>
-                  36 Treasure Dr.<br>
-                  Western Shore NS,<br>
-                  B0J 1K0<br>
-              #link.span6
-                p You can find directions to the Atlantica Oak Island on their
-                  a(href='http://www.atlanticaoakisland.com/en/utility/locationanddirections.aspx')  website
-          section#Registry
-            h2 Wedding Registry
-            .row-fluid
-              p To celebrate our marriage we are planning a trip to Paris and Malta, the first experience in a lifetime of shared memories.
-              p In the registy linked below you can check out our honeymoon wishlist. If something strikes your fancy and you feel inclined to contribute we would be most appreciative.
-              p Of course when all is said and done the best part is having you in our lives we can't wait to share the memories with you when we return!
-              a(href='http://calvinandamy.ca/registry')
-                h3 Calvin and Amy's Honeymoon Registry
-          section#Songs
-            h2 Wedding Songs
+    section#us.background.bgwhite
+      .resize
+        .row
+          .span6
+            h2.text-right The Bride
+            h3.text-right Amy Elizabeth Schroeder
+            p.text-right Amy grew up in Dartmouth Nova Scotia, Amy graduated from Acadia University with an undergraduate in History, she then attended Waterloo where she recieved a Masters in Public History. She moved to Ottawa to work for Public History before moving back to Dartmouth in 2007.
+            p.text-right She has a love of watching trashy reality tv, reading better books than Calvin, and cats of all shapes and sizes.
+          .span6
+            h2.text-left The Groom
+            h3.text-left Calvin Wesley John Rodo Vankeulen
+            p.text-left Calvin grew up in Mississauga Ontario, in 2002 he moved to Ottawa to attend Algonquin College and recieved an Advanced Diploma in Computer Science. In 2006 he started working for the Federal Government as a Software Developer.
+            p.text-left He has a great love of reading pulpy Science Fiction, playing Video Games, and one very fluffy cat.
+          .span6.offset3
+            h2.text-center Together
+            h3.text-center Calvin + Amy
+            p Calvin met Amy when they both decided to throw around a frisbee at Major's Hill Park on April 20th. Soon after meeting for the first time Amy decided it was time to move back to Dartmouth to make a go of it there. 
+            | Calvin being in need of a new house at the time took over the remander of Amy's lease and continued to keep in contact with her. Amy upon recieving a job offer with the Indian and Native Affairs moved back to Ottawa a year later.
+            | They started dating not long after and soon became inseperable. 
+            p On a trip with some friends to New Zealand in 2012 Calvin proposed to Amy in Milford Sound in what is quite possibly the most romantic parking lot in the world. 
+            p Ask him about it some time...
+    section.background#RSVP
+      .resize
+        .row
+         h2.text-center RSVP
+        if rsvp === true
+          include includes/index/rsvp
+        else
+          h3.text-center Please enter the URL that came with your Invite to see your RSVP
+    section.background.bgwhite#WeddingParty
+      .resize
+        .row
+          h2.text-center Wedding Party
+          #bridesmaids
+            h2.text-center Bridesmaids
+            #Cheryl.person.span4
+              h3.text-center Cheryl Carson
+              img(src='/img/cheryl400x200.jpg').img-rounded
+              p Amy met Cheryl in the town of Anchorhead on the dessert planet of Tatooine.
+              p Cheryl was in dire need of a starship pilot to fly her and her mentor Obi Wan Kenobi to the Empires Deathstar and Amy was in need of some money to help pay off her debts to the Hutt crime lord Jabba.
+              p Little did they know that their meeting would put in motion the downfall of the Empire and the success of the Rebellion
+            #Katrina.person.span4
+              h3.text-center Katrina Roberts
+              img(src='/img/kat400x200.jpg').img-rounded
+              p Katrina and Amy became good friends when they both found themselves playing a game of basketball out side of a school. They bonded over taking care of some kids that where up to no good. 
+              p While everything ended up working out, they share a strong conviction that parents just don't understand, and that they will both one day become princesses in a little place called bel-air.
+            #Sparky.person.span4
+              h3.text-center Lindsay Dowling
+              img(src='/img/sparky400x200.jpg').img-rounded
+              p Amy met Sparky at Gradschool in Waterloo where they were both doing their Masters in history, and ended up rooming together. They share a love of Cats and possibly other things.
+              p See Amy I do so listen to you.
+        .row
+          #groomsmen
+            h2.text-center Groomsmen
+            #Noel.person.span4
+              h3.text-center Noel Rodo-Vankeulen
+              img(src='/img/noel400x200.jpg').img-rounded
+              p Noel is Calvin's twin brother, hitting it off pretty much since the womb. Calvin doesn't know where he would be without him today. 
+              p We are still trying to figure out which one is the evil twin...
+            #Daniel.person.span4
+              h3.text-center Daniel Vankeulen
+              img(src='/img/dan400x200.jpg').img-rounded
+              p Calvin's older brother Daniel entered his life when they were both around the age of five and they've been friends ever since.
+              p He likes to spends his spare time training the next generation of Leafs Fans
+            #Josh.person.span4
+              h3.text-center Josh Remai
+              img(src='/img/josh400x200.jpg').img-rounded
+              p Calvin met Josh in Ottawa several years ago, these two become fast friends when Josh needed someone to help him take his boat up the Rideau Waterway from Kingston to Ottawa, and Calvin really needed a free vacation on a boat. 
+    section.background.bggrey#Venue
+      .resize
+        .row
+          h2.text-center The Venue
+          .span8.offset2
+            p.lead The 
+              a(href='http://www.atlanticaoakisland.com/en/utility/locationanddirections.aspx')  Atlantica Oak Island 
+              | is offering special rates during the weekend. Please let them know you are staying with the Rodo/Schroeder 
+              | wedding so you can get a discount on your room. You can find directions to the Atlantica Oak Island from Halifax on their website.
+            p If you need any help getting a ride from the airport, make sure to email me at calvinv@gmail.com and I'll help to arrange a ride for you.
+            p Don't forget your bathing suit for the pool. 
+    section#Registry.background.bgwhite
+      .resize
+        .row
+          h2.text-center Wedding Registry
+          p.span8.offset2 To celebrate our marriage we are planning a trip to Paris and Malta, the first experience in a lifetime of shared memories.
+            | In the registy linked below you can check out our honeymoon wishlist. If something strikes your fancy and you feel inclined to contribute we would be most appreciative.
+            | Of course when all is said and done the best part is having you in our lives we can't wait to share the memories with you when we return!
+        .row  
+          a(href='http://calvinandamy.ca/registry').span8.offset2
+            h3.text-center Calvin and Amy's Honeymoon Registry
+    section#Songs.background
+      .resize
+        .row
+          h2.text-center Wedding Songs
+          .span8.offset2
             p Were trying our hardest to come up with a kick ass playlist to keep us all dancing far into the night.
               | Luckily we don't have to do this alone, we've enlisted our guests in helping us get ideas of what they
               | think we should play at our wedding. Below you will find a list of what our guests are suggesting we play.
             #songList
               include includes/index/songs
 block scripts
-  script(src='javascripts/libraries/equalize.min.js')
+  //[if lt ie7]>script(src='/javascripts/libraries/flatui-radio.js')<![endif]
+  script(src='/javascripts/index.js')

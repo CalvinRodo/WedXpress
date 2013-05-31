@@ -1,102 +1,71 @@
-@oleo: 'Oleo Script', cursive;
+@font: 'Lato', sans-serif;
+@peter_river: #3498db;
+@belize_hole: #2980b9;
+@asbestos: #7f8c8d;
+@concrete: #95a5a6;
+@midnight_blue: #2c3e50;
 
 h1 {
-  font-family: @oleo;
+  font-family: @font;
 }
 
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url('/images/random_grey_variations.png');
-  background-color: #1A6A82;
-}
-
-//.nav {
-//  padding-bottom: 0px;
-//  margin-bottom: 0px;
-//}
-
-.tab-pane {
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-.form-inline {
-  input, button {
-    margin: 0 5px;
-  }
-}
-
-.thumbnail, .mainContent, .page-header {
-  background-color: #ffffff;
-}
-
-#RegistryContents {
-  text-align: center;
-}
-
-#RegistryContents > li {
-  display: inline-block;
-  *display: inline; /* ie7 fix */
-  float: none; /* this is the part that makes it work */
+  font: @font;
+  background-color: @belize_hole;
+  color: #ffffff;
 }
 
 a {
   color: #00B7FF;
 }
-
-.item {
-  margin: 10px;
+.invite {
+  border: 2px none;
 }
 
-.item .image {
-  width: 100%;
-}
-
-.form-signin {
-  max-width: 300px;
-  padding: 19px 29px 29px;
-  margin: 0 auto 20px;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-
-  .form-signin-heading {
-    margin-bottom: 10px;
-  }
-  .form-signin input[type="text"], .form-signin input[type="password"] {
-    font-size: 16px;
-    height: auto;
-    margin-bottom: 15px;
-    padding: 7px 9px;
-  }
+.well {
+  background: #ffffff; 
+  color: @midnight_blue;
 }
 
 .jumbotron {
+  top: 60px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background: url('/img/blue.png') no-repeat scroll center;
+  background-color: @belize_hole;
   position: relative;
-  padding: 40px 0;
+  padding-top: 225px;
+  padding-bottom:190px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-  .jumbotron h1 {
-    font-size: 80px;
-    font-weight: bold;
+  h1 {
+    font-size: 60px;
+    font-weight: 900;
     letter-spacing: -1px;
     line-height: 1;
   }
 }
+.brand {
+  text-decoration: none;
+}
+.resize{
+  margin-left: 40px;
+  margin-right: 20px;
+}
 
-//.nav {
-//  background: none;
-//  font-size: 28px;
-//}
+.bgwhite {
+  color: @midnight_blue;
+  background-color: #ffffff;
+}
 
-//#nav.affix {
-//  position: fixed;
-//  top: 10px;
-//}
+.bggrey {
+  background-color: @asbestos;
+}
+
+.background{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border: medium none;
+}

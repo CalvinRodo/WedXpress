@@ -3,17 +3,16 @@ html
   head
     title= title
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato')
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='http://zacstewart.github.com/Meow/jquery.meow.css')
     block stylesheets
   body
     block navbar
-    .dropdown.cal-right
+    .dropdown
       a(href='#', data-toggle='dropdown')
-        i.icon-cog
+        i.fui-gear
       ul(role='menu').dropdown-menu
         if loggedIn
           li
@@ -28,5 +27,6 @@ html
     script(src='http://code.jquery.com/ui/1.10.2/jquery-ui.js')
     script(src='/javascripts/libraries/bootstrap.min.js')
     script(src='http://zacstewart.github.com/Meow/jquery.meow.js')
+    //[if lt ie7]>script(src='/javascripts/libraries/icon-font-ie7.js')<![endif]
     script(src='/javascripts/global.js')
     block scripts

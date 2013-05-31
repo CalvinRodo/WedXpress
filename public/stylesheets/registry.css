@@ -1,0 +1,39 @@
+.thumbnail {
+  background-color: #ffffff;
+}
+body {
+  background-color: #7f8c8d;
+}
+#RegistryContents {
+  top: 100px;
+  text-align: center;
+}
+#RegistryContents > li {
+  display: inline-block;
+  *display: inline;
+  /* ie7 fix */
+
+  float: none;
+  /* this is the part that makes it work */
+
+}
+.jumbotron {
+  top: 60px;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+  color: #2c3e50;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.item {
+  margin: 10px;
+}
+.item .image {
+  width: 100%;
+}
