@@ -1,20 +1,17 @@
 extends layout
-
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/admin.css')
+block scripts
+  script(src='/javascripts/index.js')
+block navbar
+  include includes/admin/navbar
 block content
   .container-fluid.mainContent
     div.row-fluid
-      h2 Admin Table of Contents 
-      a(href='rsvpadmin') RSVP Admin Screen
-      br
-      a(href='registryadmin') Registry Admin Screen
-      br 
-      a(href='menuadmin') Menu Admin Screen
-      br
-    div.row-fluid
-      h2 Dashboard
+      h1 Dashboard
       .span6
-        h3 rsvp 
-        p Total Number of Peopl Invited: #{totalInvited}
+        h3 RSVP
+        p Total Number of People Invited: #{totalInvited}
         p Number Accepted: #{totalComing}
         p Number of People Coming: #{totalGuests}
         p Number Declined: #{totalDeclined} 
