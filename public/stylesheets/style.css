@@ -3,70 +3,48 @@ h1 {
 }
 body {
   font: 'Lato', sans-serif;
-  background-color: #3498db;
+  background-color: #2980b9;
   color: #ffffff;
-}
-.thumbnail {
-  background-color: #ffffff;
-}
-#RegistryContents {
-  text-align: center;
-}
-#RegistryContents > li {
-  display: inline-block;
-  *display: inline;
-  /* ie7 fix */
-
-  float: none;
-  /* this is the part that makes it work */
-
 }
 a {
   color: #00B7FF;
 }
-.item {
-  margin: 10px;
-}
-.item .image {
-  width: 100%;
-}
-.form-signin {
-  max-width: 300px;
-  padding: 19px 29px 29px;
-  margin: 0 auto 20px;
-  background-color: #fff;
-}
-.form-signin .form-signin-heading {
-  margin-bottom: 10px;
-}
-.form-signin .form-signin input[type="text"],
-.form-signin .form-signin input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
-}
 .jumbotron {
+  top: 60px;
   margin-left: 0px;
   margin-right: 0px;
   background: url('/images/blue.png') no-repeat scroll center;
   background-color: #2980b9;
   position: relative;
-  top: -70px;
-  padding-top: 250px;
+  padding-top: 225px;
   padding-bottom: 190px;
   color: #fff;
   text-align: center;
 }
-.jumbotron .jumbotron h1 {
-  font-size: 80px;
-  font-weight: bold;
+.jumbotron h1 {
+  font-size: 60px;
+  font-weight: 900;
   letter-spacing: -1px;
   line-height: 1;
 }
-#Venue {
-  margin-top: 50px;
+.brand {
+  text-decoration: none;
+}
+.resize {
+  margin-left: 40px;
+  margin-right: 20px;
+}
+.bgwhite {
+  color: #2c3e50;
+  background-color: #ffffff;
+}
+.bggrey {
+  background-color: #7f8c8d;
+}
+.background {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #7f8c8d;
+  margin-left: -20px;
+  margin-right: -20px;
+  border: medium none;
 }
