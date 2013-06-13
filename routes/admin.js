@@ -1,5 +1,9 @@
 function sum(result, value){
-  return parseInt(result) + parseInt(value);
+  if (result !== undefined && value !== undefined)
+  {
+    return parseInt(result) + parseInt(value);
+  }
+  return result;
 }
 
 exports.index = function AdminIndex(req, res){

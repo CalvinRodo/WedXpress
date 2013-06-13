@@ -45,6 +45,9 @@ body {
 .bggrey {
   background-color: #7f8c8d;
 }
+.bggrey a {
+  color: #2c3e50;
+}
 .background {
   padding-top: 100px;
   padding-bottom: 100px;

@@ -40,7 +40,7 @@ block content
   .container-fluid
     section#us.background.bgwhite
       .resize
-        .row
+        .row-fluid
           .span6
             h2.text-right The Bride
             h3.text-right Amy Elizabeth Schroeder
@@ -51,9 +51,10 @@ block content
             h3.text-left Calvin Wesley John Rodo Vankeulen
             p.text-left Calvin grew up in Mississauga Ontario, in 2002 he moved to Ottawa to attend Algonquin College and recieved an Advanced Diploma in Computer Science. In 2006 he started working for the Federal Government as a Software Developer.
             p.text-left He has a great love of reading pulpy Science Fiction, playing Video Games, and one very fluffy cat.
+        h2.text-center Together
+        h3.text-center Calvin + Amy 
+        .row-fluid
           .span6.offset3
-            h2.text-center Together
-            h3.text-center Calvin + Amy
             p Calvin met Amy when they both decided to throw around a frisbee at Major's Hill Park on April 20th. Soon after meeting for the first time Amy decided it was time to move back to Dartmouth to make a go of it there. 
             | Calvin being in need of a new house at the time took over the remander of Amy's lease and continued to keep in contact with her. Amy upon recieving a job offer with the Indian and Native Affairs moved back to Ottawa a year later.
             | They started dating not long after and soon became inseperable. 
@@ -61,18 +62,18 @@ block content
             p Ask him about it some time...
     section.background#RSVP
       .resize
-        .row
-         h2.text-center RSVP
+        .row-fluid
+          h2.text-center RSVP
         if rsvp === true
           include includes/index/rsvp
         else
           h3.text-center Please enter the URL that came with your Invite to see your RSVP
     section.background.bgwhite#WeddingParty
       .resize
-        .row
-          h2.text-center Wedding Party
-          #bridesmaids
-            h2.text-center Bridesmaids
+        h2.text-center Wedding Party
+        #bridesmaids
+          h2.text-center Bridesmaids
+          .row-fluid          
             #Cheryl.person.span4
               h3.text-center Cheryl Carson
               img(src='/img/cheryl400x200.jpg').img-rounded
@@ -87,11 +88,11 @@ block content
             #Sparky.person.span4
               h3.text-center Lindsay Dowling
               img(src='/img/sparky400x200.jpg').img-rounded
-              p Amy met Sparky at Gradschool in Waterloo where they were both doing their Masters in history, and ended up rooming together. They share a love of Cats and possibly other things.
+              p amy met sparky at gradschool in waterloo where they were both doing their Masters in history, and ended up rooming together. They share a love of Cats and possibly other things.
               p See Amy I do so listen to you.
-        .row
-          #groomsmen
-            h2.text-center Groomsmen
+        #groomsmen
+          h2.text-center Groomsmen
+          .row-fluid          
             #Noel.person.span4
               h3.text-center Noel Rodo-Vankeulen
               img(src='/img/noel400x200.jpg').img-rounded
@@ -108,7 +109,7 @@ block content
               p Calvin met Josh in Ottawa several years ago, these two become fast friends when Josh needed someone to help him take his boat up the Rideau Waterway from Kingston to Ottawa, and Calvin really needed a free vacation on a boat. 
     section.background.bggrey#Venue
       .resize
-        .row
+        .row-fluid          
           h2.text-center The Venue
           .span8.offset2
             p.lead The 
@@ -119,17 +120,17 @@ block content
             p Don't forget your bathing suit for the pool. 
     section#Registry.background.bgwhite
       .resize
-        .row
+        .row-fluid          
           h2.text-center Wedding Registry
           p.span8.offset2 To celebrate our marriage we are planning a trip to Paris and Malta, the first experience in a lifetime of shared memories.
             | In the registy linked below you can check out our honeymoon wishlist. If something strikes your fancy and you feel inclined to contribute we would be most appreciative.
             | Of course when all is said and done the best part is having you in our lives we can't wait to share the memories with you when we return!
-        .row  
+        .row-fluid 
           a(href='http://calvinandamy.ca/registry').span8.offset2
             h3.text-center Calvin and Amy's Honeymoon Registry
     section#Songs.background
       .resize
-        .row
+        .row-fluid          
           h2.text-center Wedding Songs
           .span8.offset2
             p Were trying our hardest to come up with a kick ass playlist to keep us all dancing far into the night.
