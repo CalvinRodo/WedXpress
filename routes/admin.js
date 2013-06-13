@@ -1,9 +1,12 @@
 function sum(result, value){
-  if (result !== undefined && value !== undefined)
-  {
-    return parseInt(result) + parseInt(value);
+  if (value === null || value === undefined){
+    return result;
   }
-  return result;
+  var parsedVal = parseInt(value, 10);
+  if (isNaN(parsedVal) === true) {
+    return result;
+  }
+  return parseInt(result,10) + parsedVal;
 }
 
 exports.index = function AdminIndex(req, res){
