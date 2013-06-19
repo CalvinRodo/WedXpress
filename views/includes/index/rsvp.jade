@@ -1,23 +1,6 @@
 .row#rsvpform
   form(action='/rsvp/#{invite._id}', method='post').form-horizontal.span6.offset3.well
     legend RSVP
-    .invite
-      .control-group
-        label(for='name').control-label Name:
-        .controls
-          input(type='text', name='invite-name-main', value='#{invite.name}').invite-name
-      .meal-choice
-        .control-group
-          label(for='requirement-main').control-label Special Requirements
-          .controls
-            input(type='text', name='requirement-main')
-        each menuItem in menu
-          .control-group
-            label.control-label #{menuItem.name}
-            .controls
-              each course in menuItem.courses
-                label.radio #{course}
-                  input(type='radio', name='#{menuItem.name}-main', data-toggle='radio', value='#{course}')
     .control-group
       label.control-label RSVP
       .controls
@@ -27,32 +10,50 @@
         label.radio
           input(type='radio', name='rsvp', data-toggle='radio', value='decline')
           | Decline
-    .control-group
-      label(for='song').control-label Suggest a Song:
-      .controls
-        input(type='text', name='song').song
-    - for (var i = 0; i < invite.invites; i ++) {
-    .guest
+    #rsvpInvite
       .invite
-        h3 Guest
         .control-group
           label(for='name').control-label Name:
           .controls
-            input(type='text', name='invite-name-#{i}', ).invite-name
+            input(type='text', name='invite-name-main', value='#{invite.name}').invite-name
         .meal-choice
           .control-group
-            label(for='requirement-#{i}').control-label Special Requirements
+            label(for='requirement-main').control-label Special Requirements
             .controls
-              input(type='text', name='requirement-#{i}')
-          each item in menu
+              input(type='text', name='requirement-main')
+          each menuItem in menu
             .control-group
-              label.control-label #{item.name}
+              label.control-label #{menuItem.name}
               .controls
-                each course in item.courses
-                  label.radio 
-                    input(type='radio', name='#{item.name}-#{i}', data-toggle='radio', value='#{course}')
-                    | #{course}
-    -}
+                each course in menuItem.courses
+                  label.radio #{course}
+                    input(type='radio', name='#{menuItem.name}-main', data-toggle='radio', value='#{course}')
+      .control-group
+        label(for='song').control-label Suggest a Song:
+        .controls
+          input(type='text', name='song').song
+      - for (var i = 0; i < invite.invites; i ++) {
+      .guest
+        .invite
+          h3 Guest
+          .control-group
+            label(for='name').control-label Name:
+            .controls
+              input(type='text', name='invite-name-#{i}', ).invite-name
+          .meal-choice
+            .control-group
+              label(for='requirement-#{i}').control-label Special Requirements
+              .controls
+                input(type='text', name='requirement-#{i}')
+            each item in menu
+              .control-group
+                label.control-label #{item.name}
+                .controls
+                  each course in item.courses
+                    label.radio 
+                      input(type='radio', name='#{item.name}-#{i}', data-toggle='radio', value='#{course}')
+                      | #{course}
+      -}
     .span3.offset1
       button(type='submit').btn.btn-block.btn-primary.btn-large Submit
 
