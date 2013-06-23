@@ -1,5 +1,6 @@
 extends layout
 block stylesheets
+  link(rel='stylesheets', href='/stylesheets/rsvpadmin.css')
 block content
     ul.nav
       li
@@ -55,25 +56,18 @@ block content
         h2 RSVP List
         .row-fluid
           #rsvpList
-            table.table.table-hover.table-condensed
-              thead
-                tr
-                  th Name
-                  th Coming
-                  th Actions
-              tbody
-                each rsvp in rsvpList
-                  tr
-                  th #{rsvp.mainInvite.name}
-                  th #{rsvp.coming}
-                  th
-                    a(data-target='#modal#{rsvp._id}', data-toggle='modal').btn View
-                    div(id='modal#{rsvp._id}', data-remote='./admin/rsvp/view/#{rsvp._id}').modal.hide.fade
-                      .modal-header
-                        h3 #{rsvp.mainInvite.name}
-                      .modal-body
-                      .modal-footer
-                        a(href='#', data-dismiss='modal').btn Cancel
-
+            each rsvp in rsvpList
+              #rsvp.border
+                p ----------------------------------------------------
+                p #{rsvp.coming}
+                - var i = 1;
+                each guest in rsvp.guests
+                  p 
+                    strong Guest #{i}: 
+                    span #{guest.name} 
+                    strong Entree:  
+                    span #{guest.menu.entree} 
+                    strong - 
+                    span #{guest.specialRequirements}
 block scripts
   script(src="javascripts/admin.js")
