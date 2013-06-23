@@ -77,17 +77,24 @@ exports.index = function index(req, res) {
     }
   ], function RenderPage(err, results) {
       var rsvpList = results[0],
-          invites = results[1];
+          invites = results[1],
+          _ = require('lodash');
+
     if (err) {
       console.error('Failed on rendering admin page');
       console.error(err);
     }
 
+
     res.render('rsvpadmin', {
       loggedIn: true,
       title: 'Invite Administration',
       scrollspy: false,
-      inviteList: invites,
+      inviteList: _(invites).reject(function (item) {
+        return _(rsvpList).some(function(rsvp) {
+          return rsvp.inviteId === item._id.toString();
+        });
+      }).value(),
       rsvpList: rsvpList
     });
   });
