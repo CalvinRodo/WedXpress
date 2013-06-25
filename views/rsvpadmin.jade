@@ -1,5 +1,6 @@
 extends layout
 block stylesheets
+  link(rel='stylesheets', href='/stylesheets/rsvpadmin.css')
 block content
     ul.nav
       li
@@ -55,6 +56,7 @@ block content
         h2 RSVP List
         .row-fluid
           #rsvpList
+<<<<<<< HEAD
             table.table.table-hover.table-condensed
               thead
                 tr
@@ -80,5 +82,20 @@ block content
             p #{decline.mainInvite.name}
 
 
+=======
+            each rsvp in rsvpList
+              #rsvp.border
+                p ----------------------------------------------------
+                p #{rsvp.coming}
+                - var i = 1;
+                each guest in rsvp.guests
+                  p 
+                    strong Guest #{i}: 
+                    span #{guest.name} 
+                    strong Entree:  
+                    span #{guest.menu.entree} 
+                    strong - 
+                    span #{guest.specialRequirements}
+>>>>>>> 1f58fe4111288a4a7450996ee6c0ca44f3f276da
 block scripts
   script(src="javascripts/admin.js")

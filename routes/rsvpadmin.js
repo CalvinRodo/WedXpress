@@ -23,6 +23,23 @@ function SendResultAsJson(err, result, res) {
 
 }
 
+function getGuests(rsvp) {
+  var guests = [],
+    guest;
+  guests.push(rsvp.mainInvite);
+  for (var i = 0; i < 10; i++) {
+    guest = rsvp["guest" + i];
+    //TODO: find a better way to handle this
+    if (guest !== undefined &&
+      guest.name !== '' &&
+      guest.name !== undefined &&
+      guest.name !== null) {
+      guests.push(guest);
+    }
+  }
+  return guests;
+}
+
 function getGuests(rsvp, numInvites) {
   var guests = [],
     guest;
@@ -95,8 +112,15 @@ exports.index = function index(req, res) {
           return rsvp.inviteId === item._id.toString();
         });
       }).value(),
+<<<<<<< HEAD
       rsvpList: _(rsvpList).reject({'coming': 'decline'}).value(),
       declineList : _(rsvpList).select({'coming': 'decline'}).value()
+=======
+      rsvpList: _(rsvpList).map(function(item) { 
+        item['guests'] = getGuests(item);
+        return item;  
+      }).value()
+>>>>>>> 1f58fe4111288a4a7450996ee6c0ca44f3f276da
     });
   });
 };
@@ -141,42 +165,4 @@ exports.GetInvite = function GetInvite(req, res) {
   db.GetItemByID(req.params.id, function (err, result) {
     SendResultAsJson(err, result, res);
   });
-};
-
-exports.ViewRSVP = function ViewRSVP(req, res) {
-  var async = require('async'),
-    id = req.params.id;
-
-  async.waterfall([function (callback) {
-    var RsvpDB = require('../DataLayer/RsvpDB.js'),
-      rsvpDB = new RsvpDB();
-    rsvpDB.GetItemByID(id, function (err, result) {
-      if (err) {
-        console.error('failed on getting rsvp from db');
-        console.error(err);
-        res.redirect('/oops');
-      }
-
-      callback(null, result);
-    });
-  },
-    function (rsvp, callback) {
-      var InviteDB = require('../DataLayer/InviteDB.js'),
-        inviteDB = new InviteDB();
-      inviteDB.GetItemByID(rsvp.inviteId, function (err, result) {
-        if (err) {
-          console.error('failed on getting invite from db');
-          console.error(err);
-          res.redirect('/oops');
-        }
-        callback(null, rsvp, result);
-      });
-    }, function (rsvp, invite, callback) {
-      res.render('includes/admin/rsvpModal', {
-        loggedIn: true,
-        coming: rsvp.coming,
-        guests: getGuests(rsvp, invite.invites)
-      });
-    }
-  ]);
 };
