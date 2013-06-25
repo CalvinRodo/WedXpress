@@ -112,15 +112,8 @@ exports.index = function index(req, res) {
           return rsvp.inviteId === item._id.toString();
         });
       }).value(),
-<<<<<<< HEAD
       rsvpList: _(rsvpList).reject({'coming': 'decline'}).value(),
       declineList : _(rsvpList).select({'coming': 'decline'}).value()
-=======
-      rsvpList: _(rsvpList).map(function(item) { 
-        item['guests'] = getGuests(item);
-        return item;  
-      }).value()
->>>>>>> 1f58fe4111288a4a7450996ee6c0ca44f3f276da
     });
   });
 };
