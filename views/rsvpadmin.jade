@@ -74,6 +74,11 @@ block content
                       .modal-body
                       .modal-footer
                         a(href='#', data-dismiss='modal').btn Cancel
+        h2 Declined
+        .row-fluid
+          each decline in declineList
+            p #{decline.mainInvite.name}
+
 
 block scripts
   script(src="javascripts/admin.js")

@@ -11,7 +11,7 @@ function DefaultRedirect(err, res, section) {
     res.redirect('/oops');
     return;
   }
-  res.redirect('/admin' + section);
+res.redirect('/admin' + section);
 }
 
 function SendResultAsJson(err, result, res) {
@@ -95,7 +95,8 @@ exports.index = function index(req, res) {
           return rsvp.inviteId === item._id.toString();
         });
       }).value(),
-      rsvpList: rsvpList
+      rsvpList: _(rsvpList).reject({'coming': 'decline'}).value(),
+      declineList : _(rsvpList).select({'coming': 'decline'}).value()
     });
   });
 };
