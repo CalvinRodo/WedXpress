@@ -48,5 +48,5 @@ exports.SetRoute = function SetRoute (app) {
   app.get('/invite/edit/:id', rsvpadmin.GetInvite);
   app.post('/invite', rsvpadmin.AddInvite);
   app.post('/invite/edit/:id', rsvpadmin.EditInvite);
-  app.get('/admin/rsvp/view/:id', rsvpadmin.ViewRSVP);
+
 };
